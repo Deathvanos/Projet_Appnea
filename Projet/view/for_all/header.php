@@ -14,7 +14,7 @@
 
 <header class="header_all">
     <div class="header_left">
-        <a class="header_title" href="../viewer/main.php">
+        <a class="header_title" href="../guest/main.php">
             <img class="header_logo" src="../../../Ressources/img/Logo_Appea-grey.svg" alt="Logo APPNEA">
             <?php echo $translat['title_brand']; ?>
         </a>
@@ -31,7 +31,7 @@
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link2']; ?></a></li>
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link3']; ?></a></li>
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link4']; ?></a></li>
-        <li class="header_log"><a href="login.php"><?php echo $translat['header_linkConn']; ?></a></li>
+        <li class="header_log"><a href="../guest/login.php"><?php echo $translat['header_linkConn']; ?></a></li>
     </ul>
 </header>
         

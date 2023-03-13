@@ -24,7 +24,7 @@
     <title>APNEA</title>
     <link rel="icon" type="image/x-icon" href="../../../Ressources/img/Logo_Appea-color.svg">
     <link rel="stylesheet" href="../../../Ressources/css/allPage.css" />
-    <link rel="stylesheet" href="../../../Ressources/css/viewer/main.css" />
+    <link rel="stylesheet" href="../../../Ressources/css/guest/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="../../../Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>

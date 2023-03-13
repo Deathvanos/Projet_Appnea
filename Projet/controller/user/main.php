@@ -14,7 +14,8 @@
 
 
 
-<?php 
+<?php session_start();
+
     // Variables pour la maintenance
     $errorPage="../../view/error.php";
 

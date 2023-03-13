@@ -11,8 +11,16 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-<?php // Redirection vers le fichier index présent dans : Projet/view
-    session_start();
+<?php  session_unset(); session_start();
+// session_unset() est OPTIONNEL : pour reset la session
 
-    header("Location: Projet/controller/viewer/main.php");
+
+    // if new session then this is a guest 
+    if (!isset($_SESSION['controle']) & !isset($_SESSION['action'])) {
+        $_SESSION['userType'] = "guest";
+    }
+    
+    // Renvoi l'utilisateur vers la page approprié
+    header("Location: Projet/controller/".$_SESSION['userType']."/main.php");
+
 ?>

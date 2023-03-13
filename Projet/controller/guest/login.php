@@ -14,11 +14,12 @@
 
 
 
-<?php 
+<?php session_start();
     // Variables pour la maintenance
     $errorPage="../../view/error.php";
-    
+
     include '../../view/php/setLang.php';
+        
+    include '../../view/guest/login.html';
     
-    include '../../view/viewer/main.php';
 ?>

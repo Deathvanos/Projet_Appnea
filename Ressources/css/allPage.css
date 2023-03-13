@@ -1,0 +1,241 @@
+/*********************************************************
+* APP - Projet Système Numérique - Composante Informatique
+* ISEP - A1 - G7C
+* Semestre 2
+* Auteur : - MAILLEY_Charles 
+           - MAIZA_Fares
+           - MARTINEZ_Eliot
+           - PAVIOT-ADET_Flore
+           - SPASOJEVIC_Fanny
+           - VINGADASSAMY_Prasanaa
+* Date de rendu  : 05/06/2023
+
+Style commun à toutes les pages
+*********************************************************/
+
+
+
+/***************-----*************** GENERAL ***************-----***************/
+
+* { /* Settings general de la page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins"; /*Ne fonctionne pas avec le fichier en local*/
+    /* Couleur de la chartre graphique */
+    --myColor-main-base: #211265;
+    --myColor-main-light: #6C37EE;
+    --myColor-main-dack: #0A0949;
+    --myColor-buttonLogin: #F6593E;
+    --myColor-3-1: #56E5FB;
+    --myColor-2-2: #18A7F9;
+    /* Other color */
+    --myColor-fontColor-main: #ffffff;
+}
+
+/* Ne fonctionne pas et je sais pas quel poppins prendre*/
+/*
+@font-face { 
+    font-family: poppins; 
+    src: url('../font/Poppins/Poppins-Black.ttf'); 
+} 
+*/
+
+
+
+/***************-----*************** Backgroud ***************-----***************/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    /*.*/
+main {
+    background-image: url("../img/background.svg");
+    background-size: 100% 100%;
+    height: auto; 
+    color: var(--myColor-fontColor-main);
+    height: 830px; /*522*/
+    /* Ajout un espace entre le bloc et le bord de l'ecran gauche*/
+    padding-left: 2.5%;
+    
+}
+
+body {/*Suppression du blanc de bas de page en cas de zoom*/
+    background-color: var(--myColor-main-base);
+}
+ 
+
+
+/***************-----*************** HEADER ***************-----***************/
+
+.header_all { /* Settings general du header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--myColor-main-base);
+    padding-inline: 2.5%;
+}
+
+.header_logo { /* Taille du logo du header */
+    width: 70px;
+    margin-right: 15px;
+}
+
+.header_logo path {
+    fill: black;
+}
+
+.header_right li { /* Settings des blocs du header*/
+    display: inline-block;
+    padding: 2% 20px;
+} 
+.header_right li:hover {background-color: #2779BF;}
+
+.header_right a { /* Settings des liens du header*/
+    color: var(--myColor-fontColor-main);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.header_title { /* Settings des liens du header*/
+    color: var(--myColor-fontColor-main);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+} 
+
+.header_log { /* Settings des liens du header*/ 
+    background-color: var(--myColor-buttonLogin);
+    border-radius: 25px;
+    margin: 10px 0;
+} 
+
+.header_left {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.header_flag {
+    width: 60px;
+    border-radius: 100%;
+
+}
+
+.header_language {
+	position: relative;
+	color: #FFF;
+    float: right;
+    margin-left: 15px;
+}
+
+.header_language ul {
+	display: none;
+}	
+.header_language:hover ul{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+}
+
+.header_language ul li {
+    padding-top: 5px;
+	color: #222538;
+    display: inline-block;
+}
+.header_language ul li:hover a {
+    background-color: #2779BF;
+    border-radius: 50%;
+}
+
+
+
+/***************-----*************** FOOTER ***************-----***************/
+
+.footer {
+    background-color: var(--myColor-main-base);
+    padding: 10px;
+    /* Pour bloquer le footer au bas de l'ecran si besoin
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    */
+}
+
+.footer_icon {
+    font-size: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer_top {
+    color: var(--myColor-fontColor-main);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.footer_top h3 {
+    display: inline-block;
+    border-bottom: 3px solid var(--myColor-fontColor-main);
+    padding-left: 5px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+.footer_top a {
+    color: var(--myColor-fontColor-main);;
+    text-decoration: none;
+}
+
+.footer_top li {display: block;}
+
+.footer_bottom {
+    color: #c0bbbb;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 11px;
+}
+
+
+
+/***************-----*************** FOOTER NUMBERPHONE TICKET ***************-----***************/
+
+.numberPhone_all {
+    background-color: var(--myColor-main-base);
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.numberPhone_left {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    height: 0px;
+    border-top  : 25px solid white;
+    border-bottom  : 25px solid white;
+    border-right : 20px solid transparent;
+    padding-right: 10px;
+    color: black;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.numberPhone_right {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    padding-right : 10px;
+    color: white;
+    font-size: 8px;
+}
+  
+

@@ -1,0 +1,3 @@
+ErrorDocument 404 /Projet/view/error.php
+ErrorDocument 410 /Projet/view/error.php
+

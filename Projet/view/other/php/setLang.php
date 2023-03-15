@@ -3,9 +3,10 @@
     $_SESSION['lang'] = isset($_GET['lang']) ? $_GET['lang'] : 'fr';
 
     // Vérifie si le fichier de langue existe pour le charger en mémoire - pour *
-    $fileLang = '../../../Ressources/lang/text_' . $_SESSION['lang'] . '.json';
+    $fileLang = 'Ressources/lang/text_' . $_SESSION['lang'] . '.json';
     if (file_exists($fileLang)) {
         $translat = json_decode(file_get_contents($fileLang), true);
     } // Redirection vers une page d'erreur
-    else {header("Location: ../../view/error.php"); exit;}
+    else {header("Location: Projet/view/error.php"); exit;
+    }
 ?>

@@ -11,18 +11,17 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-
 <header class="header_all">
     <div class="header_left">
-        <a class="header_title" href="../guest/main.php">
-            <img class="header_logo" src="../../../Ressources/img/Logo_Appea-grey.svg" alt="Logo APPNEA">
+        <a class="header_title" href="index.php">
+            <img class="header_logo" src="Ressources/img/Logo_Appea-grey.svg" alt="Logo APPNEA">
             <?php echo $translat['title_brand']; ?>
         </a>
         <nav class="header_language"> 
-            <?php echo '<img class="header_flag" src="../../../Ressources/bitmap/icon-flag/'.$_SESSION['lang'].'.svg">'; ?>
+            <?php echo '<img class="header_flag" src="Ressources/bitmap/icon-flag/'.$_SESSION['lang'].'.svg">'; ?>
             <ul class="header_listFlag">
-                <li><a href="?lang=fr"><img class="header_flag" src="../../../Ressources/bitmap/icon-flag/fr.svg" alt="Francais"></a></li> 
-                <li><a href="?lang=us" ><img class="header_flag" src="../../../Ressources/bitmap/icon-flag/us.svg" alt="English"></a></li> 
+                <li><a href=<?php echo "index.php?controle=".$_GET['controle']."&action=".$_GET['action']."&lang=fr"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/fr.svg" alt="Francais"></a></li> 
+                <li><a href=<?php echo "index.php?controle=".$_GET['controle']."&action=".$_GET['action']."&lang=us"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/us.svg" alt="English"></a></li> 
             </ul> 
         </nav>
     </div>
@@ -31,7 +30,7 @@
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link2']; ?></a></li>
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link3']; ?></a></li>
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link4']; ?></a></li>
-        <li class="header_log"><a href="../guest/login.php"><?php echo $translat['header_linkConn']; ?></a></li>
+        <li class="header_log"><a href="index.php?controle=C_guest&action=p_login"><?php echo $translat['header_linkConn']; ?></a></li>
     </ul>
 </header>
         

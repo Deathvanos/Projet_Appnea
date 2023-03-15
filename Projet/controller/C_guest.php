@@ -12,14 +12,16 @@
 ********************************************************-->
 
 
+<?php 
 
 
-<?php session_start();
-    // Variables pour la maintenance
-    $errorPage="../../view/error.php";
-
-    include '../../view/php/setLang.php';
+    /* Affiche la page d'accueil */
+    function p_main(){require('./Projet/view/guest/main.tpl');}
+    /* Affiche la page de connection */
+    function p_login(){require('./Projet/view/guest/login.tpl');}
         
-    include '../../view/guest/login.html';
+
+
+
     
 ?>

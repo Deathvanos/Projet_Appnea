@@ -16,11 +16,16 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../../../Ressources/css/guest/login.css">
+        <link rel="stylesheet" href="Ressources/css/guest/login.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <!-- background : <link rel="stylesheet" href="../../../Ressources/css/allPage.css" /> -->
+        <!-- background : <link rel="stylesheet" href="Ressources/css/allPage.css" /> -->
     </head>
     <body>
+        <?php    
+        // Bug  : on doit récuperer ces deux variables dans les variables globals 
+        $translat = $GLOBALS['translat'];
+        $errorPage = $GLOBALS['errorPage'];?>
+
         <div class="barre-verticale"></div>
         <div class="login-page">
             <div class="form">
@@ -28,10 +33,10 @@
                 <input type="text" placeholder="Nom d'utilisateur"/>
                 <input type="password" placeholder="Mot de passe"/>
                 <button> 
-                  <a href="../../controller/user/main.php">fastConn</a> <!-- A supprimer quand le button sera ok -->
+                  <a href="index.php?controle=C_user&action=p_main">fastConn</a> <!-- A supprimer quand le button sera ok -->
                   Se connecter 
                 </button>
-                <p class="message">Pas encore de compte ? <a href="../error.php">Créer un compte</a></p>
+                <p class="message">Pas encore de compte ? <a href= <?php echo $errorPage?> >Créer un compte</a></p>
               </form>
             </div>
           </div>

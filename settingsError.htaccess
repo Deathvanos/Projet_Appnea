@@ -1,6 +1,8 @@
 RewriteEngine on
 RewriteBase /
 
+RewriteRule ^article/([0-9]+)/?$ article.php?id=$1 [L]
+
 ErrorDocument 401 /Projet/view/error.php
 ErrorDocument 402 /Projet/view/error.php
 ErrorDocument 403 /Projet/view/error.php

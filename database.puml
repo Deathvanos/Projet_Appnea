@@ -11,18 +11,19 @@
 
 
 table(utilisateur) {
-  primary_key(userName): Unique VARCHAR 
+  primary_key(id): Unique VARCHAR 
   column(typeUse): ENUM {user, modo, admin} 
   column(firstName) : VARCHAR
   column(lastName) : VARCHAR
   column(birthday) : DATE
   column(phoneNumber) : INT
   column(mail) : VARCHAR
+  column(password) : hash_VARCHAR
   column(country) : VARCHAR
   column(city) : VARCHAR
   column(codePostal) : VARCHAR
   column(address) : VARCHAR
-  column(password) : hash_VARCHAR
+  
   
   foreign_key(id_sensor) : VARCHAR
 }
@@ -82,27 +83,28 @@ table(FAQ) {
 
 
 /' 
-Un User a : * nom
-           * prenom
+Un User a :* nom
+           * prénom
            * date de naissance
            * phone
            * mail
            * lieu de vie 
-Pour se connecter, un User doit utiliser son mail et un mot de passe .
+Pour se connecter, un User doit utiliser son mail et un mot de passe.
 Un User doit donc avoir un mail unique ainsi qu'un identifiant unique.
-Un User possede un boitier APPNEA.
+Un User possède un boitier APPNEA.
 
 Un boitier APPNEA contient des capteurs : * capteur cardiaque
                                           * capteur sonore
-                                          * capteur de temperature
+                                          * capteur de température
                                           * capteur d'humidité
-Chaque capteur recolte des données à un moment t
-Un ADMIN peut gérer les capteurs.
+Chaque capteur récolte des données à un moment t
+Un ADMIN peut gérer les capteurs (activation/désactivation).
 
-Un Modo et un Admin son similaire aux User mais ne possedent pas de boitier APPNEA.
-Un Modo peut gerer la FAQ. La FAQ contient des questions et des réponses.
+Un Modo et un Admin sont similaire aux User mais ne possèdent pas de boitier APPNEA.
+Un Modo peut gérer la FAQ. La FAQ contient des questions et des réponses.
 Un ADMIN peut gérer les utilisateurs (ajouter, supprimer, modifier, bannir) (USER et MODO).
-Les utilisateurs sont les USER, MODO, ADMIN'/
+Les utilisateurs sont les USER, MODO, ADMIN
+'/
 
 
 

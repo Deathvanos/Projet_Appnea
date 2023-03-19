@@ -16,7 +16,7 @@
 
 
     /* Affiche la page d'accueil */
-    function p_main(){require('./Projet/view/user/main.tpl');}
+    function main(){require('./Projet/view/admin/main.tpl');}
 
         
 

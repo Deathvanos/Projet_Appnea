@@ -30,7 +30,7 @@
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link2']; ?></a></li>
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link3']; ?></a></li>
         <li><a href=<?php echo $errorPage?>><?php echo $translat['header_link4']; ?></a></li>
-        <li class="header_log"><a href="index.php?controle=C_guest&action=p_login"><?php echo $translat['header_linkConn']; ?></a></li>
+        <li class="header_log"><a href="index.php?controle=guest&action=login"><?php echo $translat['header_linkConn']; ?></a></li>
     </ul>
 </header>
         

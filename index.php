@@ -12,7 +12,7 @@
 ********************************************************-->
 
 <?php  session_unset(); session_start();
-// session_unset() est OPTIONNEL : pour reset la session
+// shift + alt + f : indentation automatique
 
 
     // $controle : le controler à appeler
@@ -22,8 +22,12 @@
         $action= $_GET['action'];
     }
     else {
-        $controle = "C_guest";
-        $action= "p_main";
+        // session_unset() est OPTIONNEL : pour reset la session
+        session_unset();
+        // destroy the session
+        session_destroy();
+        $controle = "guest";
+        $action= "main";
          // Bug  : Les variables ne sont pas accessible dans les .tpl 
         $_GET['controle'] = $controle;
         $_GET['action'] = $action;

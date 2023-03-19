@@ -16,9 +16,8 @@
 
 
     /* Affiche la page d'accueil */
-    function p_main(){require('./Projet/view/guest/main.tpl');}
-    /* Affiche la page de connection */
-    function p_login(){require('./Projet/view/guest/login.tpl');}
+    function main(){require('./Projet/view/user/main.tpl');}
+
         
 
 

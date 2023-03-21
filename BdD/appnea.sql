@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 14 mars 2023 à 14:34
+-- Généré le : mar. 21 mars 2023 à 15:34
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `appnea_test`
+-- Base de données : `appnea`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `user` (
   `id` int(128) NOT NULL,
-  `typeUser` enum('admin','modo','user') NOT NULL,
+  `typeUser` enum('Admin','Modo','User') NOT NULL,
   `firstName` varchar(64) NOT NULL,
   `lastName` varchar(32) NOT NULL,
   `birthday` date NOT NULL,
@@ -46,11 +46,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `typeUser`, `firstName`, `lastName`, `birthday`, `phoneNumber`, `mail`, `H_password`, `country`, `city`, `localisation`) VALUES
-(1, 'user', 'Jean', 'Bon', '1984-04-12', '147258369', 'jeanbon@yahoo.fr', 'jeanbon', 'France', 'Toulouse', 'avenue de la boucherie'),
-(2, 'admin', 'admin', 'thebest', '2000-01-01', '+33 7123456789', 'adminthebest@gmail.com', 'admin', 'France', 'Paris', 'ISEP'),
-(3, 'modo', 'modo', 'theworth', '2023-03-14', '666666666', 'modothwoth@yahoo.fr', 'modo', 'France', 'Perpignan', 'à la rue'),
-(4, 'user', 'pin', 'pon', '1945-06-04', '1418118112', 'pinpon@lespompiers.fr', 'user', 'US', 'New York', 'wall street'),
-(5, 'user', 'bob', 'leponge', '2015-03-10', '789456123', 'bobleponge@lamere.fr', 'bob', 'UK', 'london', 'bridge');
+(1, 'User', 'Jean', 'Bon', '1984-04-12', '147258369', 'jeanbon@yahoo.fr', 'jeanbon123ABC!!!', 'France', 'Toulouse', 'avenue de la boucherie'),
+(2, 'Admin', 'admin', 'thebest', '2000-01-01', '+33 7123456789', 'adminthebest@gmail.com', 'admin123ABC!!!', 'France', 'Paris', 'ISEP'),
+(3, 'Modo', 'modo', 'theworth', '2023-03-14', '666666666', 'modothwoth@yahoo.fr', 'modo123ABC!!!', 'France', 'Perpignan', 'à la rue'),
+(4, 'User', 'pin', 'pon', '1945-06-04', '1418118112', 'pinpon@lespompiers.fr', 'user123ABC!!!', 'US', 'New York', 'wall street'),
+(5, 'User', 'bob', 'leponge', '2015-03-10', '789456123', 'bobleponge@lamere.fr', 'bob123ABC!!!', 'UK', 'london', 'bridge');
 
 --
 -- Index pour les tables déchargées

@@ -14,9 +14,11 @@
 
 <?php 
 
+    // Les admin sont aussi des guests
+    include("Projet/controller/guest.php");
 
     /* Affiche la page d'accueil */
-    function main(){require('./Projet/view/admin/main.tpl');}
+    function mainAdmin(){require('./Projet/view/admin/main.tpl');}
 
         
 

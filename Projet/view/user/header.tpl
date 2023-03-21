@@ -37,13 +37,11 @@
         <li class="header_conn"><nav class="header_login"> 
             <a href="index.php?controle=user&action=mainUser"><i class='bx bxs-user'></i></a>
             <ul>
-                <li><a href="index.php?controle=user&action=errorPage">Profil</a></li> 
+                <li><a href="index.php?controle=user&action=displayProfil">Profil</a></li> 
                 <li><a href='index.php?controle=user&action=errorPage'>Ticket incident</a></li>
                 <li><a href="index.php"><?php echo $txt['header_linkLogout']; ?></a></li> 
             </ul> 
         </nav></li>
-
-        
     </ul>
 </header>
         

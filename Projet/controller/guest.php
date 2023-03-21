@@ -55,9 +55,9 @@
         // Fonction login vers la base de données
         include("Projet/modele/guest.php");
         tryLogin();
-
+        $_SESSION
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        ('is'.$_SESSION['userInfo']["typeUser"])();
+        ('is'.$_SESSION['userInfo']['typeUser'])();
     }
 
 

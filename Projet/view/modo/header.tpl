@@ -30,20 +30,18 @@
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link2']; ?></a></li>
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link3']; ?></a></li>
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
-        <li class="header_log"><a href="index.php"><?php echo $txt['header_linkLogout']; ?></a></li>
-
 
 
         <li><a href='index.php?controle=user&action=errorPage'>Manage FAQ</a></li>
         <li><a href='index.php?controle=user&action=errorPage'>Uuser Mode</a></li>
         <li><a href='index.php?controle=user&action=errorPage'>Find User</a></li>
-        <nav class="header_language"> 
-            <a href=<?php echo "index.php?controle=user&action=errorPage"?>>mainUser</a>
-            <ul class="header_listFlag">
+        <li class="header_conn"><nav class="header_login"> 
+            <a href=<?php echo "index.php?controle=user&action=errorPage"?>><i class='bx bxs-user'></i></a>
+            <ul>
                 <li><a href=<?php echo "index.php?controle=user&action=errorPage"?>>Editer profil</a></li> 
                 <li><a href=<?php echo "index.php"?>><?php echo $txt['header_linkLogout']; ?></a></li> 
             </ul> 
-        </nav>
+        </nav></li>
 
         
 

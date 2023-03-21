@@ -103,11 +103,11 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     align-items: center;
 } 
 
-.header_log { /* Settings des liens du header*/ 
+.header_conn { /* Settings des liens du header*/ 
     background-color: var(--myColor-buttonLogin);
     border-radius: 25px;
     margin: 10px 0;
-} 
+}
 
 .header_left {
     padding: 5px;
@@ -147,6 +147,37 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 .header_language ul li:hover a {
     background-color: #2779BF;
     border-radius: 50%;
+}
+
+
+
+
+
+
+.header_login {
+	position: relative;
+	color: #FFF;
+    margin-inline: 15px;
+}
+
+.header_login ul {
+	display: none;
+}	
+.header_login:hover ul{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: -95px;
+}
+
+.header_login ul li {
+	color: #222538;
+    display: inline-block;
+    float: right;
+    text-align:right;
+}
+.header_login ul li:hover {
+    background-color: var(--myColor-buttonLogin);
 }
 
 

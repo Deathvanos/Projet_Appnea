@@ -30,19 +30,18 @@
         <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link2']; ?></a></li>
         <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link3']; ?></a></li>
         <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
-        <li class="header_log"><a href="index.php">Hold <?php echo $txt['header_linkLogout']; ?></a></li>
 
 
         <li><a href='index.php?controle=user&action=errorPage'>Data Sensor</a></li>
-        <li><a href='index.php?controle=user&action=errorPage'>Ticket incident</a></li>
-        <nav class="header_language"> 
-            <a href=<?php echo "index.php?controle=user&action=errorPage"?>>mainUser</a>
-            
-            <ul class="header_listFlag">
-                <li><a href=<?php echo "index.php?controle=user&action=errorPage"?>>Editer profil</a></li> 
-                <li><a href=<?php echo "index.php"?>><?php echo $txt['header_linkLogout']; ?></a></li> 
+
+        <li class="header_conn"><nav class="header_login"> 
+            <a href="index.php?controle=user&action=mainUser"><i class='bx bxs-user'></i></a>
+            <ul>
+                <li><a href="index.php?controle=user&action=errorPage">Profil</a></li> 
+                <li><a href='index.php?controle=user&action=errorPage'>Ticket incident</a></li>
+                <li><a href="index.php"><?php echo $txt['header_linkLogout']; ?></a></li> 
             </ul> 
-        </nav>
+        </nav></li>
 
         
     </ul>

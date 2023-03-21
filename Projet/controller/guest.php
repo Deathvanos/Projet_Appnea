@@ -19,13 +19,13 @@
     /***** Fonctions pour afficher une page *****/
     /********************************************/
     // Affiche la page d'accueil d'un guest
-    function main(){require('./Projet/view/guest/main.tpl');}
+    function mainGuest(){require('./Projet/view/guest/main.tpl');}
     // Affiche la page de connection 
     function login(){require('./Projet/view/guest/login.tpl');}
     // Après verification de la demande de login, connection de l'utilisateur
-    function isUser(){require('./Projet/view/user/main.tpl');}
-    function isModo(){require('./Projet/view/modo/main.tpl');}
-    function isAdmin(){require('./Projet/view/admin/main.tpl');}
+    function isUser(){header('Location: index.php?controle=user&action=mainUser');}
+    function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
+    function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
 
 
 
@@ -39,12 +39,13 @@
 
         /*** Vérification des infos avant la requete SQL ***/
         // 
-        if (!preg_match("/@/", $mail) | // un mail doit contenir un @
-            (strlen($mdp) < 8 || strlen($mdp) > 64) | // Vérifier la longueur du mot de passe
-            !preg_match("/[A-Z]/", $mdp) | // Vérifier la présence d'une lettre majuscule
-            !preg_match("/[a-z]/", $mdp) | // Vérifier la présence d'une lettre minuscule
-            !preg_match("/[0-9]/", $mdp) | // Vérifier la présence d'un chiffre
-            !preg_match('/[~!@#$%^&*()_+={[}\]|:;<>,.?]/', $mdp) ) { // Vérifier la présence d'un caractère spécial autorisé
+        if (//!preg_match("/@/", $mail) | // un mail doit contenir un @
+          //  (strlen($mdp) < 8 || strlen($mdp) > 64) | // Vérifier la longueur du mot de passe
+          //  !preg_match("/[A-Z]/", $mdp) | // Vérifier la présence d'une lettre majuscule
+           // !preg_match("/[a-z]/", $mdp) | // Vérifier la présence d'une lettre minuscule
+           // !preg_match("/[0-9]/", $mdp) | // Vérifier la présence d'un chiffre
+          //  !preg_match('/[~!@#$%^&*()_+={[}\]|:;<>,.?]/', $mdp) | // Vérifier la présence d'un caractère spécial autorisé
+            !preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) { // La chaîne ne contient que des caractères alphanumériques et certains symboles
             // caractères spéciaux possible ~ ! @ # $ % ^ & * ( ) _ - + = { [ } ] | : ; < > , . ?
                 $_SESSION['errorLog'] = "Mail ou mot de passe non conforme.";
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -57,9 +58,6 @@
 
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
         ('is'.$_SESSION['userInfo']["typeUser"])();
-
-        
-
     }
 
 

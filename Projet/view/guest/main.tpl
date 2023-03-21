@@ -31,23 +31,22 @@
 <body>
     <?php    
     // Bug  : on doit récuperer ces deux variables dans les variables globals 
-    $translat = $GLOBALS['translat'];
-    $errorPage = $GLOBALS['errorPage'];
-    include 'Projet/view/other/header.tpl';?>
+    $txt = $GLOBALS['translat'];
+    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
     <main style="height:830px;">
         <div class="top">
             <div class="top_title">
-                <a href="#OurProduct"><?php echo $translat['index_topLeft_1']; ?></a>
-                <h2><?php echo $translat['index_topLeft_2']; ?></h2>
-                <p><?php echo $translat['index_topLeft_3']; ?></p>
+                <a href="#OurProduct"><?php echo $txt['index_topLeft_1']; ?></a>
+                <h2><?php echo $txt['index_topLeft_2']; ?></h2>
+                <p><?php echo $txt['index_topLeft_3']; ?></p>
             </div>
             <div class="top_Zoneavis">
                 <div class="top_avis">
-                    <p><?php echo $translat['index_topRight_1']; ?></p>
+                    <p><?php echo $txt['index_topRight_1']; ?></p>
                     <div>
                         <img src="Ressources/img/index_autor1.png" alt="Photo_id">
-                        <autor><?php echo $translat['index_topRight_2']; ?></autor>
+                        <autor><?php echo $txt['index_topRight_2']; ?></autor>
                     </div>
                 </div>
                 <div class="top_nextAvis">
@@ -55,16 +54,16 @@
                         <i id="c2" class="bx bxs-circle"></i>
                         <i id="c3" class="bx bxs-circle"></i>
                     </cran>
-                    <a href=<?php echo $errorPage?>><i class='bx bxs-chevron-right-circle'></i></a>
+                    <a href="index.php?controle=guest&action=errorPage"><i class='bx bxs-chevron-right-circle'></i></a>
                 </div>
             </div>
         </div>
         <div class="bottom">
             <div class="bottom_presProd">
-                <h1 id="OurProduct"><?php echo $translat['index_bottom_title']; ?></h1>
-                <p><?php echo $translat['index_bottom_1']; ?></p>
-                <p><?php echo $translat['index_bottom_2']; ?></p>
-                <p><?php echo $translat['index_bottom_3']; ?></p>
+                <h1 id="OurProduct"><?php echo $txt['index_bottom_title']; ?></h1>
+                <p><?php echo $txt['index_bottom_1']; ?></p>
+                <p><?php echo $txt['index_bottom_2']; ?></p>
+                <p><?php echo $txt['index_bottom_3']; ?></p>
             </div>
             <img class="bottom_imgProd" src="Ressources/img/index_phone.png" alt="Photo_screen">
         </div>

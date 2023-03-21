@@ -26,16 +26,15 @@
 <body>
     <?php    
     // Bug  : on doit récuperer ces deux variables dans les variables globals 
-    $translat = $GLOBALS['translat'];
-    $errorPage = $GLOBALS['errorPage'];
-    include 'Projet/view/other/header.tpl';?>
+    $txt = $GLOBALS['translat'];
+    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
     <main style="height:530px;">
         <h1>Bienvenu sur votre page d'acceuil personnel</h1>
         <h2>Laissez moi deviner... vous êtes... un... être manifique (Admin)</h2>
-        <?php echo $translat['userMain'];
+        <?php echo $txt['userMain'];
         echo "<br>Voici la liste des informations concernant votre session :<br>";
-       // Print_r($_SESSION['userInfo']); // _SESSION - translat
+       // Print_r($_SESSION['userInfo']); // _SESSION - txt
         foreach ($_SESSION['userInfo'] as $cle => $valeur) {
             if (!is_numeric($cle)){echo "- ".$cle . " : " . $valeur . "<br>";}  
         }

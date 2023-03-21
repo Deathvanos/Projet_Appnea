@@ -5,6 +5,7 @@
     "header_link3": "Notre équipe",
     "header_link4": "FAQ",
     "header_linkConn": "Connexion",
+    "header_linkLogout": "Se déconnecter",
 
     "footer_p1_title": "Nous contacter",
     "footer_p1_txt1_1": "11 22 33 44 55",
@@ -29,7 +30,9 @@
     "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
     
     "userMain": "Bienvenu sur votre page d'acceuil personnel",
-    
-    "xx": "xxx"
+
+
+    "xx1": "xxx1",
+    "xx2": "xxx2"
     
 }

@@ -14,9 +14,11 @@
 
 <?php 
 
+    // Les user sont aussi des guests
+    include("Projet/controller/guest.php");
 
     /* Affiche la page d'accueil */
-    function main(){require('./Projet/view/user/main.tpl');}
+    function mainUser(){require('./Projet/view/user/main.tpl');}
 
         
 

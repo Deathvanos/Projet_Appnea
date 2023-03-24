@@ -24,17 +24,17 @@
     <link rel="stylesheet" href="Ressources/css/viewer_index.css" />
 </head>
 <body>
-    <?php    
+    <?php
     // Bug  : on doit récuperer ces deux variables dans les variables globals 
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
     <main style="height:530px;">
-        <h1>Bienvenu sur votre page d'acceuil personnel</h1>
+        <h1>Bienvenue sur votre page d'acceuil personnel</h1>
         <h2>Laissez moi deviner... vous êtes... un... pigeon (User)</h2>
         <?php echo $txt['userMain'];
         echo "<br>Voici la liste des informations concernant votre session :<br>";
-        //Print_r($_SESSION['userInfo']); // _SESSION - txt
+        // Print_r($_SESSION['userInfo']); // _SESSION - txt
         foreach ($_SESSION['userInfo'] as $cle => $valeur) {
             if (!is_numeric($cle)){echo "- ".$cle . " : " . $valeur . "<br>";}  
         }

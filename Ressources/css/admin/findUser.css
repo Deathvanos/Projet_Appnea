@@ -1,0 +1,104 @@
+.main {
+    text-align: left;
+    
+}
+
+.main a {
+    color: greenyellow;
+    text-decoration: none;
+}
+.main a:hover {
+    color: lightcoral;
+}
+
+
+
+
+
+
+.tableOverflow {
+    overflow-x: auto;
+}
+
+.tableBox {
+    /*width: 95%;*/
+    border-spacing: 0px 1.25rem;
+    font-size: 11px;
+}
+
+
+.tableBox tr {
+    text-align: left;
+    background-color: #D9D9D9;
+    color: black;
+    text-align: center;
+}
+.tableBox tr:hover {
+    background-color: #91899e;
+
+}
+
+.tableBox tr td {
+    padding-block: 10px;
+    padding-inline: 2px;
+}
+
+.tableBox tr:first-child { 
+    background-color: #91899e;
+}
+
+
+.tableBox tr td:first-child { 
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px;
+    padding-left: 10px;
+}
+.tableBox tr td:nth-child(15) {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px; 
+    padding-right: 10px;
+}
+
+
+.tableBox tr td:nth-child(17) {
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px;
+    padding-left: 10px;
+}
+.tableBox tr td:last-child { 
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px; 
+    padding-inline: 10px;
+    
+}
+
+
+.tableBox tr:nth-child(n+3) td:nth-last-child(-n + 3) { 
+    background-color: var(--myColor-buttonLogin);
+}
+
+.tableBox tr:nth-child(-n+2) td:last-child { 
+    background-color: var(--myColor-buttonLogin);
+}
+
+
+.tblBlanc {
+    visibility: hidden;
+    width: 10%;
+}
+
+.tableBox tr td i { 
+    font-size: 25px;
+}
+
+.tableBox .colorTrue {
+    background-color: green;
+    color: #D9D9D9;
+    font-size: 15px;
+}
+
+.tableBox .colorFalse  {
+    background-color: red;
+    color: #D9D9D9;
+    font-size: 15px;
+}

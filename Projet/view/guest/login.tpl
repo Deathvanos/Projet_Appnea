@@ -19,7 +19,7 @@
         <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
         <link rel="stylesheet" href="Ressources/css/guest/login.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <!-- background : <link rel="stylesheet" href="Ressources/css/allPage.css" /> -->
+        <link rel="stylesheet" href="Ressources/css/allPage.css" />
     </head>
 
     <body>
@@ -46,6 +46,8 @@
 
             </div>
           </div>
+
+          <main class='main' style="height:260px; width:50%; margin-left:50%;"></main>
       
     </body>
 </html>

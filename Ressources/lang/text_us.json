@@ -4,6 +4,12 @@
     "header_link2": "Sensors",
     "header_link3": "Our team",
     "header_link4": "QNA",
+    "header_linkU1": "Data Sensor",
+    "header_linkU2": "Incident ticket",
+    "header_linkA1": "Create user",
+    "header_linkM1": "Manage FAQ",
+    "header_linkAM2": "Find User",
+    "header_link5": "Edit profil",
     "header_linkConn": "Login",
     "header_linkLogout": "Logout",
 
@@ -28,7 +34,13 @@
     "index_bottom_1": "We propose a device allowing to make a first diagnosis to detect sleep apnea in a patient suspecting to be affected by this disorder.",
     "index_bottom_2": "Our product replaces, or completes the sleep calendar that is given during the research phase for sleep disorders in the hospital.",
     "index_bottom_3": "Thus, the patient arrives at a sleep doctor with his analyzes carried out by our device and is immediately taken to the hospital for more in-depth analyzes",
-    
+            
+    "adminMainTitle": "<color>Admin</color> Gestion",
+    "adminMain1": "Create a profil",
+    "adminMain2": "User management",
+
+    "modoMain2": "FAQ management",
+
     "userMain": "Welcome back",
 
 

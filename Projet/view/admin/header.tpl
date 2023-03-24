@@ -26,20 +26,18 @@
         </nav>
     </div>
     <ul class="header_right">
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link1']; ?></a></li>
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link2']; ?></a></li>
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link3']; ?></a></li>
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
+        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link1'];?></a></li>
+        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link2'];?></a></li>
+        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link3'];?></a></li>
 
 
-        <li><a href='index.php?controle=user&action=errorPage'>Manage FAQ</a></li>
-        <li><a href='index.php?controle=user&action=errorPage'>Manage User/Sensor</a></li>
-        <li><a href='index.php?controle=user&action=errorPage'>Find User</a></li>
+        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_linkA1'];?></a></li>
+        <li><a href='index.php?controle=admin&action=findUser'><?php echo $txt['header_linkAM2'];?></a></li>
 
         <li class="header_conn"><nav class="header_login"> 
-            <a href=<?php echo "index.php?controle=user&action=errorPage"?>><i class='bx bxs-user'></i></a>
+            <a href=<?php echo "index.php?controle=admin&action=mainAdmin"?>><i class='bx bxs-user'></i></a>
             <ul>
-                <li><a href=<?php echo "index.php?controle=user&action=errorPage"?>>Editer profil</a></li> 
+                <li><a href=<?php echo "index.php?controle=admin&action=errorPage"?>><?php echo $txt['header_link5'];?></a></li> 
                 <li><a href=<?php echo "index.php"?>><?php echo $txt['header_linkLogout']; ?></a></li> 
             </ul> 
         </nav></li>

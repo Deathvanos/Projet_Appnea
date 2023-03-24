@@ -33,13 +33,14 @@
     /***** Fonctions about le login *****/
     /************************************/
     function testConnection() {
+        console.log("Coucou");
         // Récupération des infos du guest
-        $mail = htmlspecialchars($_POST['mail']);
-        $mdp= htmlspecialchars($_POST['mdp']);
+        //$mail = htmlspecialchars($_POST['mail']);
+        //$mdp= htmlspecialchars($_POST['mdp']);
 
         /*** Vérification des infos avant la requete SQL ***/
         // 
-        if (//!preg_match("/@/", $mail) | // un mail doit contenir un @
+       /* if (//!preg_match("/@/", $mail) | // un mail doit contenir un @
           //  (strlen($mdp) < 8 || strlen($mdp) > 64) | // Vérifier la longueur du mot de passe
           //  !preg_match("/[A-Z]/", $mdp) | // Vérifier la présence d'une lettre majuscule
            // !preg_match("/[a-z]/", $mdp) | // Vérifier la présence d'une lettre minuscule
@@ -55,9 +56,39 @@
         // Fonction login vers la base de données
         include("Projet/modele/guest.php");
         tryLogin();
-        $_SESSION
+        //$_SESSION
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        ('is'.$_SESSION['userInfo']['typeUser'])();
+        ('is'.$_SESSION['userInfo']['typeUser'])();*/
+    }
+    
+    function console_log()
+    {
+        $js_code = 'console.log(' . json_encode(func_get_args(), JSON_HEX_TAG) .
+            ');';
+        $js_code = '<script>' . $js_code . '</script>';
+        echo $js_code;
+    }
+    
+    function connection(){
+        console_log("Nous sommes dans la fonction connection");
+        $mail = htmlspecialchars($_POST['mail']);
+        $mdp= htmlspecialchars($_POST['mdp']);
+        console_log('mail : ', $mail , ' mdp : ', $mdp);
+        if(!preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) { // La chaîne ne contient que des caractères alphanumériques et certains symboles
+            // caractères spéciaux possible ~ ! @ # $ % ^ & * ( ) _ - + = { [ } ] | : ; < > , . ?
+            $_SESSION['errorLog'] = "Mail ou mot de passe non conforme.";
+            header('Location: ' . $_SERVER['HTTP_REFERER']);
+            console_log('Tout est bon');
+            exit();
+        }
+        else{
+            console_log('Pas valide');
+        }
+        
+    }
+    
+    function test(){
+        require("Projet/view/guest/main.tpl");
     }
 
 

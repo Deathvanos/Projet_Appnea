@@ -13,6 +13,7 @@
 
 
 <?php 
+
     // Les user sont aussi des guests
     include("Projet/controller/guest.php");
 
@@ -30,9 +31,5 @@
         require("Projet/view/user.profil.tpl");
     }
 // Penser à concaténer l'adresse
-        
-
-
-
     
 ?>

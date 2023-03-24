@@ -13,30 +13,7 @@
 Style pour la page index
 *********************************************************/
 
-
-/***************-----*************** GENERAL ***************-----***************/
-
-* { /* Settings general de la page */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins"; /*Ne fonctionne pas avec le fichier en local*/
-    /* Couleur de la chartre graphique */
-    --myColor-main-base: #211265;
-    --myColor-main-light: #6C37EE;
-    --myColor-main-dack: #0A0949;
-    --myColor-buttonLogin: #F6593E;
-    --myColor-3-1: #56E5FB;
-    --myColor-2-2: #18A7F9;
-    /* Other color */
-    --myColor-fontColor-main: #fff;
-}
-
-
-
 /***************-----*************** TOP PAGE ***************-----***************/
-
-
 
 .top {
     /* Mettre les éléments en ligne*/

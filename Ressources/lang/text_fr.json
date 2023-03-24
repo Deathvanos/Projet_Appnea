@@ -4,6 +4,12 @@
     "header_link2": "Capteurs",
     "header_link3": "Notre équipe",
     "header_link4": "FAQ",
+    "header_linkU1": "Mes Capteurs",
+    "header_linkU2": "Ticket incident",
+    "header_linkA1": "Creer utilisateur",
+    "header_linkM1": "Manage FAQ",
+    "header_linkAM2": "Chercher utilisateur",
+    "header_link5": "Editer profil",
     "header_linkConn": "Connexion",
     "header_linkLogout": "Deconnexion",
 
@@ -28,7 +34,13 @@
     "index_bottom_1": "Nous proposons un dispositif permettant de faire un premier diagnostic pour détecter l'apnée du sommeil chez un patient suspectant être atteint de ce trouble.",
     "index_bottom_2": "Notre produit remplace, ou complète le calendrier du sommeil qui est donné lors de la phase de recherche de trouble du sommeil à l'hôpital.",
     "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
-    
+        
+    "adminMainTitle": "Gestion <color>admin</color>",
+    "adminMain1": "Création de profil",
+    "adminMain2": "Gérer les utilisateurs",
+
+    "modoMain2": "Gestion de la FAQ",
+
     "userMain": "Bienvenu sur votre page d'acceuil personnel",
 
 

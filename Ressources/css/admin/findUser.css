@@ -1,66 +1,44 @@
-.main {
-    text-align: left;
-    
-}
-
-.main a {
-    color: greenyellow;
-    text-decoration: none;
-}
-.main a:hover {
-    color: lightcoral;
-}
 
 
+/********** Main Settings du tableau **********/
 
-
-
-
-.tableOverflow {
-    overflow-x: auto;
-}
+.tableOverflow {overflow-x: auto;}
 
 .tableBox {
-    /*width: 95%;*/
-    border-spacing: 0px 1.25rem;
+    width: 95%;
     font-size: 11px;
+    /* Espacement entre les lignes du tableau*/
+    border-spacing: 0px 1.25rem;
 }
 
 
 .tableBox tr {
-    text-align: left;
     background-color: #D9D9D9;
     color: black;
     text-align: center;
 }
-.tableBox tr:hover {
-    background-color: #91899e;
-
-}
+.tableBox tr:hover {background-color: #91899e;}
 
 .tableBox tr td {
+    /*format des cases*/
     padding-block: 10px;
     padding-inline: 2px;
 }
-
-.tableBox tr:first-child { 
-    background-color: #91899e;
-}
+.tableBox tr:first-child { background-color: #91899e;}
 
 
+/* Permet les bords des cases arrondis dans le tableau*/
 .tableBox tr td:first-child { 
     border-top-left-radius: 25px; 
     border-bottom-left-radius: 25px;
     padding-left: 10px;
 }
-.tableBox tr td:nth-child(15) {
+.tableBox tr td:nth-child(14) {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px; 
     padding-right: 10px;
 }
-
-
-.tableBox tr td:nth-child(17) {
+.tableBox tr td:nth-child(16) {
     border-top-left-radius: 25px; 
     border-bottom-left-radius: 25px;
     padding-left: 10px;
@@ -69,27 +47,69 @@
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px; 
     padding-inline: 10px;
-    
 }
 
-
+/* Couleurs sur les dernières colonnes du tableau*/
 .tableBox tr:nth-child(n+3) td:nth-last-child(-n + 3) { 
     background-color: var(--myColor-buttonLogin);
 }
-
 .tableBox tr:nth-child(-n+2) td:last-child { 
     background-color: var(--myColor-buttonLogin);
 }
 
-
+/* Gestion de la case vide */
 .tblBlanc {
     visibility: hidden;
-    width: 10%;
+    width: 1%;
 }
 
-.tableBox tr td i { 
-    font-size: 25px;
+.main input, button {cursor: pointer;}
+
+
+/********** boutons de selection **********/
+
+/* Taille des icon*/
+.tableBox tr td i {font-size: 1.5rem;}
+
+
+/* Boutons de paginations */
+.btnParam {
+    background-color: transparent;
+    color: #D9D9D9;
+    padding-inline: 0.5%;
+    font-size: 18px;
 }
+.btnParam:hover {color: gray;}
+
+
+
+/********** Autres styles du tableau **********/
+
+.btnTbl {
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+}
+
+.btnDel {
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+}
+
+.tableBox tr td a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btnTbl:hover,.btnDel:hover, .tableBox tr td a:hover {color: #D9D9D9;}
+
+
+
+
+
+
 
 .tableBox .colorTrue {
     background-color: green;

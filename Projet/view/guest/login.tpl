@@ -33,7 +33,7 @@
 
 
               <!-- https://apcpedagogie.com/controler-les-mots-de-passe/ -->
-              <form name='' class="login-form" action="index.php?controle=guest&action=testConnection" method='post'>
+              <form name='login' class="login-form" action="index.php?controle=guest&action=testConnection" method='post'>
                 <input type="text" placeholder="Nom d'utilisateur" name="mail" required minlength="1"/>
                 <input type="password" placeholder="Mot de passe" name="mdp" required minlength="1"/>
                 <input type="submit" value="Se connecter" />

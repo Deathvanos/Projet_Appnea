@@ -83,7 +83,6 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 
 .header_right li { /* Settings des blocs du header*/
     display: inline-block;
-    padding: 2% 20px;
 } 
 .header_right li:hover {background-color: #2779BF;}
 
@@ -93,6 +92,9 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    padding: 15px;
+    padding-inline:  20px;
+
 }
 
 .header_title { /* Settings des liens du header*/
@@ -106,11 +108,13 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 .header_conn { /* Settings des liens du header*/ 
     background-color: var(--myColor-buttonLogin);
     border-radius: 25px;
-    margin: 10px 0;
+}
+
+.header_conn a { /* Settings des liens du header*/ 
+    padding: 15px 20px;
 }
 
 .header_left {
-    padding: 5px;
     display: flex;
     align-items: center;
 

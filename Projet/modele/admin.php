@@ -1,21 +1,78 @@
 <?php 
 
+
+    function requeteFindUser(){
+        // Ceci est le milieu de la requete
+        // Ne pas oublier d'ajouter le select avant l'appel de cette fonction
+        // Ou un LIMIT à la fin
+        return "FROM user
+        WHERE typeUser like '".($_POST['typeUser']==null? '%':htmlspecialchars($_POST['typeUser']))."'
+        AND firstName like '".($_POST['firstName']==null? '%':htmlspecialchars($_POST['firstName']))."%'
+        AND lastName like '".($_POST['lastName']==null? '%':htmlspecialchars($_POST['lastName']))."%'
+        AND mail like '".($_POST['mail']==null? '%':htmlspecialchars($_POST['mail']))."%'
+        AND birthday like '".($_POST['birthday']==null? '%':htmlspecialchars($_POST['birthday']))."'
+        AND phoneNumber like '".($_POST['phoneNumber']==null? '%':htmlspecialchars($_POST['phoneNumber']))."%'
+        AND country like '".($_POST['country']==null? '%':htmlspecialchars($_POST['country']))."%'
+        AND city like '%".($_POST['city']==null? '%':htmlspecialchars($_POST['city']))."%'
+        AND localisation like '".($_POST['localisation']==null? '%':htmlspecialchars($_POST['localisation']))."%'
+    "; 
+    }
+
+    /**
+     * Affiche les éléments de la table User
+     * A partir de $x1 jusqu'à $x1+$x2
+     * Et en fonction des filtres de requeteFindUser()
+     */
     function printDataBase($x1, $x2){
-        // Création de la connection à la base de données
-        include("Projet/modele/infoDB.php");
+        // Début Connection BdD
+        include_once("Projet/modele/infoDB.php");
         $conn = connectionToDB();
-        
-        // commence à la ligne x1+1 et prend x2 lignes 
-        $sql =  'SELECT * FROM user LIMIT '.$x1.', '.$x2; 
+        // Requete
+        $sql =  "SELECT * ".requeteFindUser()."LIMIT ".$x1.", ".$x2; 
         $res = $conn->query($sql);
-
-        // Fermeture de la base de données
+        // Fin Connection BdD
         $conn = null;
-    
+        // Renvoi le resultat de la Requete
         return $res;
+    }
 
-
+    /**
+     * Compte le nombre d'éléments dans la table User
+     * En fonction des filtres de requeteFindUser()
+     */
+    function nbUserFind(){
+        // Début Connection BdD
+        include_once("Projet/modele/infoDB.php");
+        $conn = connectionToDB();
+        // Requete
+        $sql =  "SELECT COUNT(mail)".requeteFindUser(); 
+        $res = $conn->query($sql);
+        // Fin Connection BdD
+        $conn = null;
+        // Renvoi le resultat de la Requete
+        return $res->fetch()[0];
     }
 
 
-?>
+
+
+    /**
+     * Suppression d'un utilisateur
+     */
+    function removeUser() {
+
+        echo '<div style="color:white;">Confirmation de la suppresion : '.$_POST['delUser'].'</div>';
+        // Début Connection BdD
+        include_once("Projet/modele/infoDB.php");
+        $conn = connectionToDB();
+        // Requete : Suppression de l'utilisateur
+        $query = $conn->prepare("DELETE FROM user WHERE mail = :mail");
+        $query->bindParam(':mail', $_POST['delUser']);
+        $query->execute();
+
+
+        // Fin Connection BdD
+        $conn = null;
+    }
+    
+

@@ -27,23 +27,23 @@
 
 <body>
     <?php
-    // Bug  : on doit récuperer ces deux variables dans les variables globals 
+    // Chargement du header et de la langue de la page
     $txt = $GLOBALS['translat'];
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
-    <main class='main' style="height:740px;">
+
+
+    <main class='main' style=<?php echo "height:".$size."px;" ?>>
+    <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
+
         <h1>Gérer les utilisateurs</h1> 
 
-        
-        <div class='tableOverflow'><table class='tableBox' width=95%>
+        <div class='tableOverflow'>
+        <table class='tableBox'>
 
-
-        
-       
-            <tr align=center>
+            <tr> <!-- Les noms des champs-->
                 <td><i class='bx bxs-user'></i></td>
                 <td>typeUser</td>
-                <td>id</td><!-- A supprimer -->
                 <td>firstName</td>
                 <td>lastName</td>
                 <td>mail</td>
@@ -57,43 +57,39 @@
                 <td>temperature</td>
                 <td>humidité</td>
                 <td class="tblBlanc">...</td>
-                <td colspan="3">Gestion</td>
+                <td colspan="3"><button class="btnTbl" name="validat" value="ok" >Find user</button></td>
             </tr>
-            <tr align=left>
+            
+            <tr> <!-- Les filtres-->
                 <td><i class='bx bxs-user'></i></td>
-                <td><input size=5%></input></td>
-                <td><input type=number style='width: 4em;'></input></td><!-- A supprimer -->
-                <td><input size=5%></input></td>
-                <td><input size=5%></input></td>
-                <td><input type=email size=20%></input></td>
-                <td><input type=date></input></td>
-                <td><input type=tel size=10%></input></td>
-                <td><input size=5%></input></td>
-                <td><input size=5%></input></td>
-                <td><input size=5%></input></td>
-                <td align=center><input type=checkbox></input></td>
-                <td align=center><input type=checkbox></input></td>
-                <td align=center><input type=checkbox></input></td>
-                <td align=center><input type=checkbox></input></td>
+                <td><select name="typeUser"  value=<?php echo $_POST['typeUser'] ?>>
+                    <option value=""></option>
+                    <?php foreach (['User', 'Modo', 'Admin'] as $type) {
+                        $selected = ($_POST['typeUser'] == $type) ? "selected" : "";
+                        echo "<option value='$type' $selected>$type</option>";
+                    }?>
+                </select></td>
+                <td><input name="firstName" size=5% value=<?php echo $_POST['firstName'] ?>></td>
+                <td><input name="lastName" size=5% value=<?php echo $_POST['lastName'] ?>></td>
+                <td><input name="mail" size=15% value=<?php echo $_POST['mail'] ?>></td>
+                <td><input type=date name="birthday" value=<?php echo $_POST['birthday'] ?>></td>
+                <td><input type=tel name="phoneNumber" size=10% value=<?php echo $_POST['phoneNumber'] ?>></td>
+                <td><input name="country" size=5% value=<?php echo $_POST['country'] ?>></td>
+                <td><input name="city" size=5% value=<?php echo $_POST['city'] ?>></td>
+                <td><input name="localisation" size=10% value=<?php echo $_POST['localisation'] ?>></td>
+                <td><input type=checkbox name="cardiaque"></td>
+                <td><input type=checkbox name="sonor"></td>
+                <td><input type=checkbox name="temperature"></td>
+                <td><input type=checkbox name="humidité"></td>
                 <td class="tblBlanc">...</td>
-                <td colspan="3"><a href="#">Find user</a></td>
+                <td colspan="3"><button class="btnTbl" name="validat" value="reset">reset field</button></td>
             </tr>
-
-
-            <?php 
-            // Fonction login vers la base de données
-            include("Projet/modele/admin.php");
-            $result = printDataBase(0, 5);
-
-        
-
-                
-
+            
+            <?php // Les valeurs
             foreach  ($result as $row) {
                 echo '<tr>';
                     echo '<td><i class="bx bxs-user"></i></td>';
                     echo '<td>'.$row['typeUser'].'</td>';
-                    echo '<td>'.$row['id'].'</td>';//A supprimer
                     echo '<td>'.$row['firstName'].'</td>';
                     echo '<td>'.$row['lastName'].'</td>';
                     echo '<td>'.$row['mail'].'</td>';
@@ -107,18 +103,29 @@
                     echo '<td><a href="#" class="colorTrue">true</a></td>';
                     echo '<td><a href="#" class="colorTrue">true</a></td>';
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><a href="#">Delete</a></td>';
-                    echo '<td><a href="#">Gerer</a></td>';
-                    echo '<td><a href="#">mode View</a></td>';
-                    
+                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">Delete</button></td>';
+                    echo '<td><a href="index.php?controle=user&action=errorPage">Gerer</a></td>';
+                    echo '<td><a href="index.php?controle=user&action=errorPage">mode View</a></td>';
                 echo '</tr>';
-            }
-            ?>
+            }?>
 
-        </table></div>
-        <a href=''>Suivant</a> - <a href=''>Précédant</a><br>
-        Afficher par éléments de : <a href=''>5</a> - <a href=''>10</a> - <a href=''>15</a><br>
+        </table>
+        </div>
 
+        <!-- Pagination-->
+        View (<button name="validat" class='btnParam' value="last">Last</button> |
+        <button name="validat" class='btnParam' value="next">Next</button>)
+        (<?php for ($i = 3; $i <= 5; $i++) {
+            echo "<button name='validat' class='btnParam' value='$i' ";
+                if ($i == $nbElements) {echo "disabled ";}
+            echo ">$i</button>";
+            if ($i != $nbElements) {echo " | ";}
+        }?>)
+
+        <input type="hidden" name="posList" value=<?php echo $posList?>>
+        <input type="hidden" name="nbElements" value=<?php echo $nbElements?>>
+        
+    </form>
     </main>
 
     <?php include 'Projet/view/other/footer.tpl'; ?>

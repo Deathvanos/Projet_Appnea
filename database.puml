@@ -13,6 +13,7 @@
 table(utilisateur) {
   primary_key(id): Unique VARCHAR 
   column(typeUse): ENUM {user, modo, admin} 
+  column(photo): image 
   column(firstName) : VARCHAR
   column(lastName) : VARCHAR
   column(birthday) : DATE
@@ -24,12 +25,11 @@ table(utilisateur) {
   column(codePostal) : VARCHAR
   column(address) : VARCHAR
   
-  
   foreign_key(id_sensor) : VARCHAR
 }
 
 
-table(boitierSensors) {
+table(sensorBox) {
   primary_key(id_sensor): Unique VARCHAR 
 
   primary_key(id_cardiaque) : VARCHAR
@@ -66,11 +66,11 @@ table(dataHumidity) {
 
 
 /' WHERE user.id_sensor = sensor.id_sensor ANDD 1-1 for 1-1'/
-utilisateur ||--|| boitierSensors
-boitierSensors ||--|| dataCardiaque
-boitierSensors ||--|| dataSonore
-boitierSensors ||--|| dataTemperature
-boitierSensors ||--|| dataHumidity
+utilisateur ||--|| sensorBox : 1-1
+sensorBox ||--|{ dataCardiaque : 1-*
+sensorBox ||--|{ dataSonore : 1-*
+sensorBox ||--|{ dataTemperature : 1-*
+sensorBox ||--|{ dataHumidity : 1-*
 
 
 
@@ -106,6 +106,18 @@ Un ADMIN peut gérer les utilisateurs (ajouter, supprimer, modifier, bannir) (US
 Les utilisateurs sont les USER, MODO, ADMIN
 '/
 
+/'
+Comment se passe le transfère des data de la carte au serveur ?
+  - 1 ligne dans la base = 1 seconde et une valeur (surcharge de la co)
+  - 1 ligne dans la base = 1 nuit (actualisation seulement quand la carte est off)
+  - 1 ligne dans la base = 1 heure avec toutes les données à la seconde
+  - 1 ligne dans la base = 1 ...
 
+on peut donc avoir plusieurs type de colonne
+  * date - json/csv
+  * date - value
+  * json/csv avec date+date compris
+
+'/
 
 @enduml

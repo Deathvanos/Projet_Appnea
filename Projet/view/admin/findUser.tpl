@@ -76,7 +76,7 @@
                 <td><input type=tel name="phoneNumber" size=10% value=<?php echo $_POST['phoneNumber'] ?>></td>
                 <td><input name="country" size=5% value=<?php echo $_POST['country'] ?>></td>
                 <td><input name="city" size=5% value=<?php echo $_POST['city'] ?>></td>
-                <td><input name="localisation" size=10% value=<?php echo $_POST['localisation'] ?>></td>
+                <td><input name="address" size=10% value=<?php echo $_POST['address'] ?>></td>
                 <td><input type=checkbox name="cardiaque"></td>
                 <td><input type=checkbox name="sonor"></td>
                 <td><input type=checkbox name="temperature"></td>
@@ -97,7 +97,7 @@
                     echo '<td>'.$row['phoneNumber'].'</td>';
                     echo '<td>'.$row['country'].'</td>';
                     echo '<td>'.$row['city'].'</td>';
-                    echo '<td>'.$row['localisation'].'</td>';
+                    echo '<td>'.$row['address'].'</td>';
                     echo '<td><a href="#" class="colorTrue">true</a></td>';
                     echo '<td><a href="#" class="colorFalse">false</a></td>';
                     echo '<td><a href="#" class="colorTrue">true</a></td>';

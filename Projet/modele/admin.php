@@ -5,7 +5,7 @@
         // Ceci est le milieu de la requete
         // Ne pas oublier d'ajouter le select avant l'appel de cette fonction
         // Ou un LIMIT à la fin
-        return "FROM user
+        return "FROM utilisateur
         WHERE typeUser like '".($_POST['typeUser']==null? '%':htmlspecialchars($_POST['typeUser']))."'
         AND firstName like '".($_POST['firstName']==null? '%':htmlspecialchars($_POST['firstName']))."%'
         AND lastName like '".($_POST['lastName']==null? '%':htmlspecialchars($_POST['lastName']))."%'
@@ -14,7 +14,7 @@
         AND phoneNumber like '".($_POST['phoneNumber']==null? '%':htmlspecialchars($_POST['phoneNumber']))."%'
         AND country like '".($_POST['country']==null? '%':htmlspecialchars($_POST['country']))."%'
         AND city like '%".($_POST['city']==null? '%':htmlspecialchars($_POST['city']))."%'
-        AND localisation like '".($_POST['localisation']==null? '%':htmlspecialchars($_POST['localisation']))."%'
+        AND address like '".($_POST['address']==null? '%':htmlspecialchars($_POST['address']))."%'
     "; 
     }
 
@@ -66,7 +66,7 @@
         include_once("Projet/modele/infoDB.php");
         $conn = connectionToDB();
         // Requete : Suppression de l'utilisateur
-        $query = $conn->prepare("DELETE FROM user WHERE mail = :mail");
+        $query = $conn->prepare("DELETE FROM utilisateur WHERE mail = :mail");
         $query->bindParam(':mail', $_POST['delUser']);
         $query->execute();
 

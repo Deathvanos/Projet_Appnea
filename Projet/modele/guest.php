@@ -14,10 +14,10 @@
         $conn = connectionToDB();
         
         // Regarde si le mail et le mdp existent dans la base de données
-        $sql =  'SELECT * FROM user WHERE mail=:mail AND H_password=:H_password';
+        $sql =  'SELECT * FROM utilisateur WHERE mail=:mail AND password=:password';
         $commande = $conn->prepare($sql);
         $commande->bindParam(':mail', $_POST['mail']); // pour les requetes sql avec variables externe
-        $commande->bindParam(':H_password', $_POST['mdp']); // pour les requetes sql avec variables externe
+        $commande->bindParam(':password', $_POST['mdp']); // pour les requetes sql avec variables externe
         $bool = $commande->execute();
         $resultat = $commande->fetch();
 

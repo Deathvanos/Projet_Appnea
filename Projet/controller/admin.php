@@ -97,7 +97,7 @@
             $_POST['phoneNumber'] = null;
             $_POST['country'] = null;
             $_POST['city'] = null;
-            $_POST['localisation'] = null;
+            $_POST['address'] = null;
         }
                 
         // Va chercher la table User

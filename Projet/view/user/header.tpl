@@ -26,22 +26,24 @@
         </nav>
     </div>
     <ul class="header_right">
-        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link1']; ?></a></li>
-        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link2']; ?></a></li>
-        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link3']; ?></a></li>
-        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
+        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link1'];?></a></li>
+        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link2'];?></a></li>
+        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link3'];?></a></li>
+        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_link4'];?></a></li>
 
 
-        <li><a href='index.php?controle=user&action=errorPage'>Data Sensor</a></li>
+        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_linkU1'];?></a></li>
 
         <li class="header_conn"><nav class="header_login"> 
             <a href="index.php?controle=user&action=mainUser"><i class='bx bxs-user'></i></a>
             <ul>
-                <li><a href="index.php?controle=user&action=displayProfil">Profil</a></li> 
-                <li><a href='index.php?controle=user&action=errorPage'>Ticket incident</a></li>
+                <li><a href="index.php?controle=user&action=displayProfil"><?php echo $txt['header_link5'];?></a></li> 
+                <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_linkU2'];?></a></li>
                 <li><a href="index.php"><?php echo $txt['header_linkLogout']; ?></a></li> 
             </ul> 
         </nav></li>
+
+        
     </ul>
 </header>
         

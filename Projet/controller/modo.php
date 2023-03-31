@@ -14,9 +14,8 @@
 
 <?php 
 
-    // Les modo sont aussi des guests
-    include("Projet/controller/guest.php");
-
+    // Affiche la page d'accueil d'un guest
+    function mainGuest(){require('./Projet/view/guest/main.tpl');}
     /* Affiche la page d'accueil */
     function mainModo(){require('./Projet/view/modo/main.tpl');}
 

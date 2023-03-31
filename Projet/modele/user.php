@@ -1,12 +1,14 @@
-<?php
+﻿<?php
 
 function getProfil($mail){
-    $sql = "SELECT firstName, lastName, birthday, phoneNumber, mail, country, city, localisation FROM user
+    require("Projet/modele/infoDB.php");
+    $conn = connectionToDB();
+    $sql = "SELECT firstName, lastName, birthday, phoneNumber, mail, country, city, address, photo FROM utilisateur
             WHERE mail = :mail";
     try{
-        $commande = $pdo->prepare($sql);
+        $commande = $conn->prepare($sql);
         $commande->bindParam(':mail', $mail, PDO::PARAM_STR);
-        $bool->excute($commande);
+        $bool = $commande->execute();
         if($bool){
             $resultat = $commande->fetchAll(PDO::FETCH_ASSOC); //tableau d'enregistrements
             return $resultat;

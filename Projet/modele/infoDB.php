@@ -3,7 +3,7 @@
     function connectionToDB() {
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $dbname = "appnea";
     
         try {
@@ -12,8 +12,9 @@
             return $conn;
         } 
         catch (PDOException $e) {
-            header('Location: '.$GLOBALS['errorPage']);
-            //echo "Connection failed: " . $e->getMessage();return false;
+            errorPage();
+            echo "Connection failed: " . $e->getMessage();
+            return false;
         }
     }
 

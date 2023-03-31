@@ -17,11 +17,5 @@
     // Affiche la page d'accueil d'un guest
     function mainGuest(){require('./Projet/view/guest/main.tpl');}
     /* Affiche la page d'accueil */
-    function mainUser(){require('./Projet/view/user/main.tpl');}
-
-        
-
-
-
-    
+    function mainUser(){require('./Projet/view/user/main.tpl');}    
 ?>

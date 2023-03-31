@@ -17,8 +17,6 @@
     // Redirection vers la Page d'erreur
     function errorPage(){require('./Projet/view/other/error.html');}
 
-
-
     // $controle : le controler à appeler
     // $action : la fonction (présente dans le controler) à utiliser pour afficher une page
     if (isset($_GET['controle']) & isset($_GET['action'])) {

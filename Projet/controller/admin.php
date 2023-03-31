@@ -19,11 +19,4 @@
     /* Affiche la page d'accueil */
     function mainAdmin(){require('./Projet/view/admin/main.tpl');}
     /* Affiche la page de findUser */
-    function findUser(){require('./Projet/view/admin/findUser.tpl');}
-
-        
-
-
-
-    
-?>
+    function findUser(){require('./Projet/view/admin/findUser.tpl');}?>

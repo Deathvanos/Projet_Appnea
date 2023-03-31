@@ -53,6 +53,7 @@ main {
     height: 830px; /*522*/
     /* Ajout un espace entre le bloc et le bord de l'ecran gauche*/
     padding-left: 2.5%;
+    padding-right: 2.5%;
     
 }
 

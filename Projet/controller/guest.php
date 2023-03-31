@@ -23,9 +23,9 @@
     // Affiche la page de connection 
     function login(){require('./Projet/view/guest/login.tpl');}
     // Après verification de la demande de login, connection de l'utilisateur
-    function isUser(){header('Location: index.php?controle=user&action=mainUser');}
-    function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
-    function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
+    function User(){header('Location: index.php?controle=user&action=mainUser');}
+    function Modo(){header('Location: index.php?controle=modo&action=mainModo');}
+    function Admin(){header('Location: index.php?controle=admin&action=mainAdmin');}
 
 
 
@@ -57,7 +57,7 @@
         tryLogin();
 
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        ('is'.$_SESSION['userInfo']["typeUser"])();
+        $_SESSION['userInfo']["typeUser"]();
     }
 
 

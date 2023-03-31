@@ -1,11 +1,11 @@
 <?php
 
     function connectionToDB() {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "appnea";
-    
+        $servername = "db";
+        $username = getenv('MYSQL_USER');
+        $password = getenv('MYSQL_PASSWORD');
+        $dbname = getenv('MYSQL_USER');
+
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

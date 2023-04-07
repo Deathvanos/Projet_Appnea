@@ -62,9 +62,10 @@
             
             <tr> <!-- Les filtres-->
                 <td><i class='bx bxs-user'></i></td>
-                <td><select name="typeUser"  value=<?php echo $_POST['typeUser'] ?>>
+                <td><select name="typeUser"?>>
                     <option value=""></option>
-                    <?php foreach (['User', 'Modo', 'Admin'] as $type) {
+                    <?php // Mise en place de la boite à selection
+                        foreach (['User', 'Modo', 'Admin'] as $type) {
                         $selected = ($_POST['typeUser'] == $type) ? "selected" : "";
                         echo "<option value='$type' $selected>$type</option>";
                     }?>
@@ -77,10 +78,18 @@
                 <td><input name="country" size=5% value=<?php echo $_POST['country'] ?>></td>
                 <td><input name="city" size=5% value=<?php echo $_POST['city'] ?>></td>
                 <td><input name="address" size=10% value=<?php echo $_POST['address'] ?>></td>
-                <td><input type=checkbox name="cardiaque"></td>
-                <td><input type=checkbox name="sonor"></td>
-                <td><input type=checkbox name="temperature"></td>
-                <td><input type=checkbox name="humidité"></td>
+
+                <?php foreach (['cardiaque', 'sonor', 'temperature', "humidity"] as $sensor) { // Pour chaque capteur?>
+                    <td><select name=<?php echo $sensor."Stat"?>>
+                        <option value=""></option>
+                        <?php // Mise en place de la boite à selection
+                            foreach (['Active', 'Lock', '.'] as $etat) {
+                            $selected = ($_POST[$sensor."Stat"] == $etat) ? "selected" : "";
+                            echo "<option value='$etat' $selected>$etat</option>";
+                        }?>
+                    </select></td>
+                <?php }?>
+
                 <td class="tblBlanc">...</td>
                 <td colspan="3"><button class="btnTbl" name="validat" value="reset">reset field</button></td>
             </tr>
@@ -98,10 +107,12 @@
                     echo '<td>'.$row['country'].'</td>';
                     echo '<td>'.$row['city'].'</td>';
                     echo '<td>'.$row['address'].'</td>';
-                    echo '<td><a href="#" class="colorTrue">true</a></td>';
-                    echo '<td><a href="#" class="colorFalse">false</a></td>';
-                    echo '<td><a href="#" class="colorTrue">true</a></td>';
-                    echo '<td><a href="#" class="colorTrue">true</a></td>';
+
+                    printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
+                    printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
+                    printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
+                    printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
+        
                     echo '<td class="tblBlanc">...</td>';
                     echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">Delete</button></td>';
                     echo '<td><a href="index.php?controle=user&action=errorPage">Gerer</a></td>';

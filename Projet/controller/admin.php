@@ -68,7 +68,7 @@
                 case 'next':
                     $nbUser = nbUserFind();
                     $posList += $nbElements;
-                    if ($posList>= $nbUser) {$posList=$nbUser-$nbElements;}
+                    if ($posList>= $nbUser) {$posList-=$nbElements;}
                     if ($posList<0) {$posList=0;}
                     break;
                 // Affiche les n éléments précédant
@@ -85,7 +85,7 @@
             }
         }
 
-        // On arrive sur la page pour la first time or reset page
+        // On arrive sur la page pour la first time or reset page - Il n'y a pas de filtre
         if(!isset($_POST['mail'])) {
             $nbElements = 5;
             $posList = 0;
@@ -98,6 +98,10 @@
             $_POST['country'] = null;
             $_POST['city'] = null;
             $_POST['address'] = null;
+            $_POST['cardiaqueStat'] = null;
+            $_POST['sonorStat'] = null;
+            $_POST['temperatureStat'] = null;
+            $_POST['humidityStat'] = null;
         }
                 
         // Va chercher la table User
@@ -109,6 +113,22 @@
                 
         require('./Projet/view/admin/findUser.tpl');
     }
+
+
+
+    function printInfoSensor($sensor, $isUsed, $isNotBroken) {
+        if ($sensor!=null) {
+            if ($isUsed==1 & $isNotBroken==1) {echo '<td><p class="colorTrue">active</p></td>';}
+            else {echo '<td><p class="colorFalse">lock</p></td>';}
+        }
+        else {echo '<td><p">.</p></td>';}
+    }
+
+
+
+
+
+
 
     
     

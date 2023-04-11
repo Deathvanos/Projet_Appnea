@@ -207,8 +207,6 @@ text-decoration: justify;
 background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-
-
 }
 
 
@@ -237,6 +235,8 @@ background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
     position: absolute;
         top: 1000px;
         left: 235px;
+        height: 120%;
+        width: 120%;
 }
 
 .imageEliot{
@@ -260,35 +260,35 @@ background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
 .linkEliot{
     position: absolute;
         top: 250px;
-        left: 70px;
+        left: 75px;
 }
 
 .linkFanny{
     position: absolute;
         top: 230px;
-        left: 80px;
+        left: 85px;
 }
 
 .linkCharles{
     position: absolute;
         top: 240px;
-        left: 75px;
+        left: 80px;
 }
 
 .linkPrasanaa{
     position: absolute;
         top: 235px;
-        left: 95px;
+        left: 100px;
 }
 
 .linkFlore{
     position: absolute;
         top: 215px;
-        left: 80px;
+        left: 85px;
 }
 
 .linkFares{
     position: absolute;
         top: 230px;
-        left: 70px;
+        left: 75px;
 }

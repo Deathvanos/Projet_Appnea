@@ -12,8 +12,7 @@
 
 Style pour la page Equipe
 *********************************************************/
-
-/***************-----*************** TOP PAGE ***************-----***************/
+/*
 
 
 body {
@@ -21,40 +20,40 @@ body {
   }
 
 .top {
-    /* Mettre les éléments en ligne*/
+    /* Mettre les éléments en ligne*//*
     display: flex;
     align-items: center;
-    /* Ajouter un espace vide en haut et en bas de cette élément*/
+    /* Ajouter un espace vide en haut et en bas de cette élément*//*
     margin-top: 50px;
     margin-bottom: 225px;
 }
 
-.top_title {
-    /*Prend toute la moitié gauche de l'ecran*/
+.top_title {/*
+    /*Prend toute la moitié gauche de l'ecran*//*
     width: 50%;
-    /*Ajout un trait de bordure avec l'élément de droite*/
+    /*Ajout un trait de bordure avec l'élément de droite*//*
     border-right: 1px solid var(--myColor-fontColor-main);
 }
 
-.top_title a { /*Transforme le lien en un bouton*/
-    /*Couleur de fond et de texte sans surlignement*/
+.top_title a { /*Transforme le lien en un bouton*//*
+    /*Couleur de fond et de texte sans surlignement*//*
     background-color: var(--myColor-buttonLogin);
     color: var(--myColor-fontColor-main);
     text-decoration: none;
-    /*Angle des coins du rectangle*/
+    /*Angle des coins du rectangle*//*
     border-radius: 10px;
-    /*Espacement dans le rectangle*/
+    /*Espacement dans le rectangle*//*
     padding-inline: 20px;
     padding-block: 10px;
     font-weight:lighter;
 }
 .top_title a:hover {background-color: #2779BF;}
 
-.top_title h2 {
-    /*Espace entre titre et les éléments en haut et en base*/
-    margin-top: 20px;
+.top_title h2 {/*
+    /*Espace entre titre et les éléments en haut et en base*//*
+    margin-top: 20px;/*
     margin-bottom: 20px;
-    /*Epaisseur du texte*/
+    /*Epaisseur du texte*//*
     font-weight:500;
 }
 
@@ -68,7 +67,7 @@ body {
 
 
 .top_Zoneavis {
-    /*Prend toute la moitié droite de l'ecran*/
+    /*Prend toute la moitié droite de l'ecran*//*
     width: 50%;
     padding-inline: 12%;
 }
@@ -77,22 +76,22 @@ body {
 
 .top_avis div {
     margin-top: 25px;
-    /*Aligner les boites horizontalement et les centre*/
+    /*Aligner les boites horizontalement et les centre*//*
     display: flex;
     align-items: center;
 }
 
 .top_avis div img{
     border-radius: 30px;
-    border: 2px solid var(--myColor-fontColor-main);
-    /*Taille de l'image*/
+    border: 2px solid var(--myColor-fontColor-main);/*
+    /*Taille de l'image*//*
     max-width: 15%;
 }
 
 .top_avis div autor{
     font-size: 11px;
     font-style: italic;
-    /*Espacement <-->*/
+    /*Espacement <-->*//*
     margin-left: 10px;
     margin-right: 50px;
 }
@@ -107,7 +106,7 @@ body {
 .top_nextAvis cran i {font-size: 8px;}
 
 .top_nextAvis a {
-    /*Déplace le bouton flèche en dehors de son cadre en haut*/
+    /*Déplace le bouton flèche en dehors de son cadre en haut*//*
     position: relative;
     top: -50px;
 }
@@ -145,109 +144,107 @@ body {
     height: 300px;
     margin-right: 200px;
 }
+*/
 
-
-#dégradé{
+#dégradé {
     background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    
-    }
+}
 
-#Contacter{
+#Contacter {
     position: absolute;
-width: 417px;
-height: 40px;
-left: 527px;
-top: 182px;
+    width: 417px;
+    height: 40px;
+    left: 527px;
+    top: 182px;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 40px;
-line-height: 100%;
-text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 
-      .rectangle {
-        position: absolute;
-        width: 619.67px;
-        height: 38.69px;
-        left: 209px;
-        top: 358.93px;
-        
-        background: rgba(255, 255, 255, 0.17);
-        border-radius: 72px;
-      }
-      
-      .rectangle textarea {
-        width: 100%;
-        height: 100%;
-        border: none;
-        background-color: transparent;
-        padding: 10px;
-        color: white;
-      }
+.rectangle {
+    position: absolute;
+    width: 619.67px;
+    height: 38.69px;
+    left: 209px;
+    top: 358.93px;
 
-      .objet {
-        position: absolute;
-width: 101.49px;
-height: 23.32px;
-left: 236.02px;
-top: 329px;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 72px;
+}
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 100%;
+.rectangle textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+}
 
-color: #89EDFB;
+.objet {
+    position: absolute;
+    width: 101.49px;
+    height: 23.32px;
+    left: 236.02px;
+    top: 329px;
+
+    /*font-family: 'Poppins';*/
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+    color: #89EDFB;
  }
 
  .rectanglebleu{
- display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 32px;
-gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 32px;
+    gap: 8px;
 
-position: absolute;
-width: 139px;
-height: 44px;
-left: 1124px;
-top: 315px;
+    position: absolute;
+    width: 139px;
+    height: 44px;
+    left: 1124px;
+    top: 315px;
 
-background: #423EF6;
-border-radius: 50px;
+    background: #423EF6;
+    border-radius: 50px;
  }
 
 
 .rectanglebleu span {
     font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 140%;
-  }
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+}
 
-  .rectanglequestion{
-  position: absolute;
-width: 617px;
-height: 131px;
-left: 209px;
-top: 500px;
+.rectanglequestion{
+    position: absolute;
+    width: 617px;
+    height: 131px;
+    left: 209px;
+    top: 500px;
 
-background: rgba(255, 255, 255, 0.17);
-border-radius: 72px;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 72px;
 
-  }
+}
 
-  .rectanglequestion textarea {
+.rectanglequestion textarea {
     width: 98%;
     height: 98%;
     border: none;
@@ -256,10 +253,9 @@ border-radius: 72px;
     color: white;
     padding-left: 40px;
     padding-top: 20px;
-  }
+}
 
-.question{
-
+.question {
     position: absolute;
     width: 181.67px;
     height: 23.32px;
@@ -275,40 +271,40 @@ border-radius: 72px;
     color: #89EDFB;
 }
 
-.rectangleorange{
+.rectangleorange {
     display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 32px;
-gap: 8px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 32px;
+    gap: 8px;
 
-position: absolute;
-width: 151.61px;
-height: 39.24px;
-left: 207px;
-top: 680px;
+    position: absolute;
+    width: 151.61px;
+    height: 39.24px;
+    left: 207px;
+    top: 680px;
 
-background: #F6593E;
-border-radius: 50px;
+    background: #F6593E;
+    border-radius: 50px;
 }
 
 
 .rectangleorange span {
- width: 80%;
-height: 80%;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 140%;
+    width: 80%;
+    height: 80%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
 
-text-align: center;
+    text-align: center;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 
-flex: none;
-order: 0;
-flex-grow: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 

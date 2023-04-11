@@ -22,7 +22,11 @@
     function mainGuest(){require('./Projet/view/guest/main.tpl');}
     // Affiche la page de connection 
     function login(){require('./Projet/view/guest/login.tpl');}
+
+    // Header
     function teamsPage(){require('./Projet/view/guest/teams.tpl');}
+
+    // Footer
     function contactPage(){require('./Projet/view/guest/contact.tpl');}
     // Après verification de la demande de login, connection de l'utilisateur
 

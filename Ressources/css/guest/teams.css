@@ -15,46 +15,46 @@ Style pour la page Equipe
 
 /***************-----*************** TOP PAGE ***************-----***************/
 
-
+/*
 body {
     font-family: "Poppins", sans-serif;
   }
 
 .top {
-    /* Mettre les éléments en ligne*/
+    /* Mettre les éléments en ligne*//*
     display: flex;
     align-items: center;
-    /* Ajouter un espace vide en haut et en bas de cette élément*/
+    /* Ajouter un espace vide en haut et en bas de cette élément*//*
     margin-top: 50px;
     margin-bottom: 225px;
 }
 
 .top_title {
-    /*Prend toute la moitié gauche de l'ecran*/
+    /*Prend toute la moitié gauche de l'ecran*//*
     width: 50%;
-    /*Ajout un trait de bordure avec l'élément de droite*/
+    /*Ajout un trait de bordure avec l'élément de droite*//*
     border-right: 1px solid var(--myColor-fontColor-main);
 }
 
-.top_title a { /*Transforme le lien en un bouton*/
-    /*Couleur de fond et de texte sans surlignement*/
+.top_title a { /*Transforme le lien en un bouton*//*
+    /*Couleur de fond et de texte sans surlignement*//*
     background-color: var(--myColor-buttonLogin);
     color: var(--myColor-fontColor-main);
-    text-decoration: none;
-    /*Angle des coins du rectangle*/
+    text-decoration: none;/*
+    /*Angle des coins du rectangle*//*
     border-radius: 10px;
-    /*Espacement dans le rectangle*/
-    padding-inline: 20px;
+    /*Espacement dans le rectangle*//**//*
+    padding-inline: 20px;/*
     padding-block: 10px;
     font-weight:lighter;
 }
 .top_title a:hover {background-color: #2779BF;}
 
 .top_title h2 {
-    /*Espace entre titre et les éléments en haut et en base*/
+    /*Espace entre titre et les éléments en haut et en base*//*
     margin-top: 20px;
     margin-bottom: 20px;
-    /*Epaisseur du texte*/
+    /*Epaisseur du texte*//*
     font-weight:500;
 }
 
@@ -68,16 +68,16 @@ body {
 
 
 .top_Zoneavis {
-    /*Prend toute la moitié droite de l'ecran*/
+    /*Prend toute la moitié droite de l'ecran*//*
     width: 50%;
     padding-inline: 12%;
 }
 
 
 
-.top_avis div {
+.top_avis div {/*
     margin-top: 25px;
-    /*Aligner les boites horizontalement et les centre*/
+    /*Aligner les boites horizontalement et les centre*//*
     display: flex;
     align-items: center;
 }
@@ -85,14 +85,14 @@ body {
 .top_avis div img{
     border-radius: 30px;
     border: 2px solid var(--myColor-fontColor-main);
-    /*Taille de l'image*/
+    /*Taille de l'image*//*
     max-width: 15%;
 }
 
 .top_avis div autor{
     font-size: 11px;
     font-style: italic;
-    /*Espacement <-->*/
+    /*Espacement <-->*//*
     margin-left: 10px;
     margin-right: 50px;
 }
@@ -107,7 +107,7 @@ body {
 .top_nextAvis cran i {font-size: 8px;}
 
 .top_nextAvis a {
-    /*Déplace le bouton flèche en dehors de son cadre en haut*/
+    /*Déplace le bouton flèche en dehors de son cadre en haut*//*
     position: relative;
     top: -50px;
 }
@@ -144,17 +144,16 @@ body {
 .bottom_imgProd {
     height: 300px;
     margin-right: 200px;
-}
+}*/
 
-#violet{
+
+
+#violet {
     color: #6C37EE;
 }
 
 
-.equipe_texte{
-
-
-
+.equipe_texte {
 height: 600px;
 display: flex;
 align-items: center;
@@ -162,48 +161,39 @@ justify-content: center;
 flex-direction: column;
 padding: 0;
 margin: 0;
-
-
 }
 
-.image{
-    
+.image {
     height: 284px;
     width: 413px;
     margin: 20px;
 }
 
-.equipe{
+.equipe {
     height: 284px;
     width: 413px;
     margin: 20px;
 }
 
-h2{font-size: 35px;
+h2 {font-size: 35px;}
 
-}
-
-.texte{
+.texte {
     width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px;
-
 }
 
-.paragraphe-equipe{
-    
+.paragraphe-equipe {
 text-decoration: justify;
-
 }
 
-#titre_equipe{
-    
+#titre_equipe {
     margin: 20px;
 }
 
-#dégradé{
+#dégradé {
 background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -211,84 +201,83 @@ background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
 
 
 
-.imageFares{
-
-        position: absolute;
-        top: 690px;
-        left: 250px;
+.imageFares {
+    position: absolute;
+    top: 690px;
+    left: 250px;
 
       
 }
-.imageFlore{
+.imageFlore {
     position: absolute;
-        top: 700px;
-        left: 640px;
+    top: 700px;
+    left: 640px;
 }
 
-.imagePrasanaa{
+.imagePrasanaa {
     position: absolute;
-        top: 680px;
-        left: 1050px;
+    top: 680px;
+    left: 1050px;
 }
 
-.imageCharles{
+.imageCharles {
     position: absolute;
-        top: 1000px;
-        left: 235px;
-        height: 120%;
-        width: 120%;
+    top: 1000px;
+    left: 235px;
+    height: 120%;
+    width: 120%;
 }
 
-.imageEliot{
+.imageEliot {
     position: absolute;
-        top: 990px;
-        left: 640px;
+    top: 990px;
+    left: 640px;
 }
 
-.imageFanny{
+.imageFanny {
     position: absolute;
-        top: 1010px;
-        left: 1070px;
+    top: 1010px;
+    left: 1070px;
 }
 
-.imageClient{
+.imageClient {
     position: absolute;
     top: 1300px;
     left: 635px;
 }
 
-.linkEliot{
+.linkEliot {
     position: absolute;
-        top: 250px;
-        left: 75px;
+    top: 250px;
+    left: 75px;
 }
 
-.linkFanny{
+.linkFanny {
     position: absolute;
-        top: 230px;
-        left: 85px;
+    top: 230px;
+    left: 85px;
 }
 
-.linkCharles{
+.linkCharles {
     position: absolute;
-        top: 240px;
-        left: 80px;
+    top: 240px;
+    left: 80px;
 }
 
-.linkPrasanaa{
+.linkPrasanaa {
     position: absolute;
-        top: 235px;
-        left: 100px;
+    top: 235px;
+    left: 100px;
 }
 
-.linkFlore{
+.linkFlore {
     position: absolute;
-        top: 215px;
-        left: 85px;
+    top: 215px;
+    left: 85px;
 }
 
-.linkFares{
+.linkFares {
     position: absolute;
-        top: 230px;
-        left: 75px;
+    top: 230px;
+    left: 75px;
 }

@@ -146,149 +146,170 @@ body {
     margin-right: 200px;
 }
 
-#violet{
-    color: #6C37EE;
-}
-
-
-.equipe_texte{
-
-
-
-height: 600px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 0;
-margin: 0;
-
-
-}
-
-.image{
-    
-    height: 284px;
-    width: 413px;
-    margin: 20px;
-}
-
-.equipe{
-    height: 284px;
-    width: 413px;
-    margin: 20px;
-}
-
-h2{font-size: 35px;
-
-}
-
-.texte{
-    width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-
-}
-
-.paragraphe-equipe{
-    
-text-decoration: justify;
-
-}
-
-#titre_equipe{
-    
-    margin: 20px;
-}
 
 #dégradé{
-background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    
+    }
 
+#Contacter{
+    position: absolute;
+width: 417px;
+height: 40px;
+left: 527px;
+top: 182px;
 
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 100%;
+text-align: center;
+
+color: #FFFFFF;
 }
 
 
-
-.imageFares{
-
+      .rectangle {
         position: absolute;
-        top: 690px;
-        left: 250px;
+        width: 619.67px;
+        height: 38.69px;
+        left: 209px;
+        top: 358.93px;
+        
+        background: rgba(255, 255, 255, 0.17);
+        border-radius: 72px;
+      }
+      
+      .rectangle textarea {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        padding: 10px;
+        color: white;
+      }
+
+      .objet {
+        position: absolute;
+width: 101.49px;
+height: 23.32px;
+left: 236.02px;
+top: 329px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 100%;
+
+color: #89EDFB;
+ }
+
+ .rectanglebleu{
+ display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 32px;
+gap: 8px;
+
+position: absolute;
+width: 139px;
+height: 44px;
+left: 1124px;
+top: 315px;
+
+background: #423EF6;
+border-radius: 50px;
+ }
+
+
+.rectanglebleu span {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+  }
+
+  .rectanglequestion{
+  position: absolute;
+width: 617px;
+height: 131px;
+left: 209px;
+top: 500px;
+
+background: rgba(255, 255, 255, 0.17);
+border-radius: 72px;
+
+  }
+
+  .rectanglequestion textarea {
+    width: 98%;
+    height: 98%;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+
+.question{
+
+    position: absolute;
+    width: 181.67px;
+    height: 23.32px;
+    left: 236px;
+    top: 470px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    
+    color: #89EDFB;
+}
+
+.rectangleorange{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 32px;
+gap: 8px;
+
+position: absolute;
+width: 151.61px;
+height: 39.24px;
+left: 207px;
+top: 680px;
+
+background: #F6593E;
+border-radius: 50px;
+}
+
+
+.rectangleorange span {
+ width: 80%;
+height: 80%;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+
+text-align: center;
+
+color: #FFFFFF;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
 
       
-}
-.imageFlore{
-    position: absolute;
-        top: 700px;
-        left: 640px;
-}
-
-.imagePrasanaa{
-    position: absolute;
-        top: 680px;
-        left: 1050px;
-}
-
-.imageCharles{
-    position: absolute;
-        top: 1000px;
-        left: 235px;
-}
-
-.imageEliot{
-    position: absolute;
-        top: 990px;
-        left: 640px;
-}
-
-.imageFanny{
-    position: absolute;
-        top: 1010px;
-        left: 1070px;
-}
-
-.imageClient{
-    position: absolute;
-    top: 1300px;
-    left: 635px;
-}
-
-.linkEliot{
-    position: absolute;
-        top: 250px;
-        left: 70px;
-}
-
-.linkFanny{
-    position: absolute;
-        top: 230px;
-        left: 80px;
-}
-
-.linkCharles{
-    position: absolute;
-        top: 240px;
-        left: 75px;
-}
-
-.linkPrasanaa{
-    position: absolute;
-        top: 235px;
-        left: 95px;
-}
-
-.linkFlore{
-    position: absolute;
-        top: 215px;
-        left: 80px;
-}
-
-.linkFares{
-    position: absolute;
-        top: 230px;
-        left: 70px;
-}

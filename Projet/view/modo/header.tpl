@@ -28,7 +28,7 @@
     <ul class="header_right">
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link1']; ?></a></li>
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link2']; ?></a></li>
-        <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link3']; ?></a></li>
+        <li><a href='index.php?controle=modo&action=teamsPage'><?php echo $txt['header_link3']; ?></a></li>
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
 
 

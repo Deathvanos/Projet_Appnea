@@ -19,6 +19,13 @@
     /* Affiche la page d'accueil */
     function mainAdmin(){require('./Projet/view/admin/main.tpl');}
 
+    // Header
+    function teamsPage(){require('./Projet/view/guest/teams.tpl');}
+
+    // Footer
+    function contactPage(){require('./Projet/view/guest/contact.tpl');}
+    // Après verification de la demande de login, connection de l'utilisateur
+
 
 
     /**

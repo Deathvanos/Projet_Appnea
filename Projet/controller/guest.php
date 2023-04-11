@@ -23,7 +23,10 @@
     // Affiche la page de connection 
     function login(){require('./Projet/view/guest/login.tpl');}
     function teamsPage(){require('./Projet/view/guest/teams.tpl');}
+    function contactPage(){require('./Projet/view/guest/contact.tpl');}
     // Après verification de la demande de login, connection de l'utilisateur
+
+
     function isUser(){header('Location: index.php?controle=user&action=mainUser');}
     function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
     function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}

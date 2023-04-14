@@ -18,8 +18,6 @@
     function mainGuest(){require('./Projet/view/guest/main.tpl');}
     /* Affiche la page d'accueil */
     function mainAdmin(){require('./Projet/view/admin/main.tpl');}
-    /* Affiche la page de findUser */
-    function findUser(){require('./Projet/view/admin/findUser.tpl');}
 
     // Header
     function teamsPage(){require('./Projet/view/guest/teams.tpl');}
@@ -44,7 +42,7 @@
     /* Affiche la page de findUser */
     function findUser(){
         // Fonction login vers la base de données
-        include("Projet/modele/admin.php");
+        include_once("Projet/modele/admin.php");
         
         // if delete button on
         if(isset($_POST['delUser'])) {
@@ -132,8 +130,6 @@
         }
         else {echo '<td><p">.</p></td>';}
     }
-
-
 
 
 

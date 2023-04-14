@@ -11,7 +11,7 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-<?php  session_unset(); session_start();
+<?php session_start();
 // shift + alt + f : indentation automatique
 
     // Redirection vers la Page d'erreur

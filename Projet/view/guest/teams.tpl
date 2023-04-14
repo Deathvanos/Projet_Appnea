@@ -36,8 +36,8 @@
     <main style="height:1600px;">
 
         <div class="equipe_texte">
-            <h2 id="titre_equipe">Notre <color id="dégradé">équipe</color>
-            </h2>
+            <h2 id="titre_equipe">Notre <color id="dégradé">équipe</color></h2>
+            <!-- y a des balises inutiles -->
             <div class="image"><img class="equipe" src="Ressources/img/Equipe.png"></div>
             <div class="texte">
                 <p class="paragraphe-equipe">
@@ -48,6 +48,8 @@
             </div>
         </div>
 
+        <!-- Transformer toute cette partie en table avec tr et td -->
+        <!-- Ca va aussi simplifier le code CSS -->
         <div class="equipe1a1">
 
             <div class=" imageFares"><img src="Ressources/img/Fares.png" style="width: 270px; height: auto;"><!-- A mettre dans le css -->

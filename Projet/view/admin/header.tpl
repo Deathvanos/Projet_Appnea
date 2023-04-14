@@ -28,7 +28,8 @@
     <ul class="header_right">
         <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link1'];?></a></li>
         <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link2'];?></a></li>
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link3'];?></a></li>
+        <li><a href='index.php?controle=admin&action=teamsPage'><?php echo $txt['header_link3'];?></a></li>
+
 
 
         <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_linkA1'];?></a></li>

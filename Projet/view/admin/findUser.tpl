@@ -27,73 +27,78 @@
 
 <body>
     <?php
-    // Bug  : on doit récuperer ces deux variables dans les variables globals 
+    // Chargement du header et de la langue de la page
     $txt = $GLOBALS['translat'];
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
-    <main class='main' style="height:740px;">
-        <h1>Gérer les utilisateurs</h1> 
-
-        
-        <div class='tableOverflow'><table class='tableBox' width=95%>
 
 
-        
-       
-            <tr align=center>
-                <td><i class='bx bxs-user'></i></td>
-                <td>typeUser</td>
-                <td>id</td><!-- A supprimer -->
-                <td>firstName</td>
-                <td>lastName</td>
-                <td>mail</td>
-                <td>birthday</td>
-                <td>phoneNumber</td>
-                <td>country</td>
-                <td>city</td>
-                <td>localisation</td>
-                <td>cardiaque</td>
-                <td>sonor</td>
-                <td>temperature</td>
-                <td>humidité</td>
+    <main class='main' style=<?php echo "height:".$size."px;" ?>>
+    <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
+
+        <h1><?php echo $txt['adminGestionUser_title']; ?></h1> 
+
+        <div class='tableOverflow'>
+        <table class='tableBox'>
+
+            <tr> <!-- Les noms des champs-->
+                <td></td>
+                <td><?php echo $txt['adminGestionUser_typeUser']; ?></td>
+                <td><?php echo $txt['adminGestionUser_firstName']; ?></td>
+                <td><?php echo $txt['adminGestionUser_lastName']; ?></td>
+                <td><?php echo $txt['adminGestionUser_mail']; ?></td>
+                <td><?php echo $txt['adminGestionUser_birthday']; ?></td>
+                <td><?php echo $txt['adminGestionUser_phone']; ?></td>
+                <td><?php echo $txt['adminGestionUser_country']; ?></td>
+                <td><?php echo $txt['adminGestionUser_city']; ?></td>
+                <td><?php echo $txt['adminGestionUser_localisation']; ?></td>
+                <td><?php echo $txt['adminGestionUser_cardiaque']; ?></td>
+                <td><?php echo $txt['adminGestionUser_sonor']; ?></td>
+                <td><?php echo $txt['adminGestionUser_temperature']; ?></td>
+                <td><?php echo $txt['adminGestionUser_humidity']; ?></td>
                 <td class="tblBlanc">...</td>
-                <td colspan="3">Gestion</td>
+                <td colspan="3"><button class="btnTbl" name="validat" value="ok" ><?php echo $txt['adminGestionUser_Find']; ?></button></td>
             </tr>
-            <tr align=left>
-                <td><i class='bx bxs-user'></i></td>
-                <td><input size=5%></input></td>
-                <td><input type=number style='width: 4em;'></input></td><!-- A supprimer -->
-                <td><input size=5%></input></td>
-                <td><input size=5%></input></td>
-                <td><input type=email size=20%></input></td>
-                <td><input type=date></input></td>
-                <td><input type=tel size=10%></input></td>
-                <td><input size=5%></input></td>
-                <td><input size=5%></input></td>
-                <td><input size=5%></input></td>
-                <td align=center><input type=checkbox></input></td>
-                <td align=center><input type=checkbox></input></td>
-                <td align=center><input type=checkbox></input></td>
-                <td align=center><input type=checkbox></input></td>
+            
+            <tr> <!-- Les filtres-->
+                <td></td>
+                <td><select name="typeUser"?>>
+                    <option value=""></option>
+                    <?php // Mise en place de la boite à selection
+                        foreach (['User', 'Modo', 'Admin'] as $type) {
+                        $selected = ($_POST['typeUser'] == $type) ? "selected" : "";
+                        echo "<option value='$type' $selected>$type</option>";
+                    }?>
+                </select></td>
+                <td><input name="firstName" size=5% value=<?php echo $_POST['firstName'] ?>></td>
+                <td><input name="lastName" size=5% value=<?php echo $_POST['lastName'] ?>></td>
+                <td><input name="mail" size=15% value=<?php echo $_POST['mail'] ?>></td>
+                <td><input type=date name="birthday" value=<?php echo $_POST['birthday'] ?>></td>
+                <td><input type=tel name="phoneNumber" size=10% value=<?php echo $_POST['phoneNumber'] ?>></td>
+                <td><input name="country" size=5% value=<?php echo $_POST['country'] ?>></td>
+                <td><input name="city" size=5% value=<?php echo $_POST['city'] ?>></td>
+                <td><input name="address" size=10% value=<?php echo $_POST['address'] ?>></td>
+
+                <?php foreach (['cardiaque', 'sonor', 'temperature', "humidity"] as $sensor) { // Pour chaque capteur?>
+                    <td><select name=<?php echo $sensor."Stat"?>>
+                        <option value=""></option>
+                        <?php // Mise en place de la boite à selection
+                            foreach (['Active', 'Lock', '.'] as $etat) {
+                            $selected = ($_POST[$sensor."Stat"] == $etat) ? "selected" : "";
+                            echo "<option value='$etat' $selected>$etat</option>";
+                        }?>
+                    </select></td>
+                <?php }?>
+
                 <td class="tblBlanc">...</td>
-                <td colspan="3"><a href="#">Find user</a></td>
+                <td colspan="3"><button class="btnTbl" name="validat" value="reset"><?php echo $txt['adminGestionUser_Reset']; ?></button></td>
             </tr>
-
-
-            <?php 
-            // Fonction login vers la base de données
-            include("Projet/modele/admin.php");
-            $result = printDataBase(0, 5);
-
-        
-
-                
-
+            
+            <?php // Les valeurs
             foreach  ($result as $row) {
                 echo '<tr>';
                     echo '<td><i class="bx bxs-user"></i></td>';
                     echo '<td>'.$row['typeUser'].'</td>';
-                    echo '<td>'.$row['id'].'</td>';//A supprimer
                     echo '<td>'.$row['firstName'].'</td>';
                     echo '<td>'.$row['lastName'].'</td>';
                     echo '<td>'.$row['mail'].'</td>';
@@ -101,27 +106,41 @@
                     echo '<td>'.$row['phoneNumber'].'</td>';
                     echo '<td>'.$row['country'].'</td>';
                     echo '<td>'.$row['city'].'</td>';
-                    echo '<td>'.$row['localisation'].'</td>';
-                    echo '<td><a href="#" class="colorTrue">true</a></td>';
-                    echo '<td><a href="#" class="colorFalse">false</a></td>';
-                    echo '<td><a href="#" class="colorTrue">true</a></td>';
-                    echo '<td><a href="#" class="colorTrue">true</a></td>';
+                    echo '<td>'.$row['address'].'</td>';
+
+                    printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
+                    printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
+                    printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
+                    printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
+        
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><a href="#">Delete</a></td>';
-                    echo '<td><a href="#">Gerer</a></td>';
-                    echo '<td><a href="#">mode View</a></td>';
-                    
+                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
+                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_Manage'].'</a></td>';
+                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_userMode'].'</a></td>';
                 echo '</tr>';
-            }
-            ?>
+            }?>
 
-        </table></div>
-        <a href=''>Suivant</a> - <a href=''>Précédant</a><br>
-        Afficher par éléments de : <a href=''>5</a> - <a href=''>10</a> - <a href=''>15</a><br>
+        </table>
+        </div>
 
+        <!-- Pagination-->
+        <?php echo $txt['adminGestionUser_PageIndex']; ?> (<button name="validat" class='btnParam' value="last"><?php echo $txt['adminGestionUser_LastPage']; ?></button> |
+        <button name="validat" class='btnParam' value="next"><?php echo $txt['adminGestionUser_NextPage']; ?></button>)
+        (<?php for ($i = 3; $i <= 5; $i++) {
+            echo "<button name='validat' class='btnParam' value='$i' ";
+                if ($i == $nbElements) {echo "disabled ";}
+            echo ">$i</button>";
+            if ($i != $nbElements) {echo " | ";}
+        }?>)
+
+        <input type="hidden" name="posList" value=<?php echo $posList?>>
+        <input type="hidden" name="nbElements" value=<?php echo $nbElements?>>
+        
+    </form>
     </main>
 
-    <?php include 'Projet/view/other/footer.tpl'; ?>
+    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+
 </body>
 
 </html>

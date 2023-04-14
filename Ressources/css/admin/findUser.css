@@ -21,7 +21,7 @@
 
 .tableBox tr td {
     /*format des cases*/
-    padding: 0.25%;
+    padding-block: 0.5%;
 }
 .tableBox tr:first-child { background-color: #91899e;}
 
@@ -40,22 +40,21 @@
 .tableBox tr td:nth-child(16) {
     border-top-left-radius: 25px; 
     border-bottom-left-radius: 25px;
-    padding-left: 0.5%;
+    padding-inline: 5px;
 }
 .tableBox tr td:last-child { 
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px; 
-    padding-inline: 0.5%;
+    padding-inline: 5px;
 }
 
 /* Couleurs sur les dernières colonnes du tableau*/
 .tableBox tr:nth-child(n+3) td:nth-last-child(-n + 3) { 
-    background-color: var(--myColor-buttonLogin);
-    text-align: center;align-items: center;
+    background-color: var(--myColor-buttonLogin);;
+    
 }
 .tableBox tr:nth-child(-n+2) td:last-child { 
     background-color: var(--myColor-buttonLogin);
-    text-align: center;align-items: center;
 }
 
 /* Gestion de la case vide */

@@ -36,32 +36,32 @@
     <main class='main' style=<?php echo "height:".$size."px;" ?>>
     <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
 
-        <h1>Gérer les utilisateurs</h1> 
+        <h1><?php echo $txt['adminGestionUser_title']; ?></h1> 
 
         <div class='tableOverflow'>
         <table class='tableBox'>
 
             <tr> <!-- Les noms des champs-->
-                <td><i class='bx bxs-user'></i></td>
-                <td>typeUser</td>
-                <td>firstName</td>
-                <td>lastName</td>
-                <td>mail</td>
-                <td>birthday</td>
-                <td>phoneNumber</td>
-                <td>country</td>
-                <td>city</td>
-                <td>localisation</td>
-                <td>cardiaque</td>
-                <td>sonor</td>
-                <td>temperature</td>
-                <td>humidité</td>
+                <td></td>
+                <td><?php echo $txt['adminGestionUser_typeUser']; ?></td>
+                <td><?php echo $txt['adminGestionUser_firstName']; ?></td>
+                <td><?php echo $txt['adminGestionUser_lastName']; ?></td>
+                <td><?php echo $txt['adminGestionUser_mail']; ?></td>
+                <td><?php echo $txt['adminGestionUser_birthday']; ?></td>
+                <td><?php echo $txt['adminGestionUser_phone']; ?></td>
+                <td><?php echo $txt['adminGestionUser_country']; ?></td>
+                <td><?php echo $txt['adminGestionUser_city']; ?></td>
+                <td><?php echo $txt['adminGestionUser_localisation']; ?></td>
+                <td><?php echo $txt['adminGestionUser_cardiaque']; ?></td>
+                <td><?php echo $txt['adminGestionUser_sonor']; ?></td>
+                <td><?php echo $txt['adminGestionUser_temperature']; ?></td>
+                <td><?php echo $txt['adminGestionUser_humidity']; ?></td>
                 <td class="tblBlanc">...</td>
-                <td colspan="3"><button class="btnTbl" name="validat" value="ok" >Find user</button></td>
+                <td colspan="3"><button class="btnTbl" name="validat" value="ok" ><?php echo $txt['adminGestionUser_Find']; ?></button></td>
             </tr>
             
             <tr> <!-- Les filtres-->
-                <td><i class='bx bxs-user'></i></td>
+                <td></td>
                 <td><select name="typeUser"?>>
                     <option value=""></option>
                     <?php // Mise en place de la boite à selection
@@ -91,7 +91,7 @@
                 <?php }?>
 
                 <td class="tblBlanc">...</td>
-                <td colspan="3"><button class="btnTbl" name="validat" value="reset">reset field</button></td>
+                <td colspan="3"><button class="btnTbl" name="validat" value="reset"><?php echo $txt['adminGestionUser_Reset']; ?></button></td>
             </tr>
             
             <?php // Les valeurs
@@ -114,9 +114,9 @@
                     printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
         
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">Delete</button></td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">Gerer</a></td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">mode View</a></td>';
+                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
+                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_Manage'].'</a></td>';
+                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_userMode'].'</a></td>';
                 echo '</tr>';
             }?>
 
@@ -124,8 +124,8 @@
         </div>
 
         <!-- Pagination-->
-        View (<button name="validat" class='btnParam' value="last">Last</button> |
-        <button name="validat" class='btnParam' value="next">Next</button>)
+        <?php echo $txt['adminGestionUser_PageIndex']; ?> (<button name="validat" class='btnParam' value="last"><?php echo $txt['adminGestionUser_LastPage']; ?></button> |
+        <button name="validat" class='btnParam' value="next"><?php echo $txt['adminGestionUser_NextPage']; ?></button>)
         (<?php for ($i = 3; $i <= 5; $i++) {
             echo "<button name='validat' class='btnParam' value='$i' ";
                 if ($i == $nbElements) {echo "disabled ";}

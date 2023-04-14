@@ -12,9 +12,8 @@
             return $conn;
         } 
         catch (PDOException $e) {
-            errorPage();
-            echo "Connection failed: " . $e->getMessage();
-            return false;
+            header('Location: '.$GLOBALS['errorPage']);
+            //echo "Connection failed: " . $e->getMessage();return false;
         }
     }
 

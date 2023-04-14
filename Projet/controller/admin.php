@@ -18,6 +18,8 @@
     function mainGuest(){require('./Projet/view/guest/main.tpl');}
     /* Affiche la page d'accueil */
     function mainAdmin(){require('./Projet/view/admin/main.tpl');}
+    /* Affiche la page de findUser */
+    function findUser(){require('./Projet/view/admin/findUser.tpl');}
 
     // Header
     function teamsPage(){require('./Projet/view/guest/teams.tpl');}

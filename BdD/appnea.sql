@@ -48,7 +48,9 @@ CREATE TABLE utilisateur (
   `password` varchar(127) NOT NULL,
   `country` varchar(31) NOT NULL,
   `city` varchar(31) NOT NULL,
+
   `codePostal` varchar(15) DEFAULT NULL,
+
   `address` varchar(63) NOT NULL,
   `id_Box` VARCHAR(31) DEFAULT NULL UNIQUE,
   FOREIGN KEY (`id_Box`) REFERENCES sensorBox(`id_Box`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -289,3 +291,4 @@ INSERT INTO FAQ (`id_question`, `question`, `response`) VALUES
 (8, "Comment puis-je savoir si j'ai un trouble du sommeil ?", "Les troubles du sommeil peuvent être diagnostiqués par un professionnel de la santé. Si vous avez des difficultés à vous endormir, à rester endormi ou si vous vous réveillez fatigué, vous pourriez avoir un trouble du sommeil. Parlez-en à votre médecin si vous êtes préoccupé par votre sommeil."),
 (9, "Les somnifères sont-ils une solution sûre pour les problèmes de sommeil ?", "Les somnifères peuvent aider à traiter les problèmes de sommeil à court terme, mais ils ne sont généralement pas recommandés pour une utilisation à long terme car ils peuvent causer des effets secondaires et des problèmes de dépendance."),
 (10, "Le ronflement est-il un signe de trouble du sommeil ?", "Le ronflement peut être un signe de trouble du sommeil, notamment de l'apnée du sommeil. Si vous ronflez régulièrement ou si vous vous réveillez souvent fatigué, vous pourriez avoir un trouble du sommeil. Parlez-en à votre médecin si vous êtes préoccupé par votre sommeil.");
+

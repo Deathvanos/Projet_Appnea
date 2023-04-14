@@ -140,6 +140,7 @@
     </main>
 
     <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+
 </body>
 
 </html>

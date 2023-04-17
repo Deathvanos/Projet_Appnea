@@ -30,7 +30,6 @@
 </head>
 <body>
     <?php    
-    // Bug  : on doit récuperer ces deux variables dans les variables globals 
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
@@ -69,7 +68,7 @@
         </div>
     </main>
 
-    <?php include 'Projet/view/other/footer.tpl'; ?>
+    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
 </body>
 </html>
 

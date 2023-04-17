@@ -11,12 +11,6 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-<!-- A mettre seulement sur la first page du site 
-(Permet l'utilisation de variables inter page) -->
-<!--
-<?php //**session_start(); ?>
--->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,30 +24,37 @@
     <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-<?php    
+    <?php    
     // Bug  : on doit récuperer ces deux variables dans les variables globals 
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-<main style="height:830px;">
-    <h1> Votre <color>profil</color></h1>
-    <a href="index.php?controle=user&action=displayModifInfos">Modifier les informations</a>
-    <div class="contenu">
-        <?php echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>"; ?>
-        <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->
-        <div class="infos_perso grid_container">
-            <h3>  Nom : <info><?php echo($lastName); ?></info></h3>
-            <h3 class="hide"> </h3>
-            <h3>  Prénom : <info><?php echo($firstName); ?></info></h3>
-            <h3>  Numéro de téléphone : <info><?php echo($phoneNumber); ?></info></h3>
-            <h3 class="hide"></h3>
-            <h3>  Mail : <info><?php echo($mail); ?></info></h3>
-            <h3>  Adresse : <info><?php echo($localisation); ?></info></h3>
+    <main style="height:830px;">
+        <h1> Votre <color>profil</color></h1>
+        <a href="index.php?controle=user&action=displayModifInfos">Modifier les informations</a>
+        <div class="contenu">
+            <?php 
+                if($photo_base64 ==""){
+                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
+                }else{
+                    echo "<img src='Ressources/img/Profil_picture_default.png' alt='Photo de profil' width=30% heigth=30%/>";
+                }
+                
+            ?>
+            <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->
+            <div class="infos_perso grid_container">
+                <h3>  Nom : <info><?php echo($lastName); ?></info></h3>
+                <h3 class="hide"> </h3>
+                <h3>  Prénom : <info><?php echo($firstName); ?></info></h3>
+                <h3>  Numéro de téléphone : <info><?php echo($phoneNumber); ?></info></h3>
+                <h3 class="hide"></h3>
+                <h3>  Mail : <info><?php echo($mail); ?></info></h3>
+                <h3>  Adresse : <info><?php echo($localisation); ?></info></h3>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<?php include 'Projet/view/other/footer.tpl'; ?>
+    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
 </body>
 </html>
 

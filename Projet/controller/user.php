@@ -18,7 +18,6 @@
     function mainGuest(){require('./Projet/view/guest/main.tpl');}
     /* Affiche la page d'accueil */
     function mainUser(){require('./Projet/view/user/main.tpl');}
-
     
     function displayProfil(){
         include_once("Projet/modele/user.php");
@@ -81,6 +80,7 @@
         }else{
             $phoneNumber = $_POST['phone'];
         }
+
 
         /*$mail = isset($_POST['mail'])?($_POST['mail']):$result[0]['mail'];*/
         if($_POST['mail'] == ""){

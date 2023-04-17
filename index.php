@@ -11,12 +11,14 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-<?php  session_unset(); session_start();
+<?php session_start();
 // shift + alt + f : indentation automatique
 
     // Redirection vers la Page d'erreur
-    function errorPage(){require('./Projet/view/other/error.html');}
+    function errorPage(){header('location: Projet/view/other/error.html');}
 
+
+    // Quand le website sera fini -> mettre ce code dans un try catch pour la gestion des erreurs
 
 
     // $controle : le controler à appeler

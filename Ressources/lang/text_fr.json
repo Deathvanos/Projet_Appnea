@@ -62,6 +62,10 @@
     "adminGestionUser_PageIndex": "Vue",
     "adminGestionUser_LastPage": "Précédant",
     "adminGestionUser_NextPage": "Suivant",
+    "adminGestionUser_Active": "Activé",
+    "adminGestionUser_Lock": "Bloqué",
+    "adminGestionUser_MsgDelUser": "Votre demande de suppression de l\\'utilisateur a été pris en compte.\\nPour valider la suppression, veuillez réefectuer la démarche de suppression.\\n\\nAttention, l\\'action sera irréversible",
+
 
 
     "modoMain2": "Gestion de la FAQ",

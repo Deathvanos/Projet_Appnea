@@ -69,6 +69,19 @@
     "userMain": "Bienvenu sur votre page d'acceuil personnel",
 
     "xx1": "xxx1",
-    "xx2": "xxx2"
+    "xx2": "xxx2",
+    "Submit": "Enregistrer",
+    "Abandon": "Annuler",
+    
+    "Profil_Label_Name1" : "Nom",
+    "Profil_Label_Name2" : "Prénom",
+    "Profil_Tel": "Numéro de téléphone",
+    "Profil_Mail": "Mail",
+    "Profil_Localisation": "Adresse",
+    "Profil_Button_Edit": "Modifier les informations",
+    "Profil_City": "Ville",
+    "Profil_Country": "Pays",
+    "Profil_Avatar": "Modifier la photo",
+    "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici"
     
 }

@@ -32,26 +32,33 @@
     <main style="height:830px;">
         <h1> Votre <color>profil</color></h1>
         <div class="contenu">
-            <?php echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>"; ?>
-            <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->
-            
+            <?php 
+                if($photo_base64 !=""){
+                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
+                }else{
+                    echo "<img src='Ressources/img/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
+                }
+            ?>
             <form enctype="multipart/form-data" action="index.php?controle=user&action=modifInfos" method="POST">
                 <div class="infos_perso grid_container">
-                    <elem><h3>Nom : </h3><input type="text" placeholder= <?php echo("'$lastName'"); ?> name="lastname"/></elem>
+                    <elem><h3><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" placeholder= <?php echo("'$lastName'"); ?> name="lastname" value=<?php echo("'$lastName'"); ?>/></elem>
                     <h3 class="hide"> </h3>
-                    <elem><h3>Prénom :</h3><input type="text" placeholder= <?php echo("'$firstName'");?> name="firstname"/></elem>
-                    <elem><h3>Numéro de téléphone : </h3> <input type="text" placeholder= <?php echo("'$phoneNumber'");?> name="phone"/></elem>
+                    <elem><h3><?php echo $txt['Profil_Label_Name2']; ?> :</h3><input type="text" placeholder= <?php echo("'$firstName'");?> name="firstname" value=<?php echo("'$firstName'"); ?> /></elem>
+                    <elem><h3><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder= <?php echo("'$phoneNumber'");?> name="phone" value=<?php echo("'$phoneNumber'"); ?>/></elem>
                     <h3 class="hide"> </h3>
-                    <elem><h3>Mail : </h3><input type="text" placeholder= <?php echo("'$mail'");?> name="mail"/></elem>
-                    <elem><h3>Adresse : </h3><input type="text" placeholder= <?php echo("'$address'");?> name="address"/></elem>
+                    <elem><h3><?php echo $txt['Profil_Mail']; ?> : </h3><input type="text" placeholder= <?php echo("'$mail'");?> name="mail" value=<?php echo("'$mail'"); ?>/></elem>
+                    <elem><h3><?php echo $txt['Profil_Localisation']; ?> : </h3><input type="text" placeholder= <?php echo("'$address'");?> name="address" value=<?php echo("'$address'"); ?>/></elem>
                     <h3 class="hide"> </h3>
-                    <elem><h3>Ville : </h3><input type="text" placeholder= <?php echo("'$city'");?> name="city"/></elem>
-                    <elem><h3>Pays : </h3><input type="text" placeholder= <?php echo("'$country'");?> name="country"/></elem>
+                    <elem><h3><?php echo $txt['Profil_City']; ?>  : </h3><input type="text" placeholder= <?php echo("'$city'");?> name="city" value=<?php echo("'$city'"); ?>/></elem>
+                    <elem><h3><?php echo $txt['Profil_Country']; ?>  : </h3><input type="text" placeholder= <?php echo("'$country'");?> name="country" value=<?php echo("'$country'"); ?>/></elem>
                 </div>
-                <label for="avatar">Modifier la photo</label>
+                <label for="avatar"><?php echo $txt['Profil_Avatar']; ?> </label>
                 <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;">
-                <button type="submit">Enregistrer</button>
-                <a href="">Modifier votre mot de passe ? Cliquez ici</a>
+                <button type="submit"><?php echo $txt['Submit']; ?></button>
+                <a href="" class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
+            </form>
+            <form action="index.php?controle=user&action=displayProfil" method="POST">
+                <button type="submit"><?php echo $txt['Abandon']; ?></button>
             </form>
         </div>
     </main>

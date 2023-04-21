@@ -32,10 +32,11 @@
      * L'utilisateur doit confirmer avant de supprimer un user
      */
     function sendConfirmationDelUser(){
+        $msgAlert = $GLOBALS['translat']["adminGestionUser_MsgDelUser"];
         // Chargement du fichier JavaScript
         echo '<script id="confirm-script" src="Projet/view/other/js/confirmDeleteUser.js" type="text/javascript"></script>';
         // Activation de la fonction (mettre '' pour str et rine pour int)
-        echo "<script>msgDelUser('".$_POST['delUser']."')</script>";
+        echo "<script>msgDelUser('".$_POST['delUser']."', '".$msgAlert."')</script>";
     }
 
 
@@ -43,7 +44,7 @@
     function findUser(){
         // Fonction login vers la base de données
         include_once("Projet/modele/admin.php");
-        
+
         // if delete button on
         if(isset($_POST['delUser'])) {
             // Pour la suite du programme
@@ -124,9 +125,10 @@
 
 
     function printInfoSensor($sensor, $isUsed, $isNotBroken) {
+        $txt = $GLOBALS['translat'];
         if ($sensor!=null) {
-            if ($isUsed==1 & $isNotBroken==1) {echo '<td><p class="colorTrue">active</p></td>';}
-            else {echo '<td><p class="colorFalse">lock</p></td>';}
+            if ($isUsed==1 & $isNotBroken==1) {echo '<td><p class="colorTrue">'.$txt['adminGestionUser_Active'].'</p></td>';}
+            else {echo '<td><p class="colorFalse">'.$txt['adminGestionUser_Lock'].'</p></td>';}
         }
         else {echo '<td><p">.</p></td>';}
     }

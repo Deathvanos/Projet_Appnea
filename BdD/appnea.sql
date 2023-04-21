@@ -25,6 +25,16 @@
 -- UNSIGNED : seul les nombres >= 0 sont possible
 
 
+
+-- ---------------------------------------------------------------------
+-- --------------- Creation de la DataBase si inexistante --------------
+-- ---------------------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS `appnea` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `appnea`;
+
+
+
+
 -- ---------------------------------------------------------------------
 -- ------------------------- Creation des tables -----------------------
 -- ---------------------------------------------------------------------
@@ -48,9 +58,7 @@ CREATE TABLE utilisateur (
   `password` varchar(127) NOT NULL,
   `country` varchar(31) NOT NULL,
   `city` varchar(31) NOT NULL,
-
   `codePostal` varchar(15) DEFAULT NULL,
-
   `address` varchar(63) NOT NULL,
   `id_Box` VARCHAR(31) DEFAULT NULL UNIQUE,
   FOREIGN KEY (`id_Box`) REFERENCES sensorBox(`id_Box`) ON DELETE SET NULL ON UPDATE CASCADE

@@ -63,7 +63,10 @@
     "adminGestionUser_PageIndex": "View",
     "adminGestionUser_LastPage": "Last",
     "adminGestionUser_NextPage": "Next",
-
+    "adminGestionUser_Active": "Active",
+    "adminGestionUser_Lock": "Lock",
+    "adminGestionUser_MsgDelUser": "Your user deletion request has been taken.\\nTo validate the deletion, please repeat the deletion procedure.\\n\\nAttention, the action will be irreversible.",
+    
     "modoMain2": "FAQ management",
 
     "userMain": "Welcome back",

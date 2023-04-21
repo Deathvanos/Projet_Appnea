@@ -83,7 +83,7 @@
                     <td><select name=<?php echo $sensor."Stat"?>>
                         <option value=""></option>
                         <?php // Mise en place de la boite à selection
-                            foreach (['Active', 'Lock', '.'] as $etat) {
+                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock'], '.'] as $etat) {
                             $selected = ($_POST[$sensor."Stat"] == $etat) ? "selected" : "";
                             echo "<option value='$etat' $selected>$etat</option>";
                         }?>

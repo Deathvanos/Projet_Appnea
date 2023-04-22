@@ -14,14 +14,13 @@ Style commun à toutes les pages
 *********************************************************/
 
 
-
 /***************-----*************** GENERAL ***************-----***************/
 
 * { /* Settings general de la page */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins"; /*Ne fonctionne pas avec le fichier en local*/
+    font-family: "poppins";
     /* Couleur de la chartre graphique */
     --myColor-main-base: #211265;
     --myColor-main-light: #6C37EE;
@@ -32,14 +31,6 @@ Style commun à toutes les pages
     /* Other color */
     --myColor-fontColor-main: #ffffff;
 }
-
-/* Ne fonctionne pas et je sais pas quel poppins prendre*/
-/*
-@font-face { 
-    font-family: poppins; 
-    src: url('../font/Poppins/Poppins-Black.ttf'); 
-} 
-*/
 
 
 

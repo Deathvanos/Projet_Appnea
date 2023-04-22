@@ -67,9 +67,15 @@
     "adminGestionUser_Lock": "Lock",
     "adminGestionUser_MsgDelUser": "Your user deletion request has been taken.\\nTo validate the deletion, please repeat the deletion procedure.\\n\\nAttention, the action will be irreversible.",
     
+    "modoMainTitle": "<color>Modo</color> gestion",
     "modoMain2": "FAQ management",
 
-    "userMain": "Welcome back",
+    "userMain": "Welcome back ",
+    "userMain_date": "Today we are the ",
+    "userMain_id": "identification : ",
+    "userMain_box": "Box reference : ",
+    "userMain_btnData": "Watch Data Sensor",
+    "userMain_btnTicket": "Send a incident ticket",
 
 
     "xx": "xxx"

@@ -16,13 +16,9 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>APNEA</title>
-    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
-    <link rel="stylesheet" href="Ressources/css/allPage.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Ressources/css/admin/findUser.css" />
+    <title>APNEA - findUser</title>
+    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <link rel="stylesheet" href="Ressources/css/modo/findUserModo.css" />
 </head>
 
 <body>
@@ -57,7 +53,7 @@
                 <td><?php echo $txt['adminGestionUser_temperature']; ?></td>
                 <td><?php echo $txt['adminGestionUser_humidity']; ?></td>
                 <td class="tblBlanc">...</td>
-                <td colspan="3"><button class="btnTbl" name="validat" value="ok" ><?php echo $txt['adminGestionUser_Find']; ?></button></td>
+                <td><button class="btnTbl" name="validat" value="ok" ><?php echo $txt['adminGestionUser_Find']; ?></button></td>
             </tr>
             
             <tr> <!-- Les filtres-->
@@ -91,7 +87,7 @@
                 <?php }?>
 
                 <td class="tblBlanc">...</td>
-                <td colspan="3"><button class="btnTbl" name="validat" value="reset"><?php echo $txt['adminGestionUser_Reset']; ?></button></td>
+                <td><button class="btnTbl" name="validat" value="reset"><?php echo $txt['adminGestionUser_Reset']; ?></button></td>
             </tr>
             
             <?php // Les valeurs
@@ -114,8 +110,6 @@
                     printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
         
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_Manage'].'</a></td>';
                     echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_userMode'].'</a></td>';
                 echo '</tr>';
             }?>

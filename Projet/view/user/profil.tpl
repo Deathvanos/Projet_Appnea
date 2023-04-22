@@ -14,14 +14,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>APNEA</title>
-    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
-    <link rel="stylesheet" href="Ressources/css/allPage.css" />
-    <!--<link rel="stylesheet" href="Ressources/css/guest/main.css" />-->
+    <title>APNEA - Profil</title>
+    <?php include 'Projet/view/other/header_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/profil.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <?php    
@@ -29,7 +24,7 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main style="height:830px;">
+    <main style="height:115%;"> <!-- 830px = 115% -->
         <h1> Votre <color>profil</color></h1>
         <a href="index.php?controle=user&action=displayModifInfos">Modifier les informations</a>
         <div class="contenu">

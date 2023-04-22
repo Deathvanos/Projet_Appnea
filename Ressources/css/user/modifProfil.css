@@ -74,7 +74,7 @@ elem{
     display: inline;
 }
 
-h3{
+.form_title{
     margin-left: 3%;
     display: inline;
 }
@@ -93,9 +93,16 @@ button{
     background-color: #423EF6;
     height: 5%;
     width : 10%;
-    margin-right: 65%;
-    margin-left: 10%;
+}
+
+.submit{
+    margin-right: 50%;
     float: right;
+}
+
+.btnAbandon{
+    float :right;
+    margin-right: 50%;
 }
 
 .modifMdp{

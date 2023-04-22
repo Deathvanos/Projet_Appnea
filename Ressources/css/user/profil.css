@@ -37,7 +37,7 @@ elem {
     text-align: center;
 }
 
-h3{
+.infos{
     padding-left: 3%;
     background-color: hsla(120,100%,100%,0.17);
     border-radius: 25px;

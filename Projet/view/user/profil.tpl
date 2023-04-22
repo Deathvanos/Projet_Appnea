@@ -41,13 +41,13 @@
             ?>
             <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->
             <div class="infos_perso grid_container">
-                <h3>  <?php echo $txt['Profil_Label_Name1']; ?> : <info><?php echo($lastName); ?></info></h3>
+                <h3 class="infos">  <?php echo $txt['Profil_Label_Name1']; ?> : <info><?php echo($lastName); ?></info></h3>
                 <h3 class="hide"> </h3>
-                <h3>  <?php echo $txt['Profil_Label_Name2']; ?> : <info><?php echo($firstName); ?></info></h3>
-                <h3>  <?php echo $txt['Profil_Tel']; ?> : <info><?php echo($phoneNumber); ?></info></h3>
+                <h3 class="infos">  <?php echo $txt['Profil_Label_Name2']; ?> : <info><?php echo($firstName); ?></info></h3>
+                <h3 class="infos">  <?php echo $txt['Profil_Tel']; ?> : <info><?php echo($phoneNumber); ?></info></h3>
                 <h3 class="hide"></h3>
-                <h3>  <?php echo $txt['Profil_Mail']; ?> : <info><?php echo($mail); ?></info></h3>
-                <h3>  <?php echo $txt['Profil_Localisation']; ?> : <info><?php echo($localisation); ?></info></h3>
+                <h3 class="infos">  <?php echo $txt['Profil_Mail']; ?> : <info><?php echo($mail); ?></info></h3>
+                <h3 class="infos">  <?php echo $txt['Profil_Localisation']; ?> : <info><?php echo($localisation); ?></info></h3>
             </div>
             <form action="index.php?controle=user&action=displayModifInfos" method="POST">
                 <button type="submit"><?php echo $txt['Profil_Button_Edit']; ?></button>

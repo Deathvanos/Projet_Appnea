@@ -66,11 +66,15 @@
     "adminGestionUser_Lock": "Bloqué",
     "adminGestionUser_MsgDelUser": "Votre demande de suppression de l\\'utilisateur a été pris en compte.\\nPour valider la suppression, veuillez réefectuer la démarche de suppression.\\n\\nAttention, l\\'action sera irréversible",
 
-
-
+    "modoMainTitle": "Gestion <color>modérateur</color>",
     "modoMain2": "Gestion de la FAQ",
 
-    "userMain": "Bienvenu sur votre page d'acceuil personnel",
+    "userMain": "Bienvenue ",
+    "userMain_date": "Ajourd'hui nous somme le ",
+    "userMain_id": "Identification : ",
+    "userMain_box": "Référence boxe : ",
+    "userMain_btnData": "Voir mes données de capteurs",
+    "userMain_btnTicket": "envoyer un ticket d'incident",
 
     "xx1": "xxx1",
     "xx2": "xxx2"

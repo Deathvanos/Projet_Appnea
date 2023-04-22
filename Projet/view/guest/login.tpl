@@ -15,11 +15,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
+        <title>APNEA - Login</title>
+        <?php include 'Projet/view/other/header_Font_Page.html';?>
         <link rel="stylesheet" href="Ressources/css/guest/login.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="Ressources/css/allPage.css" />
     </head>
 
     <body>

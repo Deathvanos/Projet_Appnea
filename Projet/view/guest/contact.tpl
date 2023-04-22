@@ -14,12 +14,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
     <title>APNEA - Contact</title>
-    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
-    <link rel="stylesheet" href="Ressources/css/allPage.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <?php include 'Projet/view/other/header_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/guest/contact.css" />
 </head>
 <body>

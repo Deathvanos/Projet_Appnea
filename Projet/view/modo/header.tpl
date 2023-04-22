@@ -32,12 +32,12 @@
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
 
 
-        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_linkM1'];?></a></li>
-        <li><a href='index.php?controle=user&action=errorPage'><?php echo $txt['header_linkAM2'];?></a></li>
+        <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_linkM1'];?></a></li>
+        <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_linkAM2'];?></a></li>
         <li class="header_conn"><nav class="header_login"> 
-            <a href=<?php echo "index.php?controle=user&action=errorPage"?>><i class='bx bxs-user'></i></a>
+            <a href=<?php echo "index.php?controle=modo&action=mainModo"?>><i class='bx bxs-user'></i></a>
             <ul>
-                <li><a href=<?php echo "index.php?controle=modo&action=mainModo"?>><?php echo $txt['header_link5'];?></a></li> 
+                <li><a href=<?php echo "index.php?controle=modo&action=errorPage"?>><?php echo $txt['header_link5'];?></a></li> 
                 <li><a href=<?php echo "index.php"?>><?php echo $txt['header_linkLogout']; ?></a></li> 
             </ul> 
         </nav></li>

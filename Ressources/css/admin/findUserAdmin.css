@@ -53,14 +53,10 @@
 }
 
 /* Couleurs sur les dernières colonnes du tableau*/
-.tableBox tr:nth-child(n+3) td:nth-last-child(-n + 3) { 
-    background-color: var(--myColor-buttonLogin);;
-    
-}
-
-.tableBox tr:nth-child(-n+2) td:last-child { 
+.tableBox td:nth-last-child(-n + 2) { 
     background-color: var(--myColor-buttonLogin);
 }
+
 
 /* Gestion de la case vide */
 .tblBlanc {

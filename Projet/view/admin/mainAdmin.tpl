@@ -14,28 +14,28 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <title>APNEA</title>    
-    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
-    <link rel="stylesheet" href="Ressources/css/allPage.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <title>APNEA - Main Admin</title>
+    <?php include 'Projet/view/other/header_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/admin/mainAdmin.css" />
 </head>
-<body>
-    <?php    
-    $txt = $GLOBALS['translat'];
-    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main class='main' style="height:440px;">
+<body>
+    <?php
+    // Bug  : on doit récuperer ces deux variables dans les variables globals 
+    $txt = $GLOBALS['translat'];
+    include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
+
+    <main class='main' style="height:10%;">
         <table class='buttonMain'>
             <thead><h1 class='title'><?php echo $txt['adminMainTitle']; ?></h1></thead> 
-            <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['modoMain2']; ?></a></td></tr>
-            <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['adminMain2']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['adminMain1']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=admin&action=findUser'><?php echo $txt['adminMain2']; ?></a></td></tr>
         </table>
     </main>
 
     <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
 </body>
+
 </html>

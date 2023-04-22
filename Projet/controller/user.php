@@ -15,9 +15,15 @@
 <?php 
 
     // Affiche la page d'accueil d'un guest
-    function mainGuest(){require('./Projet/view/guest/main.tpl');}
+    function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
     /* Affiche la page d'accueil */
-    function mainUser(){require('./Projet/view/user/main.tpl');}
+    function mainUser(){require('./Projet/view/user/mainUser.tpl');}
+
+    // Header
+    function teamsPage(){require('./Projet/view/guest/teams.tpl');}
+
+    // Footer
+    function contactPage(){require('./Projet/view/guest/contact.tpl');}
     
     function displayProfil(){
         include_once("Projet/modele/user.php");
@@ -114,4 +120,23 @@
         unset($result);
         displayProfil();
     }
+
+
+    function checkVarSession() {
+        Print_r($_SESSION); // _SESSION - txt
+        echo "<u><b> <br><br>Voici la liste des informations concernant votre session :<br> </b></u>";
+        foreach ($_SESSION as $cle => $valeur) {
+            if(Gettype ($valeur) != gettype(array())) {
+                echo "- ".$cle . " : " . $valeur . "<br>";
+            }
+            else {
+                echo "<br> <b>$cle</b> <br>";
+                foreach ($valeur as $Subcle => $Subvaleur) {
+                    echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
+                }
+            } 
+        }
+    }
+
+
 ?>

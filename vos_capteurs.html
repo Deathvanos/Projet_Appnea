@@ -1,0 +1,127 @@
+<!--******************************************************
+* APP - Projet Système Numérique - Composante Informatique
+* ISEP - A1 - G7C
+* Semestre 2
+* Auteur : - MAILLEY_Charles 
+           - MAIZA_Fares
+           - MARTINEZ_Eliot
+           - PAVIOT-ADET_Flore
+           - SPASOJEVIC_Fanny
+           - VINGADASSAMY_Prasanaa
+* Date de rendu  : 05/06/2023
+********************************************************-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-------------------------------------------->
+    <!-- Nom de votre page -->
+    <title>APNEA</title>
+    <!-------------------------------------------->
+    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
+    <link rel="stylesheet" href="Ressources/css/allPage.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <!-------------------------------------------->
+    <!-- Lien vers la feuille CSS de votre page -->
+    <link rel="stylesheet" href="Ressources/css/guest/main.css" />
+    <!-------------------------------------------->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    
+</head>
+<body>
+
+    <!-- Ne sert à rien de modifier cette partie -->
+    <header class="header_all">
+        <div class="header_left">
+            <a class="header_title" href="#"><img class="header_logo" src="Ressources/img/Logo_Appea-grey.svg" alt="Logo APPNEA">APPNEA</a>
+            <a class="header_title" >__Choix lang</a>
+        </div> <ul class="header_right">
+            <li><a href='#'>Produits</a></li>
+            <li><a href='#'>Capteurs</a></li>
+            <li><a href='#'>Equipe</a></li>
+            <li><a href='#'>FAQ</a></li>
+            <li class="header_conn"><a href="#">Connexion</a></li> </ul>
+    </header>
+
+    <!-- Pour régler la longeur de la page : changer la valeur du height-->
+    <main style="height:530px;">
+    <div id="my_dataviz" style="background-color: white;"></div>
+        <script>
+
+            // set the dimensions and margins of the graph
+            var margin = {top: 10, right: 30, bottom: 30, left: 60},
+                width = 460 - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+            
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz")
+              .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+                .attr("transform",
+                      "translate(" + margin.left + "," + margin.top + ")");
+            
+            //Read the data
+            d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered_comma.csv",
+            
+              // When reading the csv, I must format variables:
+              function(d){
+                return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+              },
+            
+              // Now I can use this dataset:
+              function(data) {
+            
+                // Add X axis --> it is a date format
+                var x = d3.scaleTime()
+                  .domain(d3.extent(data, function(d) { return d.date; }))
+                  .range([ 0, width ]);
+                svg.append("g")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(x));
+            
+                // Add Y axis
+                var y = d3.scaleLinear()
+                  .domain([0, d3.max(data, function(d) { return +d.value; })])
+                  .range([ height, 0 ]);
+                svg.append("g")
+                  .call(d3.axisLeft(y));
+            
+                // Add the line
+                svg.append("path")
+                  .datum(data)
+                  .attr("fill", "none")
+                  .attr("stroke", "steelblue")
+                  .attr("stroke-width", 1.5)
+                  .attr("d", d3.line()
+                    .x(function(d) { return x(d.date) })
+                    .y(function(d) { return y(d.value) })
+                    )
+            
+            })
+            
+            </script>
+    </main>
+
+    <!-- Ne sert à rien de modifier cette partie -->
+    <footer class="footer">
+        <div class="footer_top"><div><h3>Contact</h3><ul>
+            <li> <div class="numberPhone_all"><div class="numberPhone_left">00 11 22 33 44 55</div><div class="numberPhone_right">FREE</div></div></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">mail@mail.com</a></li>
+        </ul></div> <div><h3>Aide et mentions</h3><ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialité</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">CGU & Mentions légales</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Données personnelles & Cookies</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Aide</a></li>
+        </ul> </div><div> <h3>Find use</h3><ul>
+            <a class="footer_icon" href="#"><i class="bx bxl-facebook"></i></a>
+            <a class="footer_icon" href="#"><i class="bx bxl-instagram"></i></a>
+            <a class="footer_icon" href="#"><i class="bx bxl-twitter"></i></a>  
+        </ul> </div> </div><div class="footer_bottom"><i class='bx bx-copyright' ></i>Propriété privé</div>
+    </footer>
+    </body>
+</html>
+

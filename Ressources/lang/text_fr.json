@@ -1,0 +1,50 @@
+{
+    "title_brand": "Appnea",
+    "header_link1": "Nos produits",
+    "header_link2": "Capteurs",
+    "header_link3": "Notre équipe",
+    "header_link4": "FAQ",
+    "header_linkU1": "Mes Capteurs",
+    "header_linkU2": "Ticket incident",
+    "header_linkA1": "Creer utilisateur",
+    "header_linkM1": "Manage FAQ",
+    "header_linkAM2": "Chercher utilisateur",
+    "header_link5": "Editer profil",
+    "header_linkConn": "Connexion",
+    "header_linkLogout": "Deconnexion",
+
+    "footer_p1_title": "Nous contacter",
+    "footer_p1_txt1_1": "11 22 33 44 55",
+    "footer_p1_txt1_2": "Services gratuit <br>+ prix appel",
+    "footer_p1_txt2": "service@appnea.fr",
+    "footer_p2_title": "Aide et mentions",
+    "footer_p2_txt1": "CGU & Mentions légales",
+    "footer_p2_txt2": "Données personnelles & Cookies",
+    "footer_p2_txt3": "Aide",
+    "footer_p2_txt4": "Politique de confidentialité",
+    "footer_p3_title": "Retrouvez-nous sur",
+    "footer_p4": "2022 Appnea — Tous droits réservés.",
+
+    "index_topLeft_1": "Découvrir le produit",
+    "index_topLeft_2": "Une solution personnalisée <br>pour vos problèmes de <color>sommeil</color>.",
+    "index_topLeft_3": "Le sommeil profond commence avec nous.",
+    "index_topRight_1": "\"La qualité de mon sommeil et ma santé se sont beaucoup améliorés !\"",
+    "index_topRight_2": "Malik Ben Mechichi",
+    "index_bottom_title": "NOTRE PRODUIT",
+    "index_bottom_1": "Nous proposons un dispositif permettant de faire un premier diagnostic pour détecter l'apnée du sommeil chez un patient suspectant être atteint de ce trouble.",
+    "index_bottom_2": "Notre produit remplace, ou complète le calendrier du sommeil qui est donné lors de la phase de recherche de trouble du sommeil à l'hôpital.",
+    "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
+        
+    "adminMainTitle": "Gestion <color>admin</color>",
+    "adminMain1": "Création de profil",
+    "adminMain2": "Gérer les utilisateurs",
+
+    "modoMain2": "Gestion de la FAQ",
+
+    "userMain": "Bienvenu sur votre page d'acceuil personnel",
+
+
+    "xx1": "xxx1",
+    "xx2": "xxx2"
+    
+}

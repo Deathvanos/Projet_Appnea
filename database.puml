@@ -1,0 +1,111 @@
+@startuml 
+/' Alt+d pour ouvrir et reload la visualisation '/
+
+
+/' Parametrage pour la structuration d'une BdD '/
+!define primary_key(x) <b><color:#b8861b><&key></color> x</b>
+!define foreign_key(x) <color:#aaaaaa><&key></color> x
+!define column(x) <color:#efefef><&media-record></color> x
+!define table(x) entity x << (T, white) >>
+
+
+
+table(utilisateur) {
+  primary_key(id): Unique VARCHAR 
+  column(typeUse): ENUM {user, modo, admin} 
+  column(firstName) : VARCHAR
+  column(lastName) : VARCHAR
+  column(birthday) : DATE
+  column(phoneNumber) : INT
+  column(mail) : VARCHAR
+  column(password) : hash_VARCHAR
+  column(country) : VARCHAR
+  column(city) : VARCHAR
+  column(codePostal) : VARCHAR
+  column(address) : VARCHAR
+  
+  
+  foreign_key(id_sensor) : VARCHAR
+}
+
+
+table(boitierSensors) {
+  primary_key(id_sensor): Unique VARCHAR 
+
+  primary_key(id_cardiaque) : VARCHAR
+  primary_key(id_sonore) : VARCHAR
+  primary_key(id_temperature) : VARCHAR
+  primary_key(id_humidity) : VARCHAR
+  column(cardiaque_isUsed) : BOOL
+  column(sonore_isUsed) : BOOL
+  column(temperature_isUsed) : BOOL
+  column(humidity_isUsed) : BOOL
+
+}
+
+table(dataCardiaque) {
+  foreign_key(id_cardiaque): Unique VARCHAR 
+  column(data) : INT
+  column(date) : TIMESTAMP
+}
+table(dataSonore) {
+  foreign_key(id_sonore): Unique VARCHAR 
+  column(data) : INT
+  column(date) : TIMESTAMP
+}
+table(dataTemperature) {
+  foreign_key(id_temperature): Unique VARCHAR 
+  column(data) : INT
+  column(date) : TIMESTAMP
+}
+table(dataHumidity) {
+  foreign_key(id_humidity): Unique VARCHAR 
+  column(data) : INT
+  column(date) : TIMESTAMP
+}
+
+
+/' WHERE user.id_sensor = sensor.id_sensor ANDD 1-1 for 1-1'/
+utilisateur ||--|| boitierSensors
+boitierSensors ||--|| dataCardiaque
+boitierSensors ||--|| dataSonore
+boitierSensors ||--|| dataTemperature
+boitierSensors ||--|| dataHumidity
+
+
+
+table(FAQ) {
+  primary_key(id_question): Unique INT 
+  column(question) : VARCHAR
+  column(reponse) : VARCHAR  
+}
+
+
+
+/' 
+Un User a :* nom
+           * prénom
+           * date de naissance
+           * phone
+           * mail
+           * lieu de vie 
+Pour se connecter, un User doit utiliser son mail et un mot de passe.
+Un User doit donc avoir un mail unique ainsi qu'un identifiant unique.
+Un User possède un boitier APPNEA.
+
+Un boitier APPNEA contient des capteurs : * capteur cardiaque
+                                          * capteur sonore
+                                          * capteur de température
+                                          * capteur d'humidité
+Chaque capteur récolte des données à un moment t
+Un ADMIN peut gérer les capteurs (activation/désactivation).
+
+Un Modo et un Admin sont similaire aux User mais ne possèdent pas de boitier APPNEA.
+Un Modo peut gérer la FAQ. La FAQ contient des questions et des réponses.
+Un ADMIN peut gérer les utilisateurs (ajouter, supprimer, modifier, bannir) (USER et MODO).
+Les utilisateurs sont les USER, MODO, ADMIN
+'/
+
+
+
+@enduml

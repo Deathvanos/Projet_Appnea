@@ -22,7 +22,8 @@
                 <div class="numberPhone_right"><?php echo $txt['footer_p1_txt1_2']; ?></div>
             </div>
             </li>
-            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=guest&action=errorPage"><?php echo $txt['footer_p1_txt2']; ?></a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=guest&action=contactPage"><?php echo $txt['footer_p1_txt2']; ?></a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=guest&action=contactPage"><?php echo $txt['footer_p1_txt3']; ?></a></li>
         </ul>
         </div>
         <div>

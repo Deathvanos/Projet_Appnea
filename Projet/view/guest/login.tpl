@@ -40,6 +40,7 @@
                   <input id="mdp" type="password" placeholder="Entrez votre mot de passe" name="mdp" required minlength="1"/>
                   <input id="btn_connection" type="submit" value="Se connecter"/>
                   <p class="message">Nouveau chez APPNEA ? <a href="index.php?controle=guest&action=contactPage" >Achète ton produit</a></p>
+                  <p id="mdp_oublie">Mot de passe oublié ? Cliquez ici</p>
                   <!-- Afficher le message d'erreur s'il existe -->
                   <?php if(isset($_SESSION['errorLog'])){echo '<br>'.$_SESSION['errorLog'];}else{echo '';}?>
                 </form>

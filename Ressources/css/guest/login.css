@@ -43,6 +43,7 @@ body{
   width: 100%;
   padding-left: 15%;
   padding-right: 15%;
+  border-radius: 8px;
 }
 
 .desc_login{
@@ -73,7 +74,7 @@ body{
   padding: 16px 32px;
   gap: 8px;
   background: #F6593E;
-  border-radius: 8px;
+  border-radius: 15px;
 }
 
 #btn_connection{
@@ -91,7 +92,9 @@ body{
 }
 
 .message{
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 30px;
+  color: #391E87; 
 }
 
 #droite_login{
@@ -107,4 +110,18 @@ body{
   margin-top: 30%;
   color: #391E87;
   font-weight: 600;
+  text-decoration: none;
+}
+
+#mdp_oublie{
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #211265;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#achete{
+  color: #211265;
 }

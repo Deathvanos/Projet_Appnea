@@ -1,0 +1,49 @@
+﻿
+h1{
+    margin-left: 42.5%;
+    color: white;
+}
+
+color{
+    background: linear-gradient(to right, #6C37EE,#F6593E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+img{
+    float: left;
+}
+
+.contenu{
+    padding-top: 10%;
+}
+
+.grid_container {
+    width : 70%;
+    display: grid;
+    grid-template-columns: 40% 10% 40%;
+    padding-left: 5%;
+}
+
+elem {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+h3{
+    padding-left: 3%;
+    background-color: hsla(120,100%,100%,0.17);
+    border-radius: 25px;
+    margin-top: 4%;
+}
+
+info{
+    font-size: 0.75em;
+}
+
+.hide{
+    background-color: transparent;
+}

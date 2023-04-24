@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^article/([0-9]+)/?$ article.php?id=$1 [L]
+
+ErrorDocument 401 /Projet/view/error.php
+ErrorDocument 402 /Projet/view/error.php
+ErrorDocument 403 /Projet/view/error.php
+ErrorDocument 404 /Projet/view/error.php
+ErrorDocument 405 /Projet/view/error.php
+ErrorDocument 406 /Projet/view/error.php
+ErrorDocument 407 /Projet/view/error.php
+ErrorDocument 408 /Projet/view/error.php
+ErrorDocument 409 /Projet/view/error.php
+ErrorDocument 410 /Projet/view/error.php
+
+# la redirection ne fonctionne pas

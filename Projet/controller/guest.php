@@ -19,18 +19,10 @@
     /***** Fonctions pour afficher une page *****/
     /********************************************/
     // Affiche la page d'accueil d'un guest
-    function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
+    function mainGuest(){require('./Projet/view/guest/main.tpl');}
     // Affiche la page de connection 
     function login(){require('./Projet/view/guest/login.tpl');}
-
-    // Header
-    function teamsPage(){require('./Projet/view/guest/teams.tpl');}
-
-    // Footer
-    function contactPage(){require('./Projet/view/guest/contact.tpl');}
     // Après verification de la demande de login, connection de l'utilisateur
-
-
     function isUser(){header('Location: index.php?controle=user&action=mainUser');}
     function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
     function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
@@ -69,20 +61,5 @@
     }
 
 
-    function checkVarSession() {
-        Print_r($_SESSION); // _SESSION - txt
-        echo "<u><b> <br><br>Voici la liste des informations concernant votre session :<br> </b></u>";
-        foreach ($_SESSION as $cle => $valeur) {
-            if(Gettype ($valeur) != gettype(array())) {
-                echo "- ".$cle . " : " . $valeur . "<br>";
-            }
-            else {
-                echo "<br> <b>$cle</b> <br>";
-                foreach ($valeur as $Subcle => $Subvaleur) {
-                    echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
-                }
-            } 
-        }
-    }
     
 ?>

@@ -11,15 +11,26 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
+<!-- A mettre seulement sur la first page du site 
+(Permet l'utilisation de variables inter page) -->
+<!--
+<?php //**session_start(); ?>
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>APNEA - Main Guest</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
-    <link rel="stylesheet" href="Ressources/css/guest/mainGuest.css" />
+    <meta charset="UTF-8">
+    <title>APNEA</title>
+    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
+    <link rel="stylesheet" href="Ressources/css/allPage.css" />
+    <link rel="stylesheet" href="Ressources/css/guest/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <?php    
+    // Bug  : on doit récuperer ces deux variables dans les variables globals 
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
@@ -58,7 +69,7 @@
         </div>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>
 

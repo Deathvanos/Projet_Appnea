@@ -3,7 +3,7 @@
     function connectionToDB() {
         $servername = "localhost";
         $username = "root";
-        $password = "root"; // "" pour * - et "root" pour Flore
+        $password = ""; 
         $dbname = "appnea";
     
         try {

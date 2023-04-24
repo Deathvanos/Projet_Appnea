@@ -1,0 +1,21 @@
+#degrade {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Conditions {
+    position: absolute;
+    width: 50%;
+    height: 40px;
+    left: 25%;
+    top: 17%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 12%;
+}

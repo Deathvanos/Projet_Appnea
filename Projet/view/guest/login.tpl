@@ -39,17 +39,15 @@
                   <p class='desc_login'>Mot de passe</p>
                   <input id="mdp" type="password" placeholder="Entrez votre mot de passe" name="mdp" required minlength="1"/>
                   <input id="btn_connection" type="submit" value="Se connecter"/>
-                  <p class="message">Nouveau chez APPNEA ? <a href="index.php?controle=guest&action=errorPage" >Achète ton produit</a></p>
+                  <p class="message">Nouveau chez APPNEA ? <a href="index.php?controle=guest&action=contactPage" >Achète ton produit</a></p>
                   <!-- Afficher le message d'erreur s'il existe -->
                   <?php if(isset($_SESSION['errorLog'])){echo '<br>'.$_SESSION['errorLog'];}else{echo '';}?>
                 </form>
-
-
               </div>
             </div> 
           </div> 
-          <div class="droite_login">
+          <div id="droite_login" class="main">
             <h3 id="message_droite"> - Enfin du vrai repos</h3>
-          </div>    
+          </div> 
     </body>
 </html>

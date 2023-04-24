@@ -1,5 +1,8 @@
 html{
-  background-color: #56E5FB;
+  background-image: url(../../img/background_login.svg);
+  background-color:#211265;
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
 }
 
 body{
@@ -91,13 +94,15 @@ body{
   margin-top: 20px;
 }
 
-.droite_login{
+#droite_login{
   width: 50%;
-  background-color: #56E5FB;
+  background-image: url(../../img/background_login.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
 }
 
 #message_droite{
-  font-size: 30px;
+  font-size: 40px;
   text-align:center;
   margin-top: 30%;
   color: #391E87;

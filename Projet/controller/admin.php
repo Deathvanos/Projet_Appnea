@@ -11,7 +11,6 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-
 <?php 
 
     // Affiche la page d'accueil d'un guest

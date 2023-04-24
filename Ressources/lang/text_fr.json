@@ -36,6 +36,15 @@
     "index_bottom_2": "Notre produit remplace, ou complète le calendrier du sommeil qui est donné lors de la phase de recherche de trouble du sommeil à l'hôpital.",
     "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
         
+    "login_title": "Se connecter",
+    "login_nameLabel": "Nom d'utilisateur",
+    "login_nameField": "Entrez votre nom d'utilisateur",
+    "login_mdpLabel": "Mot de passe",
+    "login_mdpField": "Entrez votre mot de passe",
+    "login_newUser": "Nouveau chez APPNEA ? <a href='index.php?controle=guest&action=contactPage'>Achète ton produit</a>",
+    "login_forgotMdp": "Mot de passe oublié ? Cliquez ici",
+    "login_Add": "- Enfin du vrai repos",
+
     "adminMainTitle": "Gestion <color>admin</color>",
     "adminMain1": "Création de profil",
     "adminMain2": "Gérer les utilisateurs",

@@ -5,52 +5,37 @@
 }
 
 #Conditions {
-    position: absolute;
-    width: 50%;
-    height: 40px;
-    left: 25%;
-    top: 17%;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
     line-height: 100%;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 12%;
+    margin-block: 1% 2%;
 }
 
 
 
 table {
-    background-color: #F6593E;
-    width: 90%;
-    text-align: left;
-    height: 57px;
-    left: 253px;
-    margin-top: 8%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 95%;
     font-size: 69%;
     /* Espacement entre les lignes du tableau*/
-    border-spacing: 0px 1.25rem;
-    border-radius: 50px;
-
+    border-spacing: 0px 2.25rem;
 }
 
 tr {
     background-color: black;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 100%;
+    
 
 }
 
 td {
+    padding-block: 1.5%;
     background-color: #F6593E;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -61,18 +46,15 @@ td {
 question {
     color: #FFFFFF;
     margin-left: 5%;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 100%;
-
 }
 
 td:hover response  {
     background-color: #F6593E;
     display: inline-block;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -86,7 +68,6 @@ response {
     display: none;
     margin-left: 7%;
     margin-right: 7%;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 15px;

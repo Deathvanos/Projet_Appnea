@@ -28,7 +28,7 @@
     <main style="height:900px;">
 
         <!-- On stoque aussi les balises color dans $GLOBALS['translat'] (voir #com after) (y a des balises inutiles)-->
-        <div><h2 id="Contacter">Contacter<color id="dégradé">le support</color></h2>
+        <div><h2 id="Contacter">Contacter <color id="dégradé">le support</color></h2>
 
         <div>
             <div class="objet"> <p>Objet</p></div>

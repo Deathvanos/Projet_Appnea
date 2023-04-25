@@ -36,7 +36,7 @@
     function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
 
     //Questions
-    function questionsPage(){require('./Projet/view/guest/pagesQuestions.tpl');}
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
 
      //Conditions
      function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}

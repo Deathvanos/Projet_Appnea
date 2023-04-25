@@ -25,7 +25,7 @@
     <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
     <!-------------------------------------------->
     <!-- Lien vers la feuille CSS de votre page -->
-    <link rel="stylesheet" href="Ressources/css/guest/pageQuestions.css" />
+    <link rel="stylesheet" href="Ressources/css/guest/pageConditions.css" />
     <!-------------------------------------------->
 </head>
 <body>

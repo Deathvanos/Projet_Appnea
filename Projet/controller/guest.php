@@ -35,7 +35,11 @@
     function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
     function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
 
+    //Questions
+    function questionsPage(){require('./Projet/view/guest/pagesQuestions.tpl');}
 
+     //Conditions
+     function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
 
     /************************************/
     /***** Fonctions about le login *****/

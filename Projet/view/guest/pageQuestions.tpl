@@ -23,7 +23,7 @@
     <?php $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main style="height:730px;">
+    <main>
     
         <h2 id="Conditions"><?php echo $txt['faq_title']; ?></h2>
 

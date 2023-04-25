@@ -12,6 +12,7 @@ color{
 
 img{
     float: left;
+    width: 10em;
 }
 
 /*.filter_color{
@@ -56,9 +57,11 @@ button{
     border-radius: 25px;
     color: white;
     background-color: #423EF6;
-    height: 5%;
     width : 10%;
+    padding-block: 0.5em;
+    margin-right: 2.5%;
     float: right;
+
 }
 
 .bxs-user-rectangle{

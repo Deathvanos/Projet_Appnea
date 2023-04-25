@@ -16,11 +16,9 @@
     // Affiche la page d'accueil d'un guest
     function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
     /* Affiche la page d'accueil */
-<<<<<<< HEAD
-    function mainAdmin(){require('./Projet/view/admin/main.tpl');}
-=======
+
     function mainAdmin(){require('./Projet/view/admin/mainAdmin.tpl');}
->>>>>>> master
+
 
     // Header
     function teamsPage(){require('./Projet/view/guest/teams.tpl');}
@@ -39,18 +37,11 @@
      * L'utilisateur doit confirmer avant de supprimer un user
      */
     function sendConfirmationDelUser(){
-<<<<<<< HEAD
-        // Chargement du fichier JavaScript
-        echo '<script id="confirm-script" src="Projet/view/other/js/confirmDeleteUser.js" type="text/javascript"></script>';
-        // Activation de la fonction (mettre '' pour str et rine pour int)
-        echo "<script>msgDelUser('".$_POST['delUser']."')</script>";
-=======
         $msgAlert = $GLOBALS['translat']["adminGestionUser_MsgDelUser"];
         // Chargement du fichier JavaScript
         echo '<script id="confirm-script" src="Projet/view/other/js/confirmDeleteUser.js" type="text/javascript"></script>';
         // Activation de la fonction (mettre '' pour str et rine pour int)
         echo "<script>msgDelUser('".$_POST['delUser']."', '".$msgAlert."')</script>";
->>>>>>> master
     }
 
 
@@ -128,11 +119,6 @@
 
         // Va chercher la table User
         $result = printDataBase($posList, $nbElements);
-
-        // Pour un affichage dinamique de la hauteur de la pge
-        $nbUser = nbUserFind();
-        $size =  300 + 80 * ($nbUser-$nbElements>0 ? $nbElements : $nbUser) ;
-
         require('./Projet/view/admin/findUserAdmin.tpl');
     }
 

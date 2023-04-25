@@ -121,6 +121,7 @@ INSERT INTO sensorBox (id_Box) VALUES
 ('box18'),
 ('box19'),
 ('box20');
+('boxFaresData');
 
 
 INSERT INTO utilisateur (id_utilisateur, typeUser, photo, firstName, lastName, birthday, phoneNumber, mail, password, country, city, codePostal, address, id_Box) VALUES
@@ -162,6 +163,7 @@ INSERT INTO utilisateur (id_utilisateur, typeUser, photo, firstName, lastName, b
 (37, 'User', NULL, 'Chloé', 'Gautier', '2001-05-11', '+33635478696', 'chloe.gautier@gmail.com', 'hash123', 'France', 'Nice', 06000, '12 rue de la Mer', NULL),
 (38, 'Modo', NULL, 'Nicolas', 'Dupont', '1992-09-22', '+33658742139', 'nicolas.dupont@gmail.com', 'hash123', 'France', 'Lyon', 69002, '8 avenue des Saules', NULL),
 (39, 'User', NULL, 'Sophie', 'Laurent', '1996-11-16', '+33695637852', 'sophie.laurent@gmail.com', 'hash123', 'France', 'Marseille', 13006, '21 avenue de la Plage', 'box17');
+(100, 'User', NULL, 'Faresdata', 'Yessir', '2002-01-01', '+33767970763', 'faresdata.yessir@yahoo.fr', 'Azerty123!', 'France', 'Paris', 75017, 'Avenue de la grand armée', 'boxFaresData');
 
 
 INSERT INTO sensor (id_sensor, id_Box, typeSensor, isUsed, isNotBroken) VALUES
@@ -220,6 +222,10 @@ INSERT INTO sensor (id_sensor, id_Box, typeSensor, isUsed, isNotBroken) VALUES
 ('sensor96', null, 'heartSensor', 1, 1),
 ('sensor98', null, 'soundSensor', 1, 1),
 ('sensor99', null, 'temperatureSensor', 1, 1);
+('sensorFD1_hum', "boxFaresData", 'humiditySensor', 1, 1);
+('sensorFD2_sound', "boxFaresData", 'soundSensor', 1, 1);
+('sensorFD3_temp', "boxFaresData", 'temperatureSensor', 1, 1);
+('sensorFD4_heart', "boxFaresData", 'heartSensor', 1, 1);
 
 
 -- 1 fichier JSON contient 1h de données
@@ -285,7 +291,12 @@ INSERT INTO dataSensor (id_data, id_sensor, dataFile, date_start, date_end) VALU
 ('data30_1', 'sensor50', '{"value": 70, "unit": "dB"}', '2022-01-01 12:00:00', '2022-01-01 12:00:10'),
 ('data31_1', 'sensor51', '{"value": 80, "unit": "bpm"}', '2022-01-01 12:00:00', '2022-01-01 12:00:10'),
 ('data32_1', 'sensor52', '{"value": 42, "unit": "%"}', '2022-01-01 12:00:00', '2022-01-01 12:00:10'),
-('data33_1', 'sensor53', '{"value": 20, "unit": "°C"}', '2022-01-01 12:00:00', '2022-01-01 12:00:10');
+('data33_1', 'sensor53', '{"value": 20}', '2022-01-01 12:00:00', '2022-01-01 12:00:10');
+
+('dataFD_1', 'sensorFD1_hum', '{"values": [60, 64, 68]}', '2023-04-24 00:11:00', '2023-04-24 08:11:00');
+('dataFD_2', 'sensorFD2_sound', '{"values": [48, 49, 48]}', '2023-04-24 00:11:00', '2023-04-24 08:11:00');
+('dataFD_3', 'sensorFD3_temp', '{"values": [22, 19, 20]}', '2023-04-24 00:11:00', '2023-04-24 08:11:00');
+('dataFD_4', 'sensorFD4_heart', '{"values": [2, 3, 2]}', '2023-04-24 00:11:00', '2023-04-24 08:11:00');
 
 
 INSERT INTO FAQ (`id_question`, `question`, `response`) VALUES

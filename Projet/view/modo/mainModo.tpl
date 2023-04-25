@@ -24,7 +24,7 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main class='main' style="height:10%;">
+    <main class='main'>
         <table class='buttonMain'>
             <thead><h1 class='title'><?php echo $txt['modoMainTitle']; ?></h1></thead> 
             <tr><td><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['modoMain2']; ?></a></td></tr>

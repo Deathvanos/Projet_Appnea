@@ -23,7 +23,7 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main style="height:830px;">
+    <main>
         <div class="top">
             <div class="top_title">
                 <a href="#OurProduct"><?php echo $txt['index_topLeft_1']; ?></a>

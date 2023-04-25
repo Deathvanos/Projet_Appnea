@@ -27,7 +27,7 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
-    <main class='main' style="height:10%;">
+    <main class='main'>
         <table class='buttonMain'>
             <thead><h1 class='title'><?php echo $txt['adminMainTitle']; ?></h1></thead> 
             <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['adminMain1']; ?></a></td></tr>

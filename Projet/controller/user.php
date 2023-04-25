@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -12,13 +12,24 @@
 ********************************************************-->
 
 
-<?php 
+<?php
 
     // Affiche la page d'accueil d'un guest
-    function mainGuest(){require('./Projet/view/guest/main.tpl');}
+    function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
     /* Affiche la page d'accueil */
-    function mainUser(){require('./Projet/view/user/main.tpl');}
-    
+    function mainUser(){require('./Projet/view/user/mainUser.tpl');}
+
+    // Header
+    function teamsPage(){require('./Projet/view/guest/teams.tpl');}
+
+    // Footer
+    function contactPage(){require('./Projet/view/guest/contact.tpl');}
+
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
+
+    //Conditions
+    function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
+
     function displayProfil(){
         include_once("Projet/modele/user.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -30,10 +41,10 @@
         $photo = $result[0]['photo'];
         $photo_base64 = base64_encode($photo);
 
-        //header("Content-type: image"); 
+        //header("Content-type: image");
         require("Projet/view/user/profil.tpl");
     }
-    
+
     function displayModifInfos(){
         include_once("Projet/modele/user.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -43,13 +54,13 @@
         $mail = $result[0]['mail'];
         $address = $result[0]['address'];
         $city = $result[0]['city'];
-        $country = $result[0]['country'];  
+        $country = $result[0]['country'];
         $photo = $result[0]['photo'];
         $photo_base64 = base64_encode($photo);
         unset($result);
         require("Projet/view/user/modifProfil.tpl");
     }
-    
+
     function modifInfos(){
         include_once("Projet/modele/user.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -61,7 +72,7 @@
         }else{
             $avatar = file_get_contents($_FILES["avatar"]["tmp_name"]);
         }
-        
+
         $lastName = isset($_POST['lastname'])?$_POST['lastname']:$result[0]['lastName'];
         $firstName = isset($_POST['firstname'])?$_POST['firstname']:$result[0]['firstName'];
         $phoneNumber = isset($_POST['phoneNumber'])?($_POST['phoneNumber']):$result[0]['phoneNumber'];
@@ -77,4 +88,23 @@
         unset($result);
         displayProfil();
     }
+
+
+    function checkVarSession() {
+        Print_r($_SESSION); // _SESSION - txt
+        echo "<u><b> <br><br>Voici la liste des informations concernant votre session :<br> </b></u>";
+        foreach ($_SESSION as $cle => $valeur) {
+            if(Gettype ($valeur) != gettype(array())) {
+                echo "- ".$cle . " : " . $valeur . "<br>";
+            }
+            else {
+                echo "<br> <b>$cle</b> <br>";
+                foreach ($valeur as $Subcle => $Subvaleur) {
+                    echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
+                }
+            }
+        }
+    }
+
+
 ?>

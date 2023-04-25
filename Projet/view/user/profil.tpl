@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -14,25 +14,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>APNEA</title>
-    <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
-    <link rel="stylesheet" href="Ressources/css/allPage.css" />
-    <!--<link rel="stylesheet" href="Ressources/css/guest/main.css" />-->
+    <title>APNEA - Profil</title>
+    <?php include 'Projet/view/other/header_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/profil.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <?php    
-    // Bug  : on doit récuperer ces deux variables dans les variables globals 
+    <?php
+    // Bug  : on doit récuperer ces deux variables dans les variables globals
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
     <main style="height:830px;">
         <h1> Votre <color>profil</color></h1>
         <div class="contenu">
-            <?php 
+            <?php
                 if($photo_base64 !=""){
                     echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
                 }else{
@@ -59,4 +54,4 @@
 </body>
 </html>
 
-<!-- 1er milestone : l'utilisateur peut afficher son profil avec ses infos --> 
+<!-- 1er milestone : l'utilisateur peut afficher son profil avec ses infos -->

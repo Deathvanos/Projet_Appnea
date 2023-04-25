@@ -35,7 +35,16 @@
     "index_bottom_1": "Nous proposons un dispositif permettant de faire un premier diagnostic pour détecter l'apnée du sommeil chez un patient suspectant être atteint de ce trouble.",
     "index_bottom_2": "Notre produit remplace, ou complète le calendrier du sommeil qui est donné lors de la phase de recherche de trouble du sommeil à l'hôpital.",
     "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
-        
+
+    "login_title": "Se connecter",
+    "login_nameLabel": "Nom d'utilisateur",
+    "login_nameField": "Entrez votre nom d'utilisateur",
+    "login_mdpLabel": "Mot de passe",
+    "login_mdpField": "Entrez votre mot de passe",
+    "login_newUser": "Nouveau chez APPNEA ? <a href='index.php?controle=guest&action=contactPage'>Achète ton produit</a>",
+    "login_forgotMdp": "Mot de passe oublié ? Cliquez ici",
+    "login_Add": "- Enfin du vrai repos",
+
     "adminMainTitle": "Gestion <color>admin</color>",
     "adminMain1": "Création de profil",
     "adminMain2": "Gérer les utilisateurs",
@@ -62,17 +71,25 @@
     "adminGestionUser_PageIndex": "Vue",
     "adminGestionUser_LastPage": "Précédant",
     "adminGestionUser_NextPage": "Suivant",
+    "adminGestionUser_Active": "Activé",
+    "adminGestionUser_Lock": "Bloqué",
+    "adminGestionUser_MsgDelUser": "Votre demande de suppression de l\\'utilisateur a été pris en compte.\\nPour valider la suppression, veuillez réefectuer la démarche de suppression.\\n\\nAttention, l\\'action sera irréversible",
 
-
+    "modoMainTitle": "Gestion <color>modérateur</color>",
     "modoMain2": "Gestion de la FAQ",
 
-    "userMain": "Bienvenu sur votre page d'acceuil personnel",
+    "userMain": "Bienvenue ",
+    "userMain_date": "Ajourd'hui nous somme le ",
+    "userMain_id": "Identification : ",
+    "userMain_box": "Référence boxe : ",
+    "userMain_btnData": "Voir mes données de capteurs",
+    "userMain_btnTicket": "envoyer un ticket d'incident",
 
     "xx1": "xxx1",
     "xx2": "xxx2",
     "Submit": "Enregistrer",
     "Abandon": "Annuler",
-    
+
     "Profil_Label_Name1" : "Nom",
     "Profil_Label_Name2" : "Prénom",
     "Profil_Tel": "Numéro de téléphone",
@@ -83,5 +100,5 @@
     "Profil_Country": "Pays",
     "Profil_Avatar": "Modifier la photo",
     "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici"
-    
+
 }

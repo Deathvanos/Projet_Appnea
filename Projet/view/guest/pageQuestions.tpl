@@ -25,7 +25,7 @@
     <link href="Ressources/bitmap/boxicons/css/boxicons.min.css" rel="stylesheet">
     <!-------------------------------------------->
     <!-- Lien vers la feuille CSS de votre page -->
-    <link rel="stylesheet" href="Ressources/css/guest/main.css" />
+    <link rel="stylesheet" href="Ressources/css/guest/pageQuestions.css" />
     <!-------------------------------------------->
 </head>
 <body>
@@ -49,10 +49,50 @@
 
 
     <!-- Pour régler la longeur de la page : changer la valeur du height-->
-    <main style="height:530px;">
+    <main style="height:730px;">
         <!-- Le contenu de ta page-->
-    </main>
     
+
+    <div>
+        <h2 id="Conditions"> Vos <span id="degrade"> questions </span>  </h2>
+    <div>
+
+        <br></br>
+
+        <table>
+            <tr>
+                <td>
+                    <question>Comment acheter notre produit</question>
+                    <br>
+                    
+                    <response>Notre produit est disponible sur notre site. Il peut vous être prescrit par votre médecin traitant.</response>
+                </td>
+            </tr>
+            <table cellspacing="1">
+            <tr>
+                <td>
+                    <question>Qui contacter en cas de panne ?</question>
+                    <br>
+                    <response>Retrouvez-nous dans la rubrique Contact de notre site, nous sommes accessibles par téléphone ou bien sur nos réseaux sociaux.</response>
+                </td>
+            </tr>
+            <table cellspacing="1">
+            <tr>
+                <td>
+                    <question>Vos produits sont-ils fiables ?</question>
+                    <br>
+                    <response>Tous nos produits sont garantis fiables et testés par nos équipes. Vous pouvez retrouver nos procédures de tests dans notre rubrique Capteurs.</response>
+                </td>
+            </tr>
+
+        </table>
+     </main>
+
+
+    </main>
+
+
+
 
     <!-- Ne sert à rien de modifier cette partie -->
     <footer class="footer">

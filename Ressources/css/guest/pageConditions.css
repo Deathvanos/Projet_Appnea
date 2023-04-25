@@ -1,0 +1,95 @@
+#degrade {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Conditions {
+    position: absolute;
+    width: 50%;
+    height: 40px;
+    left: 25%;
+    top: 17%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+table {
+    background-color: #F6593E;
+    width: 90%;
+    text-align: left;
+    height: 57px;
+    left: 253px;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 69%;
+    /* Espacement entre les lignes du tableau*/
+    border-spacing: 0px 1.25rem;
+    border-radius: 50px;
+
+}
+
+tr {
+    background-color: black;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+
+}
+
+td {
+    background-color: #F6593E;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    border-radius:50px;
+}
+
+question {
+    background-color: #F6593E;
+    margin-left: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+
+}
+
+td:hover response  {
+    background-color: #F6593E;
+    display: inline-block;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    border-radius: 70px;
+}
+
+
+response {
+    color: black;
+    display: none;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    margin-top: 10px;
+    text-align: justify;
+}

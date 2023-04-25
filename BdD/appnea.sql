@@ -2,7 +2,7 @@
 -- APP - Projet Système Numérique - Composante Informatique
 -- ISEP - A1 - G7C
 -- Semestre 2
--- Auteur : - MAILLEY_Charles 
+-- Auteur : - MAILLEY_Charles
 --          - MAIZA_Fares
 --          - MARTINEZ_Eliot
 --          - PAVIOT-ADET_Flore
@@ -23,6 +23,16 @@
 
 -- On peut pas faire les jointures tant que les tables n'ont pas été toutes créée
 -- UNSIGNED : seul les nombres >= 0 sont possible
+
+
+
+-- ---------------------------------------------------------------------
+-- --------------- Creation de la DataBase si inexistante --------------
+-- ---------------------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS `appnea` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `appnea`;
+
+
 
 
 -- ---------------------------------------------------------------------
@@ -48,9 +58,7 @@ CREATE TABLE utilisateur (
   `password` varchar(127) NOT NULL,
   `country` varchar(31) NOT NULL,
   `city` varchar(31) NOT NULL,
-
   `codePostal` varchar(15) DEFAULT NULL,
-
   `address` varchar(63) NOT NULL,
   `id_Box` VARCHAR(31) DEFAULT NULL UNIQUE,
   FOREIGN KEY (`id_Box`) REFERENCES sensorBox(`id_Box`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -115,7 +123,7 @@ INSERT INTO sensorBox (id_Box) VALUES
 ('box20');
 
 
-INSERT INTO utilisateur (id_utilisateur, typeUser, photo, firstName, lastName, birthday, phoneNumber, mail, password, country, city, codePostal, address, id_Box) VALUES 
+INSERT INTO utilisateur (id_utilisateur, typeUser, photo, firstName, lastName, birthday, phoneNumber, mail, password, country, city, codePostal, address, id_Box) VALUES
 (1,  'User', null,  'Jean', 'Bon', '1984-04-12', '147258369', 'jeanbon@yahoo.fr', 'jeanbon123ABC!!!', 'France', 'Toulouse', NULL,  'avenue de la boucherie', NULL),
 (2,  'Admin', null,  'admin', 'thebest', '2000-01-01', '+33 7123456789', 'adminthebest@gmail.com', 'admin123ABC!!!', 'France', 75011,  'Paris', 'ISEP', NULL),
 (3,  'Modo', null,  'modo', 'theworth', '2023-03-14', '666666666', 'modothwoth@yahoo.fr', 'modo123ABC!!!', 'France', 'Perpignan', NULL,  'à la rue', NULL),
@@ -217,7 +225,7 @@ INSERT INTO sensor (id_sensor, id_Box, typeSensor, isUsed, isNotBroken) VALUES
 -- 1 fichier JSON contient 1h de données
 -- l'intervalle entre chaque valeurs depend du capteur
 -- Le fichier JSON peut donc contenir qu'une suite de valeurs
--- Les deux colonnes TIMESTAMP permet de connaitre l'heure de début  et de fin de la captation des données 
+-- Les deux colonnes TIMESTAMP permet de connaitre l'heure de début  et de fin de la captation des données
 INSERT INTO dataSensor (id_data, id_sensor, dataFile, date_start, date_end) VALUES
 ('data1', 'sensor1', '{ "values": [23.4, 23.6, 23.8, 24.1, 23.9] }', '2022-01-01 12:00:00', '2022-01-01 13:00:00'),
 ('data2', 'sensor1', '{ "values": [23.9, 24.2, 24.5, 24.1, 23.8] }', '2022-01-02 12:00:00', '2022-01-02 13:00:00'),
@@ -291,4 +299,3 @@ INSERT INTO FAQ (`id_question`, `question`, `response`) VALUES
 (8, "Comment puis-je savoir si j'ai un trouble du sommeil ?", "Les troubles du sommeil peuvent être diagnostiqués par un professionnel de la santé. Si vous avez des difficultés à vous endormir, à rester endormi ou si vous vous réveillez fatigué, vous pourriez avoir un trouble du sommeil. Parlez-en à votre médecin si vous êtes préoccupé par votre sommeil."),
 (9, "Les somnifères sont-ils une solution sûre pour les problèmes de sommeil ?", "Les somnifères peuvent aider à traiter les problèmes de sommeil à court terme, mais ils ne sont généralement pas recommandés pour une utilisation à long terme car ils peuvent causer des effets secondaires et des problèmes de dépendance."),
 (10, "Le ronflement est-il un signe de trouble du sommeil ?", "Le ronflement peut être un signe de trouble du sommeil, notamment de l'apnée du sommeil. Si vous ronflez régulièrement ou si vous vous réveillez souvent fatigué, vous pourriez avoir un trouble du sommeil. Parlez-en à votre médecin si vous êtes préoccupé par votre sommeil.");
-

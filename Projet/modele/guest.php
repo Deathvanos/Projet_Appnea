@@ -19,7 +19,7 @@
         $commande->bindParam(':mail', $_POST['mail']); // pour les requetes sql avec variables externe
         $commande->bindParam(':password', $_POST['mdp']); // pour les requetes sql avec variables externe
         $bool = $commande->execute();
-        $resultat = $commande->fetch();
+        $resultat = $commande->fetch(PDO::FETCH_ASSOC);
 
         if ($resultat) {
             $_SESSION['userInfo'] = $resultat;

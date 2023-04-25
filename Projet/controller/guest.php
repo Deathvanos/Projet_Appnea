@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -12,15 +12,15 @@
 ********************************************************-->
 
 
-<?php 
+<?php
 
 
     /********************************************/
     /***** Fonctions pour afficher une page *****/
     /********************************************/
     // Affiche la page d'accueil d'un guest
-    function mainGuest(){require('./Projet/view/guest/main.tpl');}
-    // Affiche la page de connection 
+    function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
+    // Affiche la page de connection
     function login(){require('./Projet/view/guest/login.tpl');}
 
     // Header
@@ -35,7 +35,11 @@
     function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
     function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
 
+    //Questions
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
 
+     //Conditions
+     function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
 
     /************************************/
     /***** Fonctions about le login *****/
@@ -46,7 +50,7 @@
         $mdp= htmlspecialchars($_POST['mdp']);
 
         /*** Vérification des infos avant la requete SQL ***/
-        // 
+        //
         if (//!preg_match("/@/", $mail) | // un mail doit contenir un @
           //  (strlen($mdp) < 8 || strlen($mdp) > 64) | // Vérifier la longueur du mot de passe
           //  !preg_match("/[A-Z]/", $mdp) | // Vérifier la présence d'une lettre majuscule
@@ -65,10 +69,24 @@
         tryLogin();
 
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        $functionName = 'is'.$_SESSION['userInfo']["typeUser"];
-        $functionName();
+        ('is'.$_SESSION['userInfo']["typeUser"])();
     }
 
 
-    
+    function checkVarSession() {
+        Print_r($_SESSION); // _SESSION - txt
+        echo "<u><b> <br><br>Voici la liste des informations concernant votre session :<br> </b></u>";
+        foreach ($_SESSION as $cle => $valeur) {
+            if(Gettype ($valeur) != gettype(array())) {
+                echo "- ".$cle . " : " . $valeur . "<br>";
+            }
+            else {
+                echo "<br> <b>$cle</b> <br>";
+                foreach ($valeur as $Subcle => $Subvaleur) {
+                    echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
+                }
+            }
+        }
+    }
+
 ?>

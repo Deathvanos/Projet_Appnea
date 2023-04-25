@@ -39,12 +39,13 @@ Style commun à toutes les pages
 main {
     background-image: url("../img/background.svg");
     background-size: 100% 100%;
-    height: auto; 
     color: var(--myColor-fontColor-main);
-    height: 830px; /*522*/
     /* Ajout un espace entre le bloc et le bord de l'ecran gauche*/
     padding-left: 2.5%;
-    
+    padding-bottom: 6em;
+
+
+
 }
 
 body {/*Suppression du blanc de bas de page en cas de zoom*/
@@ -188,6 +189,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     width: 100%;
     */
 }
+
 
 .footer_icon {
     font-size: 40px;

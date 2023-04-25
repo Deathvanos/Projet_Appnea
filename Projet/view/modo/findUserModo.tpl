@@ -29,7 +29,7 @@
 
 
 
-    <main class='main' style=<?php echo "height:".$size."px;" ?>>
+    <main>
     <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
 
         <h1><?php echo $txt['adminGestionUser_title']; ?></h1> 

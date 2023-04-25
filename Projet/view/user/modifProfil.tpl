@@ -24,14 +24,14 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-<main style="height:830px;">
+<main>
     <h1> Votre <color>profil</color></h1>
     <div class="contenu">
         <?php
-                if($photo_base64 !=""){
+        if($photo_base64 !=""){
                     echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
         }else{
-        echo "<img src='Ressources/img/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
+        echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
         }
         ?>
         <form enctype="multipart/form-data" action="index.php?controle=user&action=modifInfos" method="POST">
@@ -50,7 +50,7 @@
             <label for="avatar"><?php echo $txt['Profil_Avatar']; ?> </label>
             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;">
             <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
-            <a href="submit" class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
+            <a href="index.php?controle=modo&action=errorPage" class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
         </form>
         <form action="index.php?controle=user&action=displayProfil" method="POST">
             <button type="submit" class="btnAbandon"><?php echo $txt['Abandon']; ?></button>

@@ -1,4 +1,9 @@
-﻿h1{
+﻿
+main { /* a supprimer quand plus de float: right; */
+    padding-bottom: 15%;
+}
+
+h1{
     margin-left: 42.5%;
     color: white;
 }
@@ -15,6 +20,7 @@ form{
 
 img{
     float: left;
+    width: 10em;
 }
 
 label, a{
@@ -32,7 +38,7 @@ label{
 }
 
 .contenu{
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
 .grid_container {

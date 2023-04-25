@@ -22,16 +22,17 @@
     <?php
     // Bug  : on doit récuperer ces deux variables dans les variables globals
     $txt = $GLOBALS['translat'];
-    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
+    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';
+    ?>
 
-    <main style="height:830px;">
+    <main>
         <h1> Votre <color>profil</color></h1>
         <div class="contenu">
             <?php
                 if($photo_base64 !=""){
                     echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
                 }else{
-                    echo "<img src='Ressources/img/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
+                    echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
                 }
             ?>
             <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->

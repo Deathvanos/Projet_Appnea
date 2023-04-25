@@ -53,6 +53,24 @@
     "cgu_ML_Q": "Mentions légales",
     "cgu_ML_A": "Merci de lire avec attention les différentes modalités d'utilisation du présent site avant d'y parcourir ses pages. En vous connectant sur ce site, vous acceptez, sans réserves, les présentes modalités.<br>Aussi, conformément à l'article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l'économie numérique, les responsables du présent site internet www.anthedesign.fr sont :<br>Éditeur du Site :<br>SARL ANTHEDESIGN Numéro de SIRET : 75221735600027<br>Responsable éditorial : Hugo ESSIQUE<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Téléphone : 09 72 21 25 07<br>Email : contact@anthedesign.fr<br>Site Web : www.anthedesign.fr<br>Hébergement :<br>Hébergeur : SARL ANTHEDESIGN<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr<br>Développement :<br>SARL ANTHEDESIGN<br>Adresse : 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Site Web : www.anthedesign.fr<br>Conditions d'utilisation :<br>Ce site (www.anthedesign.fr) est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…) pour un meilleur confort d'utilisation et un graphisme plus agréable.<br>Nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc…<br>L'agence web AntheDesign met en œuvre tous les moyens dont elle dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet.<br>Toutefois, des erreurs ou omissions peuvent survenir. L'internaute devra donc s'assurer de l'exactitude des informations auprès de AntheDesign , et signaler toutes modifications du site qu'il jugerait utile. AntheDesign n'est en aucun cas responsable de l'utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.<br>Cookies : Le site www.anthedesign.fr peut-être amené à vous demander l'acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez.",
 
+    "ourTeams_title": "Notre <color id='dégradé'>équipe</color>",
+    "ourTeams_info": "Notre équipe est composée de 6 professionnels hautement qualifiés provenant de domaines variés. Nous avons combiné nos connaissances stratégiques, commerciales, techniques et marketing pour concevoir et déployer des services de détection de l'apnée du sommeil fiables et sécurisés.",
+    "ourTeams_P1": "MAIZA Fares<br><color id='violet'>Responsable </color><color id='dégradé'>data</color>",
+    "ourTeams_P2": "PAVIOT-ADET Flore<br><color id='violet'>Responsable </color><color id='dégradé'>gestion de projet</color>",
+    "ourTeams_P3": "VINGADASSAMY Prasanaa<br><color id='violet'>Responsable </color><color id='dégradé'>developpement</color>",
+    "ourTeams_P4": "Mailley Charles<br><color id='violet'>Responsable </color><color id='dégradé'>organisation</color>",
+    "ourTeams_P5": "Martinez Eliot<br><color id='violet'>Responsable </color><color id='dégradé'>qualité</color>",
+    "ourTeams_P6": "Spasojevic Fanny<br><color id='violet'>Responsable </color><color id='dégradé'>design</color>",
+    "ourTeams_client": "Notre Client <br><color id='violet'>INFINITE </color><color id='dégradé'> MESURES </color>",
+
+    "contact_title": "Contacter <color id='dégradé'>le support</color>",
+    "contact_obj_title": "Objet",
+    "contact_obj_sub": "Quel est votre demande ?",
+    "contact_question_title": "Question",
+    "contact_question_sub": "Ecrivez votre question ici.",
+    "contact_back": "Retour",
+    "contact_send": "Envoyer",
+
     "adminMainTitle": "Gestion <color>admin</color>",
     "adminMain1": "Création de profil",
     "adminMain2": "Gérer les utilisateurs",
@@ -93,11 +111,9 @@
     "userMain_btnData": "Voir mes données de capteurs",
     "userMain_btnTicket": "envoyer un ticket d'incident",
 
-    "xx1": "xxx1",
-    "xx2": "xxx2",
+
     "Submit": "Enregistrer",
     "Abandon": "Annuler",
-
     "Profil_Label_Name1" : "Nom",
     "Profil_Label_Name2" : "Prénom",
     "Profil_Tel": "Numéro de téléphone",
@@ -107,6 +123,8 @@
     "Profil_City": "Ville",
     "Profil_Country": "Pays",
     "Profil_Avatar": "Modifier la photo",
-    "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici"
+    "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici",
 
+    "xxw": "xxxw",
+    "xx": "xxx"
 }

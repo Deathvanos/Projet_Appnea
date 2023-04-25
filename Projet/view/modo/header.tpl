@@ -31,7 +31,7 @@
         <li><a href='index.php?controle=modo&action=teamsPage'><?php echo $txt['header_link3']; ?></a></li>
         <li><a href='index.php?controle=modo&action=questionsPage'><?php echo $txt['header_link4']; ?></a></li>
         <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_linkM1'];?></a></li>
-        <li><a href='index.php?controle=modo&action=errorPage'><?php echo $txt['header_linkAM2'];?></a></li>
+        <li><a href='index.php?controle=modo&action=findUser'><?php echo $txt['header_linkAM2'];?></a></li>
         <li class="header_conn"><nav class="header_login">
             <a href=<?php echo "index.php?controle=modo&action=mainModo"?>><i class='bx bxs-user'></i></a>
             <ul>

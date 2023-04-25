@@ -105,11 +105,6 @@
 
         // Va chercher la table User
         $result = printDataBase($posList, $nbElements);
-
-        // Pour un affichage dinamique de la hauteur de la pge
-        $nbUser = nbUserFind();
-        $size =  300 + 80 * ($nbUser-$nbElements>0 ? $nbElements : $nbUser) ;
-
         require('./Projet/view/modo/findUserModo.tpl');
     }
 

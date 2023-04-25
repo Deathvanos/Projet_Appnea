@@ -26,9 +26,8 @@
 
 
 
-    <main style="height:10%;">
+    <main>
 
-        
         <?php $info =  $_SESSION['userInfo'];
         echo '<h3>'.$txt['userMain_date']. date("d/m/Y") ."</h3>";
         echo '<br>'.$txt['userMain_id'].$info['mail'];
@@ -40,7 +39,6 @@
             <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['userMain_btnData']; ?></a></td></tr>
             <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['userMain_btnTicket']; ?></a></td></tr>
         </table>
-
 
     </main>
 

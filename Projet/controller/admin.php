@@ -26,6 +26,10 @@
     function contactPage(){require('./Projet/view/guest/contact.tpl');}
     // Après verification de la demande de login, connection de l'utilisateur
 
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
+
+    //Conditions
+    function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
 
 
     /**

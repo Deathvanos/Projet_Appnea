@@ -24,6 +24,11 @@
 
     // Footer
     function contactPage(){require('./Projet/view/guest/contact.tpl');}
+
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
+
+    //Conditions
+    function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
     
     function displayProfil(){
         include_once("Projet/modele/user.php");

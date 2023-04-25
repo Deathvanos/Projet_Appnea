@@ -29,7 +29,7 @@
         <li><a href='index.php?controle=guest&action=errorPage'><?php echo $txt['header_link1']; ?></a></li>
         <li><a href='index.php?controle=guest&action=errorPage'><?php echo $txt['header_link2']; ?></a></li>
         <li><a href='index.php?controle=guest&action=teamsPage'><?php echo $txt['header_link3']; ?></a></li>
-        <li><a href='index.php?controle=guest&action=errorPage'><?php echo $txt['header_link4']; ?></a></li>
+        <li><a href='index.php?controle=guest&action=questionsPage'><?php echo $txt['header_link4']; ?></a></li>
         <li class="header_conn"><a href="index.php?controle=guest&action=login"><?php echo $txt['header_linkConn']; ?></a></li>
     </ul>
 </header>

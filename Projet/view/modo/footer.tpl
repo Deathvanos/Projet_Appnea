@@ -30,9 +30,9 @@
         <h3><?php echo $txt['footer_p2_title']; ?></h3>
         <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=modo&action=errorPage"><?php echo $txt['footer_p2_txt4']; ?></a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=modo&action=errorPage"><?php echo $txt['footer_p2_txt1']; ?></a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=modo&action=conditionsPage"><?php echo $txt['footer_p2_txt1']; ?></a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=modo&action=errorPage"><?php echo $txt['footer_p2_txt2']; ?></a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=modo&action=errorPage"><?php echo $txt['footer_p2_txt3']; ?></a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.php?controle=modo&action=questionsPage"><?php echo $txt['footer_p2_txt3']; ?></a></li>
         </ul>
         </div>
         <div>

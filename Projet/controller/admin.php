@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -11,13 +11,16 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-
-<?php 
+<?php
 
     // Affiche la page d'accueil d'un guest
     function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
     /* Affiche la page d'accueil */
+<<<<<<< HEAD
+    function mainAdmin(){require('./Projet/view/admin/main.tpl');}
+=======
     function mainAdmin(){require('./Projet/view/admin/mainAdmin.tpl');}
+>>>>>>> master
 
     // Header
     function teamsPage(){require('./Projet/view/guest/teams.tpl');}
@@ -36,11 +39,18 @@
      * L'utilisateur doit confirmer avant de supprimer un user
      */
     function sendConfirmationDelUser(){
+<<<<<<< HEAD
+        // Chargement du fichier JavaScript
+        echo '<script id="confirm-script" src="Projet/view/other/js/confirmDeleteUser.js" type="text/javascript"></script>';
+        // Activation de la fonction (mettre '' pour str et rine pour int)
+        echo "<script>msgDelUser('".$_POST['delUser']."')</script>";
+=======
         $msgAlert = $GLOBALS['translat']["adminGestionUser_MsgDelUser"];
         // Chargement du fichier JavaScript
         echo '<script id="confirm-script" src="Projet/view/other/js/confirmDeleteUser.js" type="text/javascript"></script>';
         // Activation de la fonction (mettre '' pour str et rine pour int)
         echo "<script>msgDelUser('".$_POST['delUser']."', '".$msgAlert."')</script>";
+>>>>>>> master
     }
 
 
@@ -53,22 +63,22 @@
         if(isset($_POST['delUser'])) {
             // Pour la suite du programme
             $_POST['validat'] = 'ok';
-            // cas 2 : 2e clic -> suppression définitif 
+            // cas 2 : 2e clic -> suppression définitif
             if (isset($_COOKIE['valueRep'])) {
                 // mais seulement si on a choisi le même user
                 if ($_COOKIE['valueRep']==$_POST['delUser']){
-                    
+
                     removeUser();
                 }
                 // Sinon on retombe sur le 1er cas
                 else {sendConfirmationDelUser();}
             }
-            // cas 1 : 1er clic -> demande de comfirmation avant suppression 
+            // cas 1 : 1er clic -> demande de comfirmation avant suppression
             else {sendConfirmationDelUser();}
         }
 
         // La page est reload - isset($_POST['validat']) = true
-        if (isset($_POST['nbElements'])){            
+        if (isset($_POST['nbElements'])){
             $nbElements = $_POST['nbElements'];
             $posList = $_POST['posList'];
 
@@ -89,11 +99,11 @@
                     if ($posList<0) {$posList=0;}
                     break;
                 // Nombre d'éléments à afficher
-                case 3: $nbElements = 3; break;    
+                case 3: $nbElements = 3; break;
                 case 4: $nbElements = 4; break;
                 case 5: $nbElements = 5; break;
                 // Validation le compteur retourne à 0
-                default: if(!isset($_POST['delUser'])) {$posList = 0;} break; 
+                default: if(!isset($_POST['delUser'])) {$posList = 0;} break;
             }
         }
 
@@ -115,14 +125,14 @@
             $_POST['temperatureStat'] = null;
             $_POST['humidityStat'] = null;
         }
-                
+
         // Va chercher la table User
         $result = printDataBase($posList, $nbElements);
 
         // Pour un affichage dinamique de la hauteur de la pge
         $nbUser = nbUserFind();
         $size =  300 + 80 * ($nbUser-$nbElements>0 ? $nbElements : $nbUser) ;
-                
+
         require('./Projet/view/admin/findUserAdmin.tpl');
     }
 
@@ -134,6 +144,7 @@
         }
         else {echo '<td><p">.</p></td>';}
     }
+
 
 
 
@@ -150,9 +161,8 @@
                 foreach ($valeur as $Subcle => $Subvaleur) {
                     echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
                 }
-            } 
+            }
         }
     }
-    
-    
+
 ?>

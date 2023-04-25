@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -40,10 +40,9 @@
         <ul>
             <a class="footer_icon" href="index.php?controle=admin&action=errorPage"><i class="bx bxl-facebook"></i></a>
             <a class="footer_icon" href="index.php?controle=admin&action=errorPage"><i class="bx bxl-instagram"></i></a>
-            <a class="footer_icon" href="index.php?controle=admin&action=errorPage"><i class="bx bxl-twitter"></i></a>  
+            <a class="footer_icon" href="index.php?controle=admin&action=errorPage"><i class="bx bxl-twitter"></i></a>
         </ul>
         </div>
     </div>
     <div class="footer_bottom"><i class='bx bx-copyright' ></i><?php echo $txt['footer_p4']; ?></div>
 </footer>
-

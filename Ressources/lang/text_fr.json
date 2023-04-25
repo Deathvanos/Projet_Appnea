@@ -35,7 +35,7 @@
     "index_bottom_1": "Nous proposons un dispositif permettant de faire un premier diagnostic pour détecter l'apnée du sommeil chez un patient suspectant être atteint de ce trouble.",
     "index_bottom_2": "Notre produit remplace, ou complète le calendrier du sommeil qui est donné lors de la phase de recherche de trouble du sommeil à l'hôpital.",
     "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
-        
+
     "login_title": "Se connecter",
     "login_nameLabel": "Nom d'utilisateur",
     "login_nameField": "Entrez votre nom d'utilisateur",
@@ -94,6 +94,19 @@
     "userMain_btnTicket": "envoyer un ticket d'incident",
 
     "xx1": "xxx1",
-    "xx2": "xxx2"
-    
+    "xx2": "xxx2",
+    "Submit": "Enregistrer",
+    "Abandon": "Annuler",
+
+    "Profil_Label_Name1" : "Nom",
+    "Profil_Label_Name2" : "Prénom",
+    "Profil_Tel": "Numéro de téléphone",
+    "Profil_Mail": "Mail",
+    "Profil_Localisation": "Adresse",
+    "Profil_Button_Edit": "Modifier les informations",
+    "Profil_City": "Ville",
+    "Profil_Country": "Pays",
+    "Profil_Avatar": "Modifier la photo",
+    "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici"
+
 }

@@ -35,7 +35,7 @@
     "index_bottom_1": "We propose a device allowing to make a first diagnosis to detect sleep apnea in a patient suspecting to be affected by this disorder.",
     "index_bottom_2": "Our product replaces, or completes the sleep calendar that is given during the research phase for sleep disorders in the hospital.",
     "index_bottom_3": "Thus, the patient arrives at a sleep doctor with his analyzes carried out by our device and is immediately taken to the hospital for more in-depth analyzes",
-                    
+
     "login_title": "Login",
     "login_nameLabel": "User name",
     "login_nameField": "Enter your username",
@@ -75,7 +75,7 @@
     "adminGestionUser_Active": "Active",
     "adminGestionUser_Lock": "Lock",
     "adminGestionUser_MsgDelUser": "Your user deletion request has been taken.\\nTo validate the deletion, please repeat the deletion procedure.\\n\\nAttention, the action will be irreversible.",
-    
+
     "modoMainTitle": "<color>Modo</color> gestion",
     "modoMain2": "FAQ management",
 
@@ -87,6 +87,19 @@
     "userMain_btnTicket": "Send a incident ticket",
 
 
-    "xx": "xxx"
+    "xx": "xxx",
+    "Submit": "Submit",
+    "Abandon": "Abandon",
+
+    "Profil_Label_Name1": "Last name",
+    "Profil_Label_Name2": "First name",
+    "Profil_Tel": "Phone number",
+    "Profil_Mail": "Mail",
+    "Profil_Localisation" : "Address",
+    "Profil_Button_Edit": "Edit informations",
+    "Profil_City": "City",
+    "Profil_Country": "Country",
+    "Profil_Avatar": "Change profile picture",
+    "Profil_Change_mdp": "Change your password ? Click here"
 
 }

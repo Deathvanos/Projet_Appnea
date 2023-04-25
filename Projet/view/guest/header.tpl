@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -17,12 +17,12 @@
             <img class="header_logo" src="Ressources/img/Logo_Appea-grey.svg" alt="Logo APPNEA">
             <?php echo $txt['title_brand']; ?>
         </a>
-        <nav class="header_language"> 
+        <nav class="header_language">
             <?php echo '<img class="header_flag" src="Ressources/bitmap/icon-flag/'.$_SESSION['lang'].'.svg">'; ?>
             <ul class="header_listFlag">
-                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=fr"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/fr.svg" alt="Francais"></a></li> 
-                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=us"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/us.svg" alt="English"></a></li> 
-            </ul> 
+                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=fr"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/fr.svg" alt="Francais"></a></li>
+                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=us"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/us.svg" alt="English"></a></li>
+            </ul>
         </nav>
     </div>
     <ul class="header_right">
@@ -33,4 +33,3 @@
         <li class="header_conn"><a href="index.php?controle=guest&action=login"><?php echo $txt['header_linkConn']; ?></a></li>
     </ul>
 </header>
-        

@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -23,7 +23,7 @@
     <body>
         <?php $txt = $GLOBALS['translat'];?>
 
-        
+
         <div class="main_login">
 
           <a href='index.php?controle=guest&action=mainGuest' class="logo_text">
@@ -32,12 +32,12 @@
           </a>
 
           <!--
-          <nav class="header_language"> 
+          <nav class="header_language">
             <?php echo '<img class="header_flag" src="Ressources/bitmap/icon-flag/'.$_SESSION['lang'].'.svg">'; ?>
             <ul class="header_listFlag">
-                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=fr"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/fr.svg" alt="Francais"></a></li> 
-                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=us"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/us.svg" alt="English"></a></li> 
-            </ul> 
+                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=fr"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/fr.svg" alt="Francais"></a></li>
+                <li><a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=".$_SESSION['action']."&lang=us"?>><img class="header_flag" src="Ressources/bitmap/icon-flag/us.svg" alt="English"></a></li>
+            </ul>
           </nav>
           -->
 
@@ -53,15 +53,15 @@
               <input id="btn_connection" type="submit" value="<?php echo $txt['login_title'];?>"/>
               <p class="message"><?php echo $txt['login_newUser'];?></a></p>
               <p id="mdp_oublie"><a href='index.php?controle=guest&action=errorPage'><?php echo $txt['login_forgotMdp'];?></a></p>
-              <!-- Afficher le message d'erreur s'il existe -->
+              <!-- Afficher le message d'erreur s'il existe -->*
               <?php if(isset($_SESSION['errorLog'])){echo '<div class="erroMsg">'.$_SESSION['errorLog'].'</div>';}else{echo '';}?>
             </form>
           </div>
-        </div> 
-        
+        </div>
+
 
         <div id="droite_login" class="main">
           <h3><?php echo $txt['login_Add'];?></h3>
-        </div> 
+        </div>
     </body>
 </html>

@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -70,7 +70,7 @@
             <div class=" imageCharles"> <img src="Ressources/img/teams/Charles.png" style="width: 260px; height: auto;"><!-- A mettre dans le css -->
                 <div class="Role"> Mailley Charles <br><color id="violet">Responsable </color><color id="dégradé"> organisation </color></div>
                 <a href="https://www.linkedin.com/in/charlesmailley?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRoXepLvuTnmeYQ7YW3PXDA%3D%3D" target="_blank">
-                    <div class="linkCharles"><i class='bx bxl-linkedin-square' style='font-size: 40px;'></i></div> <!-- A mettre dans le css --> 
+                    <div class="linkCharles"><i class='bx bxl-linkedin-square' style='font-size: 40px;'></i></div> <!-- A mettre dans le css -->
                 </a>
             </div>
 

@@ -107,4 +107,40 @@
     }
 
 
+
+    function sensorUserPage() {
+        include_once("Projet/modele/user.php");
+                
+        //Récuperation des données de chaques capteurs
+        $td = getDataTemperature();
+        $cd = getDataCardiaque();
+        $hd = getDataHumidite();
+        $sd = getDataSonore();
+
+        $d1 = $td[0]['date_start'];
+        $d2 = $td[0]['date_end'];
+        $tempValues = $td[0]['dataFile'];
+        $cardValues = $cd[0]['dataFile'];
+        $humValues = $hd[0]['dataFile'];
+        $sonValues = $sd[0]['dataFile'];
+
+        $_COOKIE['d1'] = $td[0]['date_start'];
+        $_COOKIE['d2'] = $td[0]['date_end'];
+
+        $_COOKIE['tempValues'] = $td[0]['dataFile'];
+        $_COOKIE['cardValues'] = $cd[0]['dataFile'];
+        $_COOKIE['humValues'] = $hd[0]['dataFile'];
+        $_COOKIE['sonValues'] = $sd[0]['dataFile'];
+
+        //echo print_r($_COOKIE['tempValues']);
+        // $df1 = get_object_vars($data1)['values'];
+        //$df2 = get_object_vars($data2)['values'];
+        //array_merge($df1,$df2)
+        //echo print_r( $data1 );
+
+
+        require("Projet/view/user/sensorUser.tpl");
+    }
+
+
 ?>

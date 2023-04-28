@@ -99,13 +99,14 @@ function getDataTemperature(){
 
   $d1 = $td[0]['date_start'];
   $d2 = $td[0]['date_end'];
+
   $tempValues = $td[0]['dataFile'];
   $cardValues = $cd[0]['dataFile'];
   $humValues = $hd[0]['dataFile'];
   $sonValues = $sd[0]['dataFile'];
 
 
-
+  //Creation des cookies de récupération
   $_COOKIE['d1'] = $td[0]['date_start'];
   $_COOKIE['d2'] = $td[0]['date_end'];
 
@@ -114,11 +115,6 @@ function getDataTemperature(){
   $_COOKIE['humValues'] = $hd[0]['dataFile'];
   $_COOKIE['sonValues'] = $sd[0]['dataFile'];
 
-   //echo print_r($_COOKIE['tempValues']);
-    // $df1 = get_object_vars($data1)['values'];
-    //$df2 = get_object_vars($data2)['values'];
-    //array_merge($df1,$df2)
-    //echo print_r( $data1 );
     ?>
 
 <!DOCTYPE html>
@@ -210,6 +206,28 @@ function getDataTemperature(){
       .horizontal-lign{
         border: 2px solid rgb(240, 182, 34);
       }
+
+      main{
+        height:1330px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        .vertical-lign{
+          border: 0px ;
+        }
+
+        .allGraphs{
+          flex-direction: column;
+        }
+
+        .Line{
+          flex-direction: column;
+        }
+
+        main{
+          height: 2260px;
+        }
+      }
     </style>
     
 
@@ -231,7 +249,7 @@ function getDataTemperature(){
 
 
     <!-- Pour régler la longeur de la page : changer la valeur du height-->
-    <main style="height:1330px;">
+    <main>
 
       <br>
       <h1>Vos Capteurs</h1>

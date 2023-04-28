@@ -10,163 +10,33 @@
            - VINGADASSAMY_Prasanaa
 * Date de rendu  : 05/06/2023
 
-Style pour la page Equipe
+Style commun à toutes les pages
 *********************************************************/
 
-/***************-----*************** TOP PAGE ***************-----***************/
+#violet { color: #6C37EE;}
 
-/*
-body {
-    font-family: "Poppins", sans-serif;
-  }
-
-.top {
-    /* Mettre les éléments en ligne*//*
-    display: flex;
-    align-items: center;
-    /* Ajouter un espace vide en haut et en bas de cette élément*//*
-    margin-top: 50px;
-    margin-bottom: 225px;
-}
-
-.top_title {
-    /*Prend toute la moitié gauche de l'ecran*//*
-    width: 50%;
-    /*Ajout un trait de bordure avec l'élément de droite*//*
-    border-right: 1px solid var(--myColor-fontColor-main);
-}
-
-.top_title a { /*Transforme le lien en un bouton*//*
-    /*Couleur de fond et de texte sans surlignement*//*
-    background-color: var(--myColor-buttonLogin);
-    color: var(--myColor-fontColor-main);
-    text-decoration: none;/*
-    /*Angle des coins du rectangle*//*
-    border-radius: 10px;
-    /*Espacement dans le rectangle*//**//*
-    padding-inline: 20px;/*
-    padding-block: 10px;
-    font-weight:lighter;
-}
-.top_title a:hover {background-color: #2779BF;}
-
-.top_title h2 {
-    /*Espace entre titre et les éléments en haut et en base*//*
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /*Epaisseur du texte*//*
-    font-weight:500;
-}
-
-.top_title color {
-    background: linear-gradient(to right, #6C37EE,#F6593E);
-    -webkit-text-fill-color: transparent;
+#dégradé {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-
-
-
-.top_Zoneavis {
-    /*Prend toute la moitié droite de l'ecran*//*
-    width: 50%;
-    padding-inline: 12%;
-}
-
-
-
-.top_avis div {/*
-    margin-top: 25px;
-    /*Aligner les boites horizontalement et les centre*//*
-    display: flex;
-    align-items: center;
-}
-
-.top_avis div img{
-    border-radius: 30px;
-    border: 2px solid var(--myColor-fontColor-main);
-    /*Taille de l'image*//*
-    max-width: 15%;
-}
-
-.top_avis div autor{
-    font-size: 11px;
-    font-style: italic;
-    /*Espacement <-->*//*
-    margin-left: 10px;
-    margin-right: 50px;
-}
-
-.top_nextAvis {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 25px;
-    
-}
-
-.top_nextAvis cran i {font-size: 8px;}
-
-.top_nextAvis a {
-    /*Déplace le bouton flèche en dehors de son cadre en haut*//*
-    position: relative;
-    top: -50px;
-}
-.top_nextAvis a i {
-    font-size: 40px;
-    color:var(--myColor-main-light);
-    background-color:#fff;
-    border-radius: 100%;
-}
-
-.top_nextAvis #c1 {
-    color:var(--myColor-buttonLogin);
-}
-
-.bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bottom_presProd {
-    width: 50%;
-}
-
-.bottom #OurProduct {
-    display: inline-block;
-    font-weight:100;
-    border-bottom: 3px solid var(--myColor-fontColor-main);
-}
-
-.bottom_presProd p {
-    margin-top:25px;
-}
-
-.bottom_imgProd {
-    height: 300px;
-    margin-right: 200px;
-}*/
-
-
-
-#violet {
-    color: #6C37EE;
-}
-
+/* Top part */
 
 .equipe_texte {
-height: 600px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 0;
-margin: 0;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    left: 50%;
 }
 
-.image {
-    height: 284px;
-    width: 413px;
+.titre_equipe {
     margin: 20px;
+    font-size: 35px;
 }
 
 .equipe {
@@ -175,9 +45,9 @@ margin: 0;
     margin: 20px;
 }
 
-h2 {font-size: 35px;}
-
-.texte {
+.paragraphe-equipe {
+    text-decoration: justify;
+    text-align: justify;
     width: 1000px;
     display: flex;
     align-items: center;
@@ -185,99 +55,40 @@ h2 {font-size: 35px;}
     margin: 20px;
 }
 
-.paragraphe-equipe {
-text-decoration: justify;
+
+
+
+
+/* Table part */
+
+.tableBox {
+    margin: 0 auto;
+    border-spacing: 100px;
+}
+.tableBox td {text-align: center;}
+
+.imagemembre{
+    width: 170px; 
+    height: auto;
 }
 
-#titre_equipe {
-    margin: 20px;
+.link {
+   font-size: 40px;
+    top: 123%;
+    text-decoration: none;
 }
 
-#dégradé {
-background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+/* Bottom part */
+  
+.imageclient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+  
+  
+  
 
 
-
-.imageFares {
-    position: absolute;
-    top: 690px;
-    left: 250px;
-
-      
-}
-.imageFlore {
-    position: absolute;
-    top: 700px;
-    left: 640px;
-}
-
-.imagePrasanaa {
-    position: absolute;
-    top: 680px;
-    left: 1050px;
-}
-
-.imageCharles {
-    position: absolute;
-    top: 1000px;
-    left: 235px;
-    height: 120%;
-    width: 120%;
-}
-
-.imageEliot {
-    position: absolute;
-    top: 990px;
-    left: 640px;
-}
-
-.imageFanny {
-    position: absolute;
-    top: 1010px;
-    left: 1070px;
-}
-
-.imageClient {
-    position: absolute;
-    top: 1300px;
-    left: 635px;
-}
-
-.linkEliot {
-    position: absolute;
-    top: 250px;
-    left: 75px;
-}
-
-.linkFanny {
-    position: absolute;
-    top: 230px;
-    left: 85px;
-}
-
-.linkCharles {
-    position: absolute;
-    top: 240px;
-    left: 80px;
-}
-
-.linkPrasanaa {
-    position: absolute;
-    top: 235px;
-    left: 100px;
-}
-
-.linkFlore {
-    position: absolute;
-    top: 215px;
-    left: 85px;
-}
-
-.linkFares {
-    position: absolute;
-    top: 230px;
-    left: 75px;
-}

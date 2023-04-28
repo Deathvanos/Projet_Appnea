@@ -29,8 +29,8 @@
 
 
 
-    <main class='main' style=<?php echo "height:".$size."px;" ?>>
-    <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
+    <main>
+    <form name='findUser' action="index.php?controle=modo&action=findUser" method='post'>
 
         <h1><?php echo $txt['adminGestionUser_title']; ?></h1> 
 
@@ -110,7 +110,9 @@
                     printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
         
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_userMode'].'</a></td>';
+                    if ($row['typeUser']=="User") {echo '<td><a href="index.php?controle=user&action=sensorUserPage">'.$txt['adminGestionUser_userMode'].'</a></td>';}
+                    else {echo '<td>...</td>';}
+                    
                 echo '</tr>';
             }?>
 
@@ -118,7 +120,8 @@
         </div>
 
         <!-- Pagination-->
-        <?php echo $txt['adminGestionUser_PageIndex']; ?> (<button name="validat" class='btnParam' value="last"><?php echo $txt['adminGestionUser_LastPage']; ?></button> |
+        <?php echo $txt['adminGestionUser_PageIndex']; ?> (
+        <button name="validat" class='btnParam' value="last"><?php echo $txt['adminGestionUser_LastPage']; ?></button> |
         <button name="validat" class='btnParam' value="next"><?php echo $txt['adminGestionUser_NextPage']; ?></button>)
         (<?php for ($i = 3; $i <= 5; $i++) {
             echo "<button name='validat' class='btnParam' value='$i' ";

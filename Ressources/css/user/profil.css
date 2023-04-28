@@ -12,7 +12,12 @@ color{
 
 img{
     float: left;
+    width: 10em;
 }
+
+/*.filter_color{
+    filter: invert(100%) sepia(36%) saturate(0%) hue-rotate(243deg) brightness(103%) contrast(101%);
+}*/
 
 .contenu{
     padding-top: 10%;
@@ -33,7 +38,7 @@ elem {
     text-align: center;
 }
 
-h3{
+.infos{
     padding-left: 3%;
     background-color: hsla(120,100%,100%,0.17);
     border-radius: 25px;
@@ -46,4 +51,20 @@ info{
 
 .hide{
     background-color: transparent;
+}
+
+button{
+    border-radius: 25px;
+    color: white;
+    background-color: #423EF6;
+    width : 10%;
+    padding-block: 0.5em;
+    margin-right: 2.5%;
+    float: right;
+
+}
+
+.bxs-user-rectangle{
+    width : 300px;
+    height: 300px;
 }

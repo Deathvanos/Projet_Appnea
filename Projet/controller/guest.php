@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -12,7 +12,7 @@
 ********************************************************-->
 
 
-<?php 
+<?php
 
 
     /********************************************/
@@ -20,7 +20,7 @@
     /********************************************/
     // Affiche la page d'accueil d'un guest
     function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
-    // Affiche la page de connection 
+    // Affiche la page de connection
     function login(){require('./Projet/view/guest/login.tpl');}
 
     // Header
@@ -35,7 +35,11 @@
     function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
     function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
 
+    //Questions
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
 
+     //Conditions
+     function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
 
     /************************************/
     /***** Fonctions about le login *****/
@@ -46,7 +50,7 @@
         $mdp= htmlspecialchars($_POST['mdp']);
 
         /*** Vérification des infos avant la requete SQL ***/
-        // 
+        //
         if (//!preg_match("/@/", $mail) | // un mail doit contenir un @
           //  (strlen($mdp) < 8 || strlen($mdp) > 64) | // Vérifier la longueur du mot de passe
           //  !preg_match("/[A-Z]/", $mdp) | // Vérifier la présence d'une lettre majuscule
@@ -81,8 +85,8 @@
                 foreach ($valeur as $Subcle => $Subvaleur) {
                     echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
                 }
-            } 
+            }
         }
     }
-    
+
 ?>

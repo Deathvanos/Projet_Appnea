@@ -23,7 +23,7 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main style="height:830px;">
+    <main>
         <div class="top">
             <div class="top_title">
                 <a href="#OurProduct"><?php echo $txt['index_topLeft_1']; ?></a>
@@ -34,7 +34,7 @@
                 <div class="top_avis">
                     <p><?php echo $txt['index_topRight_1']; ?></p>
                     <div>
-                        <img src="Ressources/img/index_autor1.png" alt="Photo_id">
+                        <img src="Ressources/img/mainGuest/index_autor1.png" alt="Photo_id">
                         <autor><?php echo $txt['index_topRight_2']; ?></autor>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <p><?php echo $txt['index_bottom_2']; ?></p>
                 <p><?php echo $txt['index_bottom_3']; ?></p>
             </div>
-            <img class="bottom_imgProd" src="Ressources/img/index_phone.png" alt="Photo_screen">
+            <img class="bottom_imgProd" src="Ressources/img/mainGuest/index_phone.png" alt="Photo_screen">
         </div>
     </main>
 

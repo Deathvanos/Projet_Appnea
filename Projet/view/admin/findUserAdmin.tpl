@@ -29,7 +29,7 @@
 
 
 
-    <main class='main' style=<?php echo "height:".$size."px;" ?>>
+    <main class='main'>
     <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
 
         <h1><?php echo $txt['adminGestionUser_title']; ?></h1> 
@@ -104,14 +104,24 @@
                     echo '<td>'.$row['city'].'</td>';
                     echo '<td>'.$row['address'].'</td>';
 
-                    printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
-                    printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
-                    printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
-                    printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
-        
+                    if($row['typeUser']=="User") {
+                        printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
+                        printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
+                        printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
+                        printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
+                    }
+                    else {echo '<td></td>';echo '<td></td>';echo '<td></td>';echo '<td></td>';}
+    
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_Manage'].'</a></td>';
+
+                    if($row['typeUser']!="Admin") {
+                        echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
+                        echo '<td><a href="index.php?controle=user&action=displayProfil">'.$txt['adminGestionUser_Manage'].'</a></td>';
+                    }
+                    else {
+                        echo '<td></td>';
+                        echo '<td></td>';
+                    }
                 echo '</tr>';
             }?>
 

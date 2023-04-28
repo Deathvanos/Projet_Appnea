@@ -1,6 +1,4 @@
 
-
-
 /**
  * Avant la suppression d'un User :
  * Génération de 2 boites de dialogues à confirmer
@@ -8,7 +6,7 @@
  */
 function msgDelUser(idUser, txt) {   
     // Boite de dialogue
-    var firstConfirm = confirm(txt);
+    var firstConfirm = confirm(txt+" \nUser: "+idUser);
     if (firstConfirm==true) {
             document.cookie = "valueRep="+idUser;
             return true;
@@ -16,6 +14,3 @@ function msgDelUser(idUser, txt) {
     document.cookie = "valueRep=false";
     return false;
 }
-
-
-

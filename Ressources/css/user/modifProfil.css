@@ -1,4 +1,9 @@
-﻿h1{
+﻿
+main { /* a supprimer quand plus de float: right; */
+    padding-bottom: 15%;
+}
+
+h1{
     margin-left: 42.5%;
     color: white;
 }
@@ -15,6 +20,7 @@ form{
 
 img{
     float: left;
+    width: 10em;
 }
 
 label, a{
@@ -24,12 +30,15 @@ label, a{
 }
 
 label{
-    padding-top: 50%;
+    display: block;
+    height : 1em;
+    width : 25%;
+    /*padding-top: 50%;*/
     padding-left: 2%;
 }
 
 .contenu{
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
 .grid_container {
@@ -41,21 +50,37 @@ label{
 
 input{
     width: 250px;
-    border-radius: 25px;
-    background-color: transparent;
+    align-content: center;
+    border:none;
+    border-bottom  : 2px solid lightgray;
+    background-color:transparent;
     padding-left: 1%;
     margin-left: 3%;
     color: white;
 }
 
+input::placeholder, input[value]{
+    text-align: center;
+}
+
+
+input:focus{
+    outline : none;
+    border-radius: 25px;
+    border-bottom: 1px solid lightgray;
+    /*background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);*/
+}
+
+
 elem{
+    padding-bottom: 2%;
     background-color: hsla(120,100%,100%,0.17);
     border-radius: 25px;
     margin-top: 7%;
     display: inline;
 }
 
-h3{
+.form_title{
     margin-left: 3%;
     display: inline;
 }
@@ -74,11 +99,21 @@ button{
     background-color: #423EF6;
     height: 5%;
     width : 10%;
+}
+
+.submit{
+    margin-right: 50%;
     float: right;
 }
 
-a{
+.btnAbandon{
+    float :right;
+    margin-right: 50%;
+}
+
+.modifMdp{
     float : right;
-    margin-top: 7%;
+    margin-top: 2%;
+    margin-left: 20%;
 }
 

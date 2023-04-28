@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles 
+* Auteur : - MAILLEY_Charles
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -12,7 +12,7 @@
 ********************************************************-->
 
 
-<?php 
+<?php
 
     // Affiche la page d'accueil d'un guest
     function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
@@ -24,7 +24,12 @@
 
     // Footer
     function contactPage(){require('./Projet/view/guest/contact.tpl');}
-    
+
+    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
+
+    //Conditions
+    function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
+
     function displayProfil(){
         include_once("Projet/modele/user.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -36,10 +41,10 @@
         $photo = $result[0]['photo'];
         $photo_base64 = base64_encode($photo);
 
-        //header("Content-type: image"); 
+        //header("Content-type: image");
         require("Projet/view/user/profil.tpl");
     }
-    
+
     function displayModifInfos(){
         include_once("Projet/modele/user.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -49,13 +54,13 @@
         $mail = $result[0]['mail'];
         $address = $result[0]['address'];
         $city = $result[0]['city'];
-        $country = $result[0]['country'];  
+        $country = $result[0]['country'];
         $photo = $result[0]['photo'];
         $photo_base64 = base64_encode($photo);
         unset($result);
         require("Projet/view/user/modifProfil.tpl");
     }
-    
+
     function modifInfos(){
         include_once("Projet/modele/user.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -67,52 +72,15 @@
         }else{
             $avatar = file_get_contents($_FILES["avatar"]["tmp_name"]);
         }
-        /*$lastName = isset($_POST['lastname'])?($_POST['lastname']):$result[0]['lastName'];*/
-        if($_POST['lastname'] == ""){
-            $lastName = $result[0]['lastName'];
-        } else{
-            $lastName = $_POST['lastname'];
-        }
-        /*$firstName = isset($_POST['firstname'])?($_POST['firstname']):$result[0]['firstName'];*/
-        if($_POST['firstname'] == ""){
-            $firstName = $result[0]['firstName'];
-        } else{
-            $firstName = $_POST['firstname'];
-        }
-        
-        /*$phoneNumber = isset($_POST['phoneNumber'])?($_POST['phoneNumber']):$result[0]['phoneNumber'];*/
-        if($_POST['phone'] == ""){
-            $phoneNumber = $result[0]['phoneNumber'];
-        }else{
-            $phoneNumber = $_POST['phone'];
-        }
 
+        $lastName = isset($_POST['lastname'])?$_POST['lastname']:$result[0]['lastName'];
+        $firstName = isset($_POST['firstname'])?$_POST['firstname']:$result[0]['firstName'];
+        $phoneNumber = isset($_POST['phoneNumber'])?($_POST['phoneNumber']):$result[0]['phoneNumber'];
+        $mail = isset($_POST['mail'])?($_POST['mail']):$result[0]['mail'];
+        $address = isset($_POST['address'])?($_POST['address']):$result[0]['address'];
+        $city = isset($_POST['city'])?($_POST['city']):$result[0]['city'];
+        $country = isset($_POST['country'])?($_POST['country']):$result[0]['country'];
 
-        /*$mail = isset($_POST['mail'])?($_POST['mail']):$result[0]['mail'];*/
-        if($_POST['mail'] == ""){
-            $mail = $result[0]['mail'];
-        }else{
-            $mail = $_POST['mail'];
-        }
-        /* $address = isset($_POST['address'])?($_POST['address']):$result[0]['address']; */
-        if($_POST['address'] == ""){
-            $address = $result[0]['address'];
-        }else{
-            $address = $_POST['address'];
-        }
-        
-        /*$city = isset($_POST['city'])?($_POST['city']):$result[0]['city'];*/
-        if($_POST['city'] == ""){
-            $city = $result[0]['city'];
-        }else{
-            $city = $_POST['city'];
-        }
-        /*$country = isset($_POST['country'])?($_POST['country']):$result[0]['country'];*/
-        if($_POST['country'] == ""){
-            $country = $result[0]['country'];
-        } else{
-            $country = $_POST['country'];
-        }
         $id_user = $result[0]['id_utilisateur'];
         $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar);
 
@@ -134,8 +102,44 @@
                 foreach ($valeur as $Subcle => $Subvaleur) {
                     echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
                 }
-            } 
+            }
         }
+    }
+
+
+
+    function sensorUserPage() {
+        include_once("Projet/modele/user.php");
+                
+        //Récuperation des données de chaques capteurs
+        $td = getDataTemperature();
+        $cd = getDataCardiaque();
+        $hd = getDataHumidite();
+        $sd = getDataSonore();
+
+        $d1 = $td[0]['date_start'];
+        $d2 = $td[0]['date_end'];
+        $tempValues = $td[0]['dataFile'];
+        $cardValues = $cd[0]['dataFile'];
+        $humValues = $hd[0]['dataFile'];
+        $sonValues = $sd[0]['dataFile'];
+
+        $_COOKIE['d1'] = $td[0]['date_start'];
+        $_COOKIE['d2'] = $td[0]['date_end'];
+
+        $_COOKIE['tempValues'] = $td[0]['dataFile'];
+        $_COOKIE['cardValues'] = $cd[0]['dataFile'];
+        $_COOKIE['humValues'] = $hd[0]['dataFile'];
+        $_COOKIE['sonValues'] = $sd[0]['dataFile'];
+
+        //echo print_r($_COOKIE['tempValues']);
+        // $df1 = get_object_vars($data1)['values'];
+        //$df2 = get_object_vars($data2)['values'];
+        //array_merge($df1,$df2)
+        //echo print_r( $data1 );
+
+
+        require("Projet/view/user/sensorUser.tpl");
     }
 
 

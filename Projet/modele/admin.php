@@ -21,21 +21,21 @@
           AND country like :country
           AND city like :city
           AND address like :address
-          AND ".($_POST['cardiaqueStat']==$txt['adminGestionUser_Active']? "(heart.isUsed is true and heart.isNotBroken is true)": 
-                ($_POST['cardiaqueStat']==$txt['adminGestionUser_Lock']? '(heart.isUsed is false or heart.isNotBroken is false)':  
-                ($_POST['cardiaqueStat']=='.'? '(heart.id_sensor is null)': 
+          AND ".($_POST['cardiaqueStat']==$txt['adminGestionUser_Active']? "(heart.isUsed is true and heart.isNotBroken is true)":
+                ($_POST['cardiaqueStat']==$txt['adminGestionUser_Lock']? '(heart.isUsed is false or heart.isNotBroken is false)':
+                ($_POST['cardiaqueStat']=='.'? '(heart.id_sensor is null)':
                 "(heart.id_sensor is null OR heart.id_sensor is not null)")))."
-          AND ".($_POST['sonorStat']==$txt['adminGestionUser_Active']? "(sound.isUsed is true and sound.isNotBroken is true)": 
-                ($_POST['sonorStat']==$txt['adminGestionUser_Lock']? '(sound.isUsed is false or sound.isNotBroken is false)':  
-                ($_POST['sonorStat']=='.'? '(sound.id_sensor is null)': 
+          AND ".($_POST['sonorStat']==$txt['adminGestionUser_Active']? "(sound.isUsed is true and sound.isNotBroken is true)":
+                ($_POST['sonorStat']==$txt['adminGestionUser_Lock']? '(sound.isUsed is false or sound.isNotBroken is false)':
+                ($_POST['sonorStat']=='.'? '(sound.id_sensor is null)':
                 "(sound.id_sensor is null OR sound.id_sensor is not null)")))."
-          AND ".($_POST['temperatureStat']==$txt['adminGestionUser_Active']? "(temp.isUsed is true and temp.isNotBroken is true)": 
-                ($_POST['temperatureStat']==$txt['adminGestionUser_Lock']? '(temp.isUsed is false or temp.isNotBroken is false)':  
-                ($_POST['temperatureStat']=='.'? '(temp.id_sensor is null)': 
+          AND ".($_POST['temperatureStat']==$txt['adminGestionUser_Active']? "(temp.isUsed is true and temp.isNotBroken is true)":
+                ($_POST['temperatureStat']==$txt['adminGestionUser_Lock']? '(temp.isUsed is false or temp.isNotBroken is false)':
+                ($_POST['temperatureStat']=='.'? '(temp.id_sensor is null)':
                 "(temp.id_sensor is null OR temp.id_sensor is not null)")))."
-          AND ".($_POST['humidityStat']==$txt['adminGestionUser_Active']? "(hum.isUsed is true and hum.isNotBroken is true)": 
-                  ($_POST['humidityStat']==$txt['adminGestionUser_Lock']? '(hum.isUsed is false or hum.isNotBroken is false)':  
-                  ($_POST['humidityStat']=='.'? '(hum.id_sensor is null)': 
+          AND ".($_POST['humidityStat']==$txt['adminGestionUser_Active']? "(hum.isUsed is true and hum.isNotBroken is true)":
+                  ($_POST['humidityStat']==$txt['adminGestionUser_Lock']? '(hum.isUsed is false or hum.isNotBroken is false)':
+                  ($_POST['humidityStat']=='.'? '(hum.id_sensor is null)':
                   "(hum.id_sensor is null OR hum.id_sensor is not null)")))."
     ";}
 
@@ -87,7 +87,7 @@
         // Renvoi le resultat de la Requete
         return $commande->fetchAll(PDO::FETCH_ASSOC);
         }
-    
+
 
 
     /*
@@ -99,11 +99,11 @@
         include_once("Projet/modele/infoDB.php");
         $conn = connectionToDB();
         // Requete
-        $sql = "SELECT COUNT(mail) ".requeteFindUser()." Order by id_utilisateur"; 
+        $sql = "SELECT COUNT(mail) ".requeteFindUser()." Order by id_utilisateur";
         $query = $conn->prepare($sql);
         requeteFindUser_bind($query);
         $query->execute();
-        
+
         // Fin Connection BdD
         $conn = null;
         // Renvoi le resultat de la Requete
@@ -111,7 +111,7 @@
     }
 
 
-    
+
     /**
      * Suppression d'un utilisateur
      */
@@ -128,5 +128,3 @@
         // Fin Connection BdD
         $conn = null;
     }
-    
-

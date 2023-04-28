@@ -49,4 +49,86 @@ function updateUser($tab, $id){
         die();
     }
 }
+
+
+
+
+
+
+function getDataTemperature() {
+    include_once("./Projet/modele/infoDB.php");
+    $conn = connectionToDB();
+    $sql = "SELECT u.mail, u.id_Box, s.typeSensor, d.dataFile, d.date_start, d.date_end
+                FROM utilisateur u
+                LEFT JOIN sensor s ON u.id_Box=s.id_Box
+                LEFT JOIN datasensor d ON s.id_sensor=d.id_sensor
+                
+                WHERE u.mail='faresdata.yessir@yahoo.fr'
+                AND s.typeSensor='temperatureSensor'
+                ORDER BY d.date_start DESC";
+
+    $commande = $conn->prepare($sql);
+    $bool = $commande->execute();
+
+    $resultat = $commande->fetchAll(PDO::FETCH_ASSOC); //tableau d'enregistrements
+    return $resultat;
+}
+
+function getDataCardiaque() {
+    include_once("./Projet/modele/infoDB.php");
+    $conn = connectionToDB();
+    $sql = "SELECT u.mail, u.id_Box, s.typeSensor, d.dataFile, d.date_start, d.date_end
+              FROM utilisateur u
+              LEFT JOIN sensor s ON u.id_Box=s.id_Box
+              LEFT JOIN datasensor d ON s.id_sensor=d.id_sensor
+              
+              WHERE u.mail='faresdata.yessir@yahoo.fr'
+              AND s.typeSensor='heartSensor'
+              ORDER BY d.date_start DESC";
+
+    $commande = $conn->prepare($sql);
+    $bool = $commande->execute();
+
+    $resultat = $commande->fetchAll(PDO::FETCH_ASSOC); //tableau d'enregistrements
+    return $resultat;
+}
+
+function getDataHumidite() {
+    include_once("./Projet/modele/infoDB.php");
+    $conn = connectionToDB();
+    $sql = "SELECT u.mail, u.id_Box, s.typeSensor, d.dataFile, d.date_start, d.date_end
+            FROM utilisateur u
+            LEFT JOIN sensor s ON u.id_Box=s.id_Box
+            LEFT JOIN datasensor d ON s.id_sensor=d.id_sensor
+            
+            WHERE u.mail='faresdata.yessir@yahoo.fr'
+            AND s.typeSensor='humiditySensor'
+            ORDER BY d.date_start DESC";
+
+    $commande = $conn->prepare($sql);
+    $bool = $commande->execute();
+
+    $resultat = $commande->fetchAll(PDO::FETCH_ASSOC); //tableau d'enregistrements
+    return $resultat;
+}
+
+function getDataSonore()
+{
+    include_once("./Projet/modele/infoDB.php");
+    $conn = connectionToDB();
+    $sql = "SELECT u.mail, u.id_Box, s.typeSensor, d.dataFile, d.date_start, d.date_end
+            FROM utilisateur u
+            LEFT JOIN sensor s ON u.id_Box=s.id_Box
+            LEFT JOIN datasensor d ON s.id_sensor=d.id_sensor
+            
+            WHERE u.mail='faresdata.yessir@yahoo.fr'
+            AND s.typeSensor='soundSensor'
+            ORDER BY d.date_start DESC";
+
+    $commande = $conn->prepare($sql);
+    $bool = $commande->execute();
+
+    $resultat = $commande->fetchAll(PDO::FETCH_ASSOC); //tableau d'enregistrements
+    return $resultat;
+}
 ?>

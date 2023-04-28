@@ -110,7 +110,9 @@
                     printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
         
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_userMode'].'</a></td>';
+                    if ($row['typeUser']=="User") {echo '<td><a href="index.php?controle=user&action=sensorUserPage">'.$txt['adminGestionUser_userMode'].'</a></td>';}
+                    else {echo '<td>...</td>';}
+                    
                 echo '</tr>';
             }?>
 

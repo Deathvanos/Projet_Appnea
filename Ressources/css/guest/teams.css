@@ -10,28 +10,33 @@
            - VINGADASSAMY_Prasanaa
 * Date de rendu  : 05/06/2023
 
-Style pour la page Equipe
+Style commun à toutes les pages
 *********************************************************/
 
-/***************-----*************** TOP PAGE ***************-----***************/
+#violet { color: #6C37EE;}
 
-#violet {color: #6C37EE;}
-
-
-.equipe_texte {
-height: 600px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 0;
-margin: 0;
+#dégradé {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.image {
-    height: 284px;
-    width: 413px;
+/* Top part */
+
+.equipe_texte {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    left: 50%;
+}
+
+.titre_equipe {
     margin: 20px;
+    font-size: 35px;
 }
 
 .equipe {
@@ -40,9 +45,9 @@ margin: 0;
     margin: 20px;
 }
 
-h2 {font-size: 35px;}
-
-.texte {
+.paragraphe-equipe {
+    text-decoration: justify;
+    text-align: justify;
     width: 1000px;
     display: flex;
     align-items: center;
@@ -50,99 +55,40 @@ h2 {font-size: 35px;}
     margin: 20px;
 }
 
-.paragraphe-equipe {
-text-decoration: justify;
+
+
+
+
+/* Table part */
+
+.tableBox {
+    margin: 0 auto;
+    border-spacing: 100px;
+}
+.tableBox td {text-align: center;}
+
+.imagemembre{
+    width: 170px; 
+    height: auto;
 }
 
-#titre_equipe {
-    margin: 20px;
+.link {
+   font-size: 40px;
+    top: 123%;
+    text-decoration: none;
 }
 
-#dégradé {
-background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+/* Bottom part */
+  
+.imageclient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+  
+  
+  
 
 
-
-.imageFares {
-    position: absolute;
-    top: 690px;
-    left: 250px;
-
-      
-}
-.imageFlore {
-    position: absolute;
-    top: 700px;
-    left: 640px;
-}
-
-.imagePrasanaa {
-    position: absolute;
-    top: 680px;
-    left: 1050px;
-}
-
-.imageCharles {
-    position: absolute;
-    top: 1000px;
-    left: 235px;
-    height: 120%;
-    width: 120%;
-}
-
-.imageEliot {
-    position: absolute;
-    top: 990px;
-    left: 640px;
-}
-
-.imageFanny {
-    position: absolute;
-    top: 1010px;
-    left: 1070px;
-}
-
-.imageClient {
-    position: absolute;
-    top: 1300px;
-    left: 635px;
-}
-
-.linkEliot {
-    position: absolute;
-    top: 250px;
-    left: 75px;
-}
-
-.linkFanny {
-    position: absolute;
-    top: 230px;
-    left: 85px;
-}
-
-.linkCharles {
-    position: absolute;
-    top: 240px;
-    left: 80px;
-}
-
-.linkPrasanaa {
-    position: absolute;
-    top: 235px;
-    left: 100px;
-}
-
-.linkFlore {
-    position: absolute;
-    top: 215px;
-    left: 85px;
-}
-
-.linkFares {
-    position: absolute;
-    top: 230px;
-    left: 75px;
-}

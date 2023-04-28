@@ -42,7 +42,7 @@ main {
     color: var(--myColor-fontColor-main);
     /* Ajout un espace entre le bloc et le bord de l'ecran gauche*/
     padding-left: 2.5%;
-    padding-bottom: 6em;
+    padding-bottom: 8em;
 
 
 

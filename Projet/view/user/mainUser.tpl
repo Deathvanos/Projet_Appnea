@@ -36,8 +36,8 @@
 
         <table class='buttonMain'>
             <thead><center><h1 class='title'><?php echo $txt['userMain'].'<color>'.$info['firstName']." ".$info['lastName'].'</color>'; ?></h1></center></thead> 
-            <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['userMain_btnData']; ?></a></td></tr>
-            <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['userMain_btnTicket']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=user&action=sensorUserPage'><?php echo $txt['userMain_btnData']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=user&action=errorPage'><?php echo $txt['userMain_btnTicket']; ?></a></td></tr>
         </table>
 
     </main>

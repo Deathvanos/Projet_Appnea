@@ -41,7 +41,7 @@ elem {
 .infos{
     padding-left: 3%;
     background-color: hsla(120,100%,100%,0.17);
-    border-radius: 25px;
+    border-radius: 2rem;
     margin-top: 4%;
 }
 
@@ -54,7 +54,7 @@ info{
 }
 
 button{
-    border-radius: 25px;
+    border-radius: 2rem;
     color: white;
     background-color: #423EF6;
     width : 10%;

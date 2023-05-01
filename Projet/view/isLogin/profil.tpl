@@ -15,7 +15,7 @@
 <html lang="fr">
 <head>
     <title>APNEA - Profil</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/profil.css"/>
 </head>
 <body>
@@ -45,13 +45,13 @@
                 <h3 class="infos">  <?php echo $txt['Profil_Mail']; ?> : <info><?php echo($mail); ?></info></h3>
                 <h3 class="infos">  <?php echo $txt['Profil_Localisation']; ?> : <info><?php echo($localisation); ?></info></h3>
             </div>
-            <form action="index.php?controle=user&action=displayModifInfos" method="POST">
+            <form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=displayModifInfos";?> method="POST">
                 <button type="submit"><?php echo $txt['Profil_Button_Edit']; ?></button>
             </form>
         </div>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>
 

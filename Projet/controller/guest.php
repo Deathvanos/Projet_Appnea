@@ -18,31 +18,52 @@
     /********************************************/
     /***** Fonctions pour afficher une page *****/
     /********************************************/
-    // Affiche la page d'accueil d'un guest
-    function mainGuest(){require('./Projet/view/guest/mainGuest.tpl');}
-    // Affiche la page de connection
-    function login(){require('./Projet/view/guest/login.tpl');}
 
-    // Header
-    function teamsPage(){require('./Projet/view/guest/teams.tpl');}
+    /***** Header *****/
 
-    // Footer
-    function contactPage(){require('./Projet/view/guest/contact.tpl');}
+    function mainGuest(){require_once('./Projet/view/guest/mainGuest.tpl');}
+    
+    function productPage(){require_once('./Projet/view/guest/productPage.tpl');}
+    
+    function teamsPage(){require_once('./Projet/view/guest/teams.tpl');}
+
+    function FAQPage(){require_once('./Projet/view/guest/FAQPage.tpl');}
+
+
+    /***** Footer *****/
+    function contactPage(){require_once('./Projet/view/guest/contact.tpl');}
+
+    function CGUPage(){require_once('./Projet/view/guest/CGUPage.tpl');}
+
+
+    function PrivacyPolicyPage(){require_once('./Projet/view/guest/privacyPolicyPage.tpl');}
+
+    function CookiesPage(){require_once('./Projet/view/guest/cookiesPage.tpl');}
+    
+
+ 
+    /********************************************/
+    /********* Fonctions de login Page **********/
+    /********************************************/
+    
     // Après verification de la demande de login, connection de l'utilisateur
+    function isUser(){
+        $_SESSION['controle'] = "user";
+        header('Location: index.php?controle=user&action=mainUser');
+    }
+    function isModo(){
+        $_SESSION['controle'] = "modo";
+        header('Location: index.php?controle=modo&action=mainModo');
+    }
+    function isAdmin(){
+        $_SESSION['controle'] = "admin";
+        header('Location: index.php?controle=admin&action=mainAdmin');
+    }
 
-
-    function isUser(){header('Location: index.php?controle=user&action=mainUser');}
-    function isModo(){header('Location: index.php?controle=modo&action=mainModo');}
-    function isAdmin(){header('Location: index.php?controle=admin&action=mainAdmin');}
-
-    //Questions
-    function questionsPage(){require('./Projet/view/guest/pageQuestions.tpl');}
-
-     //Conditions
-     function conditionsPage(){require('./Projet/view/guest/pageConditions.tpl');}
+ 
 
     /************************************/
-    /***** Fonctions about le login *****/
+    /****** Fonctions check login *******/
     /************************************/
     function testConnection() {
         // Récupération des infos du guest
@@ -50,14 +71,8 @@
         $mdp= htmlspecialchars($_POST['mdp']);
 
         /*** Vérification des infos avant la requete SQL ***/
-        //
-        if (//!preg_match("/@/", $mail) | // un mail doit contenir un @
-          //  (strlen($mdp) < 8 || strlen($mdp) > 64) | // Vérifier la longueur du mot de passe
-          //  !preg_match("/[A-Z]/", $mdp) | // Vérifier la présence d'une lettre majuscule
-           // !preg_match("/[a-z]/", $mdp) | // Vérifier la présence d'une lettre minuscule
-           // !preg_match("/[0-9]/", $mdp) | // Vérifier la présence d'un chiffre
-          //  !preg_match('/[~!@#$%^&*()_+={[}\]|:;<>,.?]/', $mdp) | // Vérifier la présence d'un caractère spécial autorisé
-            !preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) { // La chaîne ne contient que des caractères alphanumériques et certains symboles
+        if (!preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) { 
+            // La chaîne ne contient que des caractères alphanumériques et certains symboles
             // caractères spéciaux possible ~ ! @ # $ % ^ & * ( ) _ - + = { [ } ] | : ; < > , . ?
                 $_SESSION['errorLog'] = "Mail ou mot de passe non conforme.";
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -65,7 +80,7 @@
         }
 
         // Fonction login vers la base de données
-        include("Projet/modele/guest.php");
+        include_once("Projet/modele/isLogout.php");
         tryLogin();
 
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
@@ -73,18 +88,20 @@
     }
 
 
+
+
+    /************************************/
+    /** TEMP : check session variable ***/
+    /************************************/
+
     function checkVarSession() {
         Print_r($_SESSION); // _SESSION - txt
         echo "<u><b> <br><br>Voici la liste des informations concernant votre session :<br> </b></u>";
         foreach ($_SESSION as $cle => $valeur) {
-            if(Gettype ($valeur) != gettype(array())) {
-                echo "- ".$cle . " : " . $valeur . "<br>";
-            }
+            if(Gettype ($valeur) != gettype(array())) {echo "- ".$cle . " : " . $valeur . "<br>";}
             else {
                 echo "<br> <b>$cle</b> <br>";
-                foreach ($valeur as $Subcle => $Subvaleur) {
-                    echo "- ".$Subcle . " : " . $Subvaleur . "<br>";
-                }
+                foreach ($valeur as $Subcle => $Subvaleur) {echo "- ".$Subcle . " : " . $Subvaleur . "<br>";}
             }
         }
     }

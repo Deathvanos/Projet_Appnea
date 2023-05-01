@@ -17,7 +17,7 @@
 
 <head>
     <title>APNEA - findUser</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/modo/findUserModo.css" />
 </head>
 
@@ -79,7 +79,7 @@
                     <td><select name=<?php echo $sensor."Stat"?>>
                         <option value=""></option>
                         <?php // Mise en place de la boite à selection
-                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock'], '.'] as $etat) {
+                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock']] as $etat) {
                             $selected = ($_POST[$sensor."Stat"] == $etat) ? "selected" : "";
                             echo "<option value='$etat' $selected>$etat</option>";
                         }?>
@@ -104,15 +104,18 @@
                     echo '<td>'.$row['city'].'</td>';
                     echo '<td>'.$row['address'].'</td>';
 
-                    printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
-                    printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
-                    printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
-                    printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
-        
+                    if($row['typeUser']=="User") {
+                        printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
+                        printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
+                        printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
+                        printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
+                    }
+                    else {echo '<td></td>';echo '<td></td>';echo '<td></td>';echo '<td></td>';}
+    
                     echo '<td class="tblBlanc">...</td>';
+
                     if ($row['typeUser']=="User") {echo '<td><a href="index.php?controle=user&action=sensorUserPage">'.$txt['adminGestionUser_userMode'].'</a></td>';}
-                    else {echo '<td>...</td>';}
-                    
+                    else {echo '<td></td>';}
                 echo '</tr>';
             }?>
 
@@ -136,7 +139,7 @@
     </form>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 

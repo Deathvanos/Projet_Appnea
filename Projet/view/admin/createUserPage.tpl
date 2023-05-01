@@ -16,9 +16,9 @@
 <html lang="fr">
 
 <head>
-    <title>APNEA - Main Admin</title>
+    <title>APNEA - createUserPage</title>
     <?php include 'Projet/view/other/head_Font_Page.html';?>
-    <link rel="stylesheet" href="Ressources/css/admin/mainAdmin.css" />
+    <link rel="stylesheet" href="Ressources/css/admin/createUserPage.css" />
 </head>
 
 <body>
@@ -28,11 +28,7 @@
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
     <main class='main'>
-        <table class='buttonMain'>
-            <thead><h1 class='title'><?php echo $txt['adminMainTitle']; ?></h1></thead> 
-            <tr><td><a href='index.php?controle=admin&action=createUserPage'><?php echo $txt['adminMain1']; ?></a></td></tr>
-            <tr><td><a href='index.php?controle=admin&action=findUser'><?php echo $txt['adminMain2']; ?></a></td></tr>
-        </table>
+        <h1>createUserPage</h1>
     </main>
 
     <?php include 'Projet/view/other/footer.tpl'; ?>

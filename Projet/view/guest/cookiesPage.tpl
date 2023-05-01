@@ -11,27 +11,27 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>APNEA - Main Modo</title>    
+    <title>APNEA - cookiesPage</title>
     <?php include 'Projet/view/other/head_Font_Page.html';?>
-    <link rel="stylesheet" href="Ressources/css/modo/mainModo.css" />
+    <link rel="stylesheet" href="Ressources/css/guest/cookiesPage.css" />
 </head>
 <body>
     <?php    
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main class='main'>
-        <table class='buttonMain'>
-            <thead><h1 class='title'><?php echo $txt['modoMainTitle']; ?></h1></thead> 
-            <tr><td><a href='index.php?controle=modo&action=manageFAQPage'><?php echo $txt['modoMain2'];?></a></td></tr>
-            <tr><td><a href='index.php?controle=modo&action=findUser'><?php echo $txt['adminMain2']; ?></a></td></tr>
-        </table>
+    <main>
+
+        <h1>Données personnelles & Cookies</h1>
+
+        
+       
     </main>
 
     <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>
+

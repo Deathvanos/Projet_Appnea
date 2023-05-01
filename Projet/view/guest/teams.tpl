@@ -16,7 +16,7 @@
 
 <head>
     <title>APNEA - Teams</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/guest/teams.css"/>
 </head>
 
@@ -91,7 +91,7 @@
     </main>
 
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 

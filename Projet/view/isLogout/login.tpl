@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include 'Projet/view/other/header_Font_Page.html';?>
+        <?php include 'Projet/view/other/head_Font_Page.html';?>
         <link rel="stylesheet" href="Ressources/css/guest/login.css">
         <link rel="icon" type="image/x-icon" href="Ressources/img/Logo_Appea-color.svg">
     </head>

@@ -37,7 +37,7 @@ Style pour la page index
     color: var(--myColor-fontColor-main);
     text-decoration: none;
     /*Angle des coins du rectangle*/
-    border-radius: 10px;
+    border-radius: 2rem;
     /*Espacement dans le rectangle*/
     padding-inline: 20px;
     padding-block: 10px;
@@ -78,7 +78,7 @@ Style pour la page index
 }
 
 .top_avis div img{
-    border-radius: 30px;
+    border-radius: 2rem;
     border: 2px solid var(--myColor-fontColor-main);
     /*Taille de l'image*/
     max-width: 15%;
@@ -110,7 +110,7 @@ Style pour la page index
     font-size: 40px;
     color:var(--myColor-main-light);
     background-color:#fff;
-    border-radius: 100%;
+    border-radius: 2rem;
 }
 
 .top_nextAvis #c1 {

@@ -15,7 +15,7 @@
 <html lang="fr">
 <head>
     <title>APNEA - Contact</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/guest/contact.css" />
 </head>
 <body>
@@ -37,12 +37,12 @@
         
        <div class='buttons'>
             <a href="#"><?php echo $txt['contact_send'];?></a>
-            <a href="javascript:history.back()"><?php echo $txt['contact_back'];?></a>
+            <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=main".ucfirst($_SESSION['controle'])?>><?php echo $txt['contact_back'];?></a>
        </div>
         
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 </html>

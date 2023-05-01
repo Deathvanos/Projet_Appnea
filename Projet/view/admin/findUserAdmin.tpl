@@ -17,7 +17,7 @@
 
 <head>
     <title>APNEA - findUser</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/admin/findUserAdmin.css" />
 </head>
 
@@ -79,7 +79,7 @@
                     <td><select name=<?php echo $sensor."Stat"?>>
                         <option value=""></option>
                         <?php // Mise en place de la boite à selection
-                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock'], '.'] as $etat) {
+                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock']] as $etat) {
                             $selected = ($_POST[$sensor."Stat"] == $etat) ? "selected" : "";
                             echo "<option value='$etat' $selected>$etat</option>";
                         }?>
@@ -119,8 +119,8 @@
                         echo '<td><a href="index.php?controle=user&action=displayProfil">'.$txt['adminGestionUser_Manage'].'</a></td>';
                     }
                     else {
-                        echo '<td></td>';
-                        echo '<td></td>';
+                        echo '<td> </td>';
+                        echo '<td> </td>';
                     }
                 echo '</tr>';
             }?>
@@ -144,7 +144,7 @@
     </form>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 

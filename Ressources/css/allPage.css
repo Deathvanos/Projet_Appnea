@@ -62,6 +62,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     align-items: center;
     background-color: var(--myColor-main-base);
     padding-inline: 2.5%;
+    margin-top: 0.5em;
 }
 
 .header_logo { /* Taille du logo du header */
@@ -99,7 +100,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 
 .header_conn { /* Settings des liens du header*/ 
     background-color: var(--myColor-buttonLogin);
-    border-radius: 25px;
+    border-radius: 2rem;
 }
 
 .header_conn a { /* Settings des liens du header*/ 
@@ -114,7 +115,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 
 .header_flag {
     width: 60px;
-    border-radius: 100%;
+    border-radius: 2rem;
 
 }
 
@@ -142,7 +143,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 }
 .header_language ul li:hover a {
     background-color: #2779BF;
-    border-radius: 50%;
+    border-radius: 2rem;
 }
 
 
@@ -192,17 +193,17 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 
 
 .footer_icon {
-    font-size: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .footer_top {
     color: var(--myColor-fontColor-main);
     display: flex;
     justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .footer_top h3 {
@@ -210,7 +211,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     border-bottom: 3px solid var(--myColor-fontColor-main);
     padding-left: 5px;
     padding-right: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 0.25em;
 }
 
 .footer_top a {
@@ -218,7 +219,10 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     text-decoration: none;
 }
 
-.footer_top li {display: block;}
+.footer_top li {
+    display: block;   
+    margin-block: 0.4em;
+}
 
 .footer_bottom {
     color: #c0bbbb;

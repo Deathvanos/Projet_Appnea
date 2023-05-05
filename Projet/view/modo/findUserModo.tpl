@@ -114,7 +114,7 @@
     
                     echo '<td class="tblBlanc">...</td>';
 
-                    if ($row['typeUser']=="User") {echo '<td><a href="index.php?controle=user&action=sensorUserPage">'.$txt['adminGestionUser_userMode'].'</a></td>';}
+                    if ($row['typeUser']=="User") {echo "<td><a href='index.php?controle=modo&action=showUserGraph&temoin=".$row['mail']."'>".$txt['adminGestionUser_userMode'].'</a></td>';}
                     else {echo '<td></td>';}
                 echo '</tr>';
             }?>

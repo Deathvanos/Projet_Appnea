@@ -115,8 +115,8 @@
                     echo '<td class="tblBlanc">...</td>';
 
                     if($row['typeUser']!="Admin") {
-                        echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
-                        echo '<td><a href="index.php?controle=user&action=displayProfil">'.$txt['adminGestionUser_Manage'].'</a></td>';
+                        echo "<td><button type='button' class='btnDel' onclick=showPopup('".$row['mail']."','".$_SESSION['lang']."')>".$txt['adminGestionUser_Delete'].'</button></td>';
+                        echo "<td><a href='index.php?controle=admin&action=showUserInfo&temoin=".$row['mail']."'>".$txt['adminGestionUser_Manage'].'</a></td>';
                     }
                     else {
                         echo '<td> </td>';
@@ -124,7 +124,6 @@
                     }
                 echo '</tr>';
             }?>
-
         </table>
         </div>
 

@@ -20,6 +20,7 @@ Style commun à toutes les pages
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
     font-family: "poppins";
     /* Couleur de la chartre graphique */
     --myColor-main-base: #211265;
@@ -43,13 +44,11 @@ main {
     /* Ajout un espace entre le bloc et le bord de l'ecran gauche*/
     padding-left: 2.5%;
     padding-bottom: 8em;
-
-
-
 }
 
 body {/*Suppression du blanc de bas de page en cas de zoom*/
     background-color: var(--myColor-main-base);
+    margin-top: 0.5em;
 }
  
 
@@ -62,7 +61,6 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     align-items: center;
     background-color: var(--myColor-main-base);
     padding-inline: 2.5%;
-    margin-top: 0.5em;
 }
 
 .header_logo { /* Taille du logo du header */
@@ -231,6 +229,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     font-size: 11px;
 }
 
+.footer_bottom i {color: #c0bbbb;}
 
 
 /***************-----*************** FOOTER NUMBERPHONE TICKET ***************-----***************/

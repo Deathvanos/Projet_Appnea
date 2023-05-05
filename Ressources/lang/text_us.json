@@ -40,7 +40,8 @@
     "login_nameField": "Enter your username",
     "login_mdpLabel": "Password",
     "login_mdpField": "Enter your password",
-    "login_newUser": "New at APPNEA ? <a href='index.php?controle=guest&action=contactPage'>Buy your product</a>",
+    "login_newUser1": "New at APPNEA ? ",
+    "login_newUser2": "Buy your product",
     "login_forgotMdp": "Forgot your password ? Click here",
     "login_Add": "- Finally some real rest",
 
@@ -74,7 +75,6 @@
     "adminMain1": "Create a profil",
     "adminMain2": "User management",
 
-
     "adminGestionUser_title": "Users management",
     "adminGestionUser_typeUser": "UserTpe",
     "adminGestionUser_firstName": "FirstName",
@@ -99,7 +99,12 @@
     "adminGestionUser_NextPage": "Next",
     "adminGestionUser_Active": "Active",
     "adminGestionUser_Lock": "Lock",
-    "adminGestionUser_MsgDelUser": "Your user deletion request has been taken.\\nTo validate the deletion, please repeat the deletion procedure.\\n\\nAttention, the action will be irreversible.",
+    "adminGestionUser_MsgDelTitle": "Delete Confirmation",
+    "adminGestionUser_MsgDelUser": "Are you sure you want to delete this user?<br>Attention, the action will be irreversible.",
+    "adminGestionUser_OkDetete1": "User ",
+    "adminGestionUser_OkDetete2": " was successfully deleted.",
+    "adminGestionUser_FailDelete": "Error while deleting",
+    "adminGestionUser_PopupSubmit": "Confirme",
 
     "modoMainTitle": "<color>Modo</color> gestion",
     "modoMain2": "FAQ management",

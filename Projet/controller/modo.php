@@ -18,7 +18,7 @@
     /* Affiche la page d'accueil */
     function mainModo(){require('./Projet/view/modo/mainModo.tpl');}
     function manageFAQPage(){require('./Projet/view/modo/manageFAQPage.tpl');}
-
+    function showUserGraph(){require_once('./Projet/view/modo/showUserGraph.tpl');}
 
 
     function findUser(){

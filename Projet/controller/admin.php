@@ -17,37 +17,22 @@
 
     function mainAdmin(){require_once('./Projet/view/admin/mainAdmin.tpl');}
     function createUserPage(){require_once('./Projet/view/admin/createUserPage.tpl');}
-
-
-
-    /**
-     * L'utilisateur doit confirmer avant de supprimer un user
-     */
-
-    function sendConfirmationDelUser(){
-        $msgAlert = $GLOBALS['translat']["adminGestionUser_MsgDelUser"];
-        // Chargement du fichier JavaScript
-        echo '<script id="confirm-script" src="Projet/view/other/js/confirmDeleteUser.js" type="text/javascript"></script>';
-        // Activation de la fonction (mettre '' pour str et rine pour int)
-        echo "<script>msgDelUser('".$_POST['delUser']."', '".$msgAlert."')</script>";
-    }
-
-
+    function showUserInfo(){require_once('./Projet/view/admin/showUserInfo.tpl');}
+    
+    
     /* Affiche la page de findUser */
     function findUser(){
         $arrayReturn = searchUser();
         $result = $arrayReturn[0];
         $nbElements = $arrayReturn[1];
         $posList = $arrayReturn[2];
+        // Charge le fichier contenant la fonction du popup
+        echo '<script src="Projet/view/other/js/popupDeleteUser.js"></script>';
+        // charge la page
         require_once('./Projet/view/admin/findUserAdmin.tpl');
     }
 
 
-    
-
-
-
-
-
+ 
 
 ?>

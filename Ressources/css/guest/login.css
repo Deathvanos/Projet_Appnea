@@ -1,6 +1,10 @@
 
 /***** Structure ****/
 
+input {
+  color: black;
+} 
+
 html{
   background-image: url('../../img/background_login.svg');
   background-repeat: no-repeat;
@@ -98,6 +102,10 @@ body{
   text-align: center;
   margin-top: 30px;
   color: #391E87; 
+}
+
+.message a{
+  color: blue; 
 }
 
 #droite_login{

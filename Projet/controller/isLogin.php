@@ -79,21 +79,7 @@
 
             // Fonction login vers la base de données
             include_once("Projet/modele/isLogin.php");
-            // if delete button on
-            if(isset($_POST['delUser'])) {
-                // Pour la suite du programme
-                $_POST['validat'] = 'ok';
-                // cas 2 : 2e clic -> suppression définitif
-                if (isset($_COOKIE['valueRep'])) {
-                    // mais seulement si on a choisi le même user
-                    if ($_COOKIE['valueRep']==$_POST['delUser']){
-                        include_once("Projet/modele/admin.php");
-                        removeUser();
-                    } // Sinon on retombe sur le 1er cas
-                    else {sendConfirmationDelUser();}
-                }  // cas 1 : 1er clic -> demande de comfirmation avant suppression
-                else {sendConfirmationDelUser();}
-            }
+
             // La page est reload - isset($_POST['validat']) = true
             if (isset($_POST['nbElements'])){
                 $nbElements = $_POST['nbElements'];

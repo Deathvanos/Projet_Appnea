@@ -12,9 +12,16 @@
 
 }
 
+.tableBox td {color: black;}
+.tableBox input {color: black;}
+.tableBox i {color: black;}
+.tableBox a {color: black;}
+.tableBox button {color: black;}
+.tableBox select {color: black;}
+.tableBox option {color: black;}
+
 
 .tableBox tr {
-
     background-color: #D9D9D9;
     color: black;
     text-align: center;

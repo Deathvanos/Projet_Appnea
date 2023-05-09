@@ -1,7 +1,6 @@
 {
     "title_brand": "Appnea",
     "header_link1": "Nos produits",
-    "header_link2": "Capteurs",
     "header_link3": "Notre équipe",
     "header_link4": "FAQ",
     "header_linkU1": "Mes Capteurs",
@@ -41,7 +40,8 @@
     "login_nameField": "Entrez votre nom d'utilisateur",
     "login_mdpLabel": "Mot de passe",
     "login_mdpField": "Entrez votre mot de passe",
-    "login_newUser": "Nouveau chez APPNEA ? <a href='index.php?controle=guest&action=contactPage'>Achète ton produit</a>",
+    "login_newUser1": "Nouveau chez APPNEA ? ",
+    "login_newUser2": "Achète ton produit",
     "login_forgotMdp": "Mot de passe oublié ? Cliquez ici",
     "login_Add": "- Enfin du vrai repos",
 
@@ -99,7 +99,12 @@
     "adminGestionUser_NextPage": "Suivant",
     "adminGestionUser_Active": "Activé",
     "adminGestionUser_Lock": "Bloqué",
-    "adminGestionUser_MsgDelUser": "Votre demande de suppression de l\\'utilisateur a été pris en compte.\\nPour valider la suppression, veuillez réefectuer la démarche de suppression.\\n\\nAttention, l\\'action sera irréversible",
+    "adminGestionUser_MsgDelTitle": "Confirmation de suppression",
+    "adminGestionUser_MsgDelUser": "Êtes-vous sûr de vouloir supprimer cet utilisateur ?<br>Attention, l'action sera irréversible",
+    "adminGestionUser_OkDetete1": "L'utilisateur ",
+    "adminGestionUser_OkDetete2": " a été supprimé avec succès.",
+    "adminGestionUser_FailDelete": "Erreur lors de la suppression",
+    "adminGestionUser_PopupSubmit": "Confirmer",
 
     "modoMainTitle": "Gestion <color>modérateur</color>",
     "modoMain2": "Gestion de la FAQ",

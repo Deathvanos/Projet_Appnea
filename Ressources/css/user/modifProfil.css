@@ -66,7 +66,7 @@ input::placeholder, input[value]{
 
 input:focus{
     outline : none;
-    border-radius: 25px;
+    border-radius: 2rem;
     border-bottom: 1px solid lightgray;
     /*background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);*/
 }
@@ -75,7 +75,7 @@ input:focus{
 elem{
     padding-bottom: 2%;
     background-color: hsla(120,100%,100%,0.17);
-    border-radius: 25px;
+    border-radius: 2rem;
     margin-top: 7%;
     display: inline;
 }
@@ -94,7 +94,7 @@ info{
 }
 
 button{
-    border-radius: 25px;
+    border-radius: 2rem;
     color: white;
     background-color: #423EF6;
     height: 5%;

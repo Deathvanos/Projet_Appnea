@@ -28,11 +28,13 @@
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
     <main class='main'>
-        <table class='buttonMain'>
-            <thead><h1 class='title'><?php echo $txt['adminMainTitle']; ?></h1></thead> 
-            <tr><td><a href='index.php?controle=admin&action=createUserPage'><?php echo $txt['adminMain1']; ?></a></td></tr>
-            <tr><td><a href='index.php?controle=admin&action=findUser'><?php echo $txt['adminMain2']; ?></a></td></tr>
-        </table>
+            <h1 class='title'>Vous consultez la page de : <?php echo $_GET['temoin']; ?> </h1> 
+            <br><br><br>
+            <h3>Quel beau graphs</h3> 
+            <br><br><br><br>
+            RETOUR
+
+
     </main>
 
     <?php include 'Projet/view/other/footer.tpl'; ?>

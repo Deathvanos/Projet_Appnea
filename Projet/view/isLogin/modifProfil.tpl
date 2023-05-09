@@ -15,7 +15,7 @@
 <html lang="fr">
 <head>
     <title>APNEA - Profil modification</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/modifProfil.css"/>
 </head>
 <body>
@@ -34,7 +34,7 @@
         echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
         }
         ?>
-        <form enctype="multipart/form-data" action="index.php?controle=user&action=modifInfos" method="POST">
+        <form enctype="multipart/form-data" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=modifInfos";?> method="POST">
             <div class="infos_perso grid_container">
                 <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" placeholder= <?php echo("'$lastName'"); ?> name="lastname" value=<?php echo("'$lastName'"); ?>/></elem>
                 <h3 class="hide"> </h3>
@@ -50,14 +50,14 @@
             <label for="avatar"><?php echo $txt['Profil_Avatar']; ?> </label>
             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;">
             <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
-            <a href="index.php?controle=modo&action=errorPage" class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
+            <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=errorPage";?> class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
         </form>
-        <form action="index.php?controle=user&action=displayProfil" method="POST">
+        <form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=displayProfil";?> method="POST">
             <button type="submit" class="btnAbandon"><?php echo $txt['Abandon']; ?></button>
         </form>
     </div>
 </main>
 
-<?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+<?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>

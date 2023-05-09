@@ -40,7 +40,7 @@ td {
     font-weight: 600;
     font-size: 20px;
     line-height: 100%;
-    border-radius:50px;
+    border-radius:2rem;
 }
 
 question {
@@ -59,7 +59,7 @@ td:hover response  {
     font-weight: 600;
     font-size: 15px;
     line-height: 100%;
-    border-radius: 70px;
+    border-radius: 2rem;
 }
 
 

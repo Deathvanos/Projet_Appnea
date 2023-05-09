@@ -15,7 +15,7 @@
 <html lang="fr">
 <head>
     <title>APNEA - CGU</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/guest/pageConditions.css" />
 </head>
 <body>
@@ -40,7 +40,7 @@
 
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 </html>

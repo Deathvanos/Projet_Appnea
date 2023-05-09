@@ -13,6 +13,9 @@
 Style commun à toutes les pages
 *********************************************************/
 
+ 
+
+
 #violet { color: #6C37EE;}
 
 #dégradé {
@@ -77,6 +80,8 @@ Style commun à toutes les pages
     top: 123%;
     text-decoration: none;
 }
+
+.tableBox i {color: blue;}
 
 /* Bottom part */
   

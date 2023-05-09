@@ -16,7 +16,7 @@
 <html lang="fr">
 <head>
     <title>APNEA - Main User</title>    
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/mainUser.css" />
 </head>
 <body>
@@ -37,11 +37,11 @@
         <table class='buttonMain'>
             <thead><center><h1 class='title'><?php echo $txt['userMain'].'<color>'.$info['firstName']." ".$info['lastName'].'</color>'; ?></h1></center></thead> 
             <tr><td><a href='index.php?controle=user&action=sensorUserPage'><?php echo $txt['userMain_btnData']; ?></a></td></tr>
-            <tr><td><a href='index.php?controle=user&action=errorPage'><?php echo $txt['userMain_btnTicket']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=user&action=contactPage'><?php echo $txt['userMain_btnTicket']; ?></a></td></tr>
         </table>
 
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>

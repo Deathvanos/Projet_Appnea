@@ -18,10 +18,9 @@
 
 <head>
     <title>APNEA - User Sensor</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/sensorUser.css" />
-    <!-- Load d3.js --> <!-- Circle are black when hovered-->
-    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="Projet/view/other/js/d3.v4.js"></script>
 </head>
 
 <body>
@@ -626,7 +625,7 @@
     </main>
 
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 
 </body>

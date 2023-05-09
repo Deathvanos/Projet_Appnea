@@ -1,3 +1,5 @@
 <?php
-// Pas d'implementation pour le moment
+
+    // Affiche la page de connection
+    function login(){require_once('./Projet/view/isLogout/login.tpl');}
 ?>

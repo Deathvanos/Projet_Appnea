@@ -84,7 +84,9 @@
         tryLogin();
 
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        ('is'.$_SESSION['userInfo']["typeUser"])();
+        // ('is'.$_SESSION['userInfo']["typeUser"])();
+        $funcTypeUser = 'is'.$_SESSION['userInfo']["typeUser"];
+        $funcTypeUser();
     }
 
 

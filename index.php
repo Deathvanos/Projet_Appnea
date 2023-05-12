@@ -12,6 +12,9 @@
 ********************************************************-->
 
 <?php session_start();
+
+date_default_timezone_set("Europe/Paris");
+
 // shift + alt + f : indentation automatique
 
     // Redirection vers la Page d'erreur

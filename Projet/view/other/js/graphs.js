@@ -1,7 +1,7 @@
     // set the dimensions and margins of the graph
     var margin = { top: 10, right: 30, bottom: 30, left: 60 },
-        width = 360 - margin.left - margin.right,
-        height = 100 - margin.top - margin.bottom;
+        width = 340 - margin.left - margin.right,
+        height = 220 - margin.top - margin.bottom;
     
 
     // append the svg object to the body of the page
@@ -456,6 +456,12 @@ function mousemoveforth() {
 function mouseoutforth() {
     focusforth.style("opacity", 0);
     focusTextforth.style("opacity", 0);
+}
+
+// Data analysis section
+
+function sleepApnea(time, data){
+    
 }
 
 

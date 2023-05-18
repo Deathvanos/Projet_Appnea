@@ -91,7 +91,7 @@
             <div class="Line">
                 <div id="first" class="firstGraph">
 
-                    <h2>Capteur Temperature</h2>
+                    <h3>Capteur Temperature</h3>
                 </div>
 
 
@@ -107,7 +107,7 @@
 
                 <div id="second" class="secondGraph">
 
-                    <h2>Capteur Cardiaque</h2>
+                    <h3>Capteur Cardiaque</h3>
 
 
                 </div>
@@ -118,14 +118,14 @@
             <div class="Line">
                 <div id="third" class="thirdGraph">
 
-                    <h2>Capteur Humidité</h2>
+                    <h3>Capteur Humidité</h3>
                 </div>
 
                 <div class="vertical-lign"></div>
 
                 <div id="forth" class="forthGraph">
 
-                    <h2>Capteur Sonore</h2>
+                    <h3>Capteur Sonore</h3>
                 </div>
             </div>
 

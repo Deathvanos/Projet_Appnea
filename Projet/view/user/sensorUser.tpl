@@ -33,7 +33,7 @@
     <main>
 
         <br>
-        <h1>Vos Capteurs</h1>
+        <h1><?php echo $txt['Captor_Page_Name'];?></h1>
         <br>
 
 
@@ -91,7 +91,7 @@
             <div class="Line">
                 <div id="first" class="firstGraph">
 
-                    <h3>Capteur Temperature</h3>
+                    <h3><?php echo $txt['Temperature'];?></h3>
                 </div>
 
 
@@ -107,7 +107,7 @@
 
                 <div id="second" class="secondGraph">
 
-                    <h3>Capteur Cardiaque</h3>
+                    <h3><?php echo $txt['Cardiac'];?></h3>
 
 
                 </div>
@@ -118,21 +118,22 @@
             <div class="Line">
                 <div id="third" class="thirdGraph">
 
-                    <h3>Capteur Humidité</h3>
+                    <h3><?php echo $txt['Humidity'];?></h3>
                 </div>
 
                 <div class="vertical-lign"></div>
 
                 <div id="forth" class="forthGraph">
 
-                    <h3>Capteur Sonore</h3>
+                    <h3><?php echo $txt['Sound'];?></h3>
                 </div>
             </div>
 
         </div>
+        <script src="Projet/view/other/js/graphs.js" ></script>
         <br>
         <br>
-        <h1>Au vu de vos données, il est fort probable que vous ayez fait de l'apnée du sommeil cette nuit.</h1>
+        <h1><?php echo $txt[$_COOKIE["result"]];?></h1>
 
 
     </main>
@@ -142,5 +143,5 @@
 
 
 </body>
-<script src="Projet/view/other/js/graphs.js" ></script>
+
 </html>

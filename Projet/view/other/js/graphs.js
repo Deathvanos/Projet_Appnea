@@ -460,8 +460,53 @@ function mouseoutforth() {
 
 // Data analysis section
 
-function sleepApnea(time, data){
-    
+//Cette fonction aura 3 retour possible :
+// - Vous ne faites probablement pas d'appnee du sommeil
+// - Suspicions d'appnée du sommeil
+// - Vous faites très probablement de l'apnée du sommeil
+
+//Cette fonction sera chargée de compter le nombre de fois ou la courbe est au dessus de la valeur step
+function peaksDetection(data, step){
+    let count = 0;
+    for (let i = 1; i < data.length; i++) {
+        if (data[i-1].y < step && data[i].y >= step) {
+            count+=1;
+        }        
+    }
+    return count;
 }
 
+function calculateAverage(data) {
+    var total = 0;
+    var count = 0;
+
+    data.forEach(function(item, index) {
+        total += item;
+        count++;
+    });
+
+    return total / count;
+}
+
+function sleepApnea(){
+    //Detection du nombre de reveils en sursaut
+    let tempWakeUpCount = peaksDetection(dataTemp,37.8)
+    let cardWakeUpCount = peaksDetection(dataCard, 60)
+    let humWakeUpCount = peaksDetection(dataHum, 40)
+    let sonWakeUpCount = peaksDetection(dataSon, 40)
+
+    let WakeUpCount = Math.round(calculateAverage([tempWakeUpCount, cardWakeUpCount, humWakeUpCount, sonWakeUpCount]));
+
+    if (WakeUpCount <= 2){
+        return "Low_Chance"
+    }else if (WakeUpCount <= 5){
+        return "Medium_Chance"
+    }else{
+        return "High_Chance"
+    }
+
+}
+
+//Lancement de la fonction de détection d'apnée du sommeil
+document.cookie = "result = " +sleepApnea();
 

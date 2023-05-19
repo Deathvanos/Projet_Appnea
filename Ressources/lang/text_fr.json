@@ -130,6 +130,16 @@
     "Profil_Avatar": "Modifier la photo",
     "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici",
 
+
+    "Captor_Page_Name": "Vos Capteurs",
+    "Temperature": "Capteur Température",
+    "Cardiac": "Capteur Cardiaque",
+    "Sound": "Capteur Sonore",
+    "Humidity": "Capteur Humidité",
+    "Low_Chance": "Au vu de vos données du jour, il est <strong style = 'color: rgb(127, 212, 238)'>peu probable</strong> que vous fassiez de l'apnée du sommeil",
+    "Medium_Chance" : "Au vu de vos données du jour, vous faites <strong style = 'color: rgb(230, 140, 71)'> probablement</strong> de l'apnée du sommeil. Prendre contact avec un medecin est vivement conseillé",
+    "High_Chance" : "Au vu de vos données du jour, vous faites <strong style = 'color: rgb(241, 87, 64)'>très probablement</strong> de l'apnée du sommeil. Nous vous invitons a prendre contact avec un medecin dans les plus brefs délais.",
+
     "xxw": "xxxw",
     "xx": "xxx"
 }

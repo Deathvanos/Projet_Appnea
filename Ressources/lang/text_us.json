@@ -131,6 +131,15 @@
     "Profil_Country": "Country",
     "Profil_Avatar": "Change profile picture",
     "Profil_Change_mdp": "Change your password ? Click here",
+
+    "Captor_Page_Name": "Your Sensors",
+    "Temperature": "Temperature Sensor",
+    "Cardiac": "Cardiac Sensor",
+    "Sound": "Sound Sensor",
+    "Humidity": "Humidity Sensor",
+    "Low_Chance": "Based on your data for the day, it is <strong style = 'color: rgb(127, 212, 238)'>unlikely</strong> that you have sleep apnea",
+    "Medium_Chance" : "Based on your data today, you <strong style = 'color: rgb(230, 140, 71)'>probably </strong> have sleep apnea. Contacting a doctor is highly recommended",
+    "High_Chance" : "Based on your data for the day, you are <strong style = 'color: rgb(241, 87, 64)'>very likely</strong> experiencing sleep appnea. We invite you to contact a doctor as soon as possible.",
     
     
     "xxw": "xxxw",

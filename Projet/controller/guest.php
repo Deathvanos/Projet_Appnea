@@ -27,7 +27,16 @@
     
     function teamsPage(){require_once('./Projet/view/guest/teams.tpl');}
 
-    function FAQPage(){require_once('./Projet/view/guest/FAQPage.tpl');}
+    function FAQPage(){
+
+        // Fonction login vers la base de données
+        include_once("Projet/modele/isLogout.php");
+        $data = FAQPage();
+        
+
+        require_once('./Projet/view/guest/FAQPage.tpl');
+    
+    }
 
 
     /***** Footer *****/

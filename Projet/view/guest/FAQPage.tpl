@@ -28,24 +28,28 @@
         <h2 id="Conditions"><?php echo $txt['faq_title']; ?></h2>
 
         <table>
-            <tr><td>
-                <question>Comment acheter notre produit</question><br>
-                <response>Notre produit est disponible sur notre site. Il peut vous être prescrit par votre médecin traitant.</response>
-            </td></tr>
-            <tr><td>
-                <question>Qui contacter en cas de panne ?</question><br>
-                <response>Retrouvez-nous dans la rubrique Contact de notre site, nous sommes accessibles par téléphone ou bien sur nos réseaux sociaux.</response>
-            </td></tr>
-            <tr><td>
-                <question>Vos produits sont-ils fiables ?</question><br>
-                <response>Tous nos produits sont garantis fiables et testés par nos équipes. Vous pouvez retrouver nos procédures de tests dans notre rubrique Capteurs.</response>
-            </td></tr>
-        </table>
+
+        <?php 
+        // Faire la boucle pour afficher les i questions (enlever les questions d'en dessous)
+        
+            //<tr><td>
+            // Affichage des questions dans la table HTML
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td>";
+                echo "<question>" . $row['question'] . "</question><br>";
+                echo "<response>" . $row['response'] . "</response>";
+                echo "</td></tr>";
+    }
+           // </td></tr>
+            ?>
 
     </main>
+    
+</table>
 
     <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 </html>
 
+// 

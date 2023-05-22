@@ -26,16 +26,15 @@
         </nav>
     </div>
     <ul class="header_right">
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link1'];?></a></li>
-        <li><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['header_link2'];?></a></li>
+        <li><a href='index.php?controle=admin&action=productPage'><?php echo $txt['header_link1'];?></a></li>
         <li><a href='index.php?controle=admin&action=teamsPage'><?php echo $txt['header_link3'];?></a></li>
-        <li><a href='index.php?controle=admin&action=questionsPage'><?php echo $txt['header_linkA1'];?></a></li>
+        <li><a href='index.php?controle=admin&action=createUserPage'><?php echo $txt['header_linkA1'];?></a></li>
         <li><a href='index.php?controle=admin&action=findUser'><?php echo $txt['header_linkAM2'];?></a></li>
 
         <li class="header_conn"><nav class="header_login">
             <a href=<?php echo "index.php?controle=admin&action=mainAdmin"?>><i class='bx bxs-user'></i></a>
             <ul>
-                <li><a href="index.php?controle=user&action=displayProfil"><?php echo $txt['header_link5'];?></a></li>
+                <li><a href="index.php?controle=admin&action=displayProfil"><?php echo $txt['header_link5'];?></a></li>
                 <li><a href=<?php echo "index.php"?>><?php echo $txt['header_linkLogout']; ?></a></li>
             </ul>
         </nav></li>

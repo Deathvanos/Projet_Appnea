@@ -17,7 +17,7 @@
 
 <head>
     <title>APNEA - Main Admin</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/admin/mainAdmin.css" />
 </head>
 
@@ -27,15 +27,15 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
-    <main class='main' style="height:10%;">
+    <main class='main'>
         <table class='buttonMain'>
             <thead><h1 class='title'><?php echo $txt['adminMainTitle']; ?></h1></thead> 
-            <tr><td><a href='index.php?controle=admin&action=errorPage'><?php echo $txt['adminMain1']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=admin&action=createUserPage'><?php echo $txt['adminMain1']; ?></a></td></tr>
             <tr><td><a href='index.php?controle=admin&action=findUser'><?php echo $txt['adminMain2']; ?></a></td></tr>
         </table>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 
 </html>

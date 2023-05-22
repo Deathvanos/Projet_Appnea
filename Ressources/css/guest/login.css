@@ -1,6 +1,10 @@
 
 /***** Structure ****/
 
+input {
+  color: black;
+} 
+
 html{
   background-image: url('../../img/background_login.svg');
   background-repeat: no-repeat;
@@ -57,7 +61,7 @@ body{
   width: 100%;
   padding-left: 15%;
   padding-right: 15%;
-  border-radius: 8px;
+  border-radius: 2rem;
 }
 
 .desc_login{
@@ -70,7 +74,7 @@ body{
 #nom, #mdp {
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.3);
-  border-radius: 4px;
+  border-radius: 2rem;
   width: 100%;
   box-sizing: border-box;
   height: 50px;
@@ -88,7 +92,7 @@ body{
   padding: 16px 32px;
   gap: 8px;
   background: #F6593E;
-  border-radius: 8px;
+  border-radius: 2rem;
 }
 #btn_connection:hover{
   background: #2779BF;
@@ -98,6 +102,10 @@ body{
   text-align: center;
   margin-top: 30px;
   color: #391E87; 
+}
+
+.message a{
+  color: blue; 
 }
 
 #droite_login{

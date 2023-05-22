@@ -3,7 +3,7 @@
     function connectionToDB() {
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $dbname = "appnea";
 
         try {

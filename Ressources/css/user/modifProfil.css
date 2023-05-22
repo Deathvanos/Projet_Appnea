@@ -1,4 +1,15 @@
-﻿h1{
+﻿*{
+    margin : 0;
+    padding  :0;
+}
+
+
+main { /* a supprimer quand plus de float: right; */
+    padding-bottom: 15%;
+}
+
+h1{
+    margin-top: 5%;
     margin-left: 42.5%;
     color: white;
 }
@@ -15,6 +26,9 @@ form{
 
 img{
     float: left;
+    width: 15%;
+    /*overflow: hidden;
+    position: relative;*/
 }
 
 label, a{
@@ -32,21 +46,21 @@ label{
 }
 
 .contenu{
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
 .grid_container {
-    width : 70%;
+    width : 80%;
     display: grid;
-    grid-template-columns: 40% 5% 40%;
+    grid-template-columns: 40% 15% 40%;
     padding-left: 7%;
 }
 
 input{
-    width: 250px;
+    width: 70%;
     align-content: center;
     border:none;
-    border-bottom  : 2px solid lightgray;
+    border-bottom : 2px solid lightgray;
     background-color:transparent;
     padding-left: 1%;
     margin-left: 3%;
@@ -60,16 +74,17 @@ input::placeholder, input[value]{
 
 input:focus{
     outline : none;
-    border-radius: 25px;
+    border-radius: 2rem;
     border-bottom: 1px solid lightgray;
     /*background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);*/
 }
 
 
 elem{
+    width : 125%;
     padding-bottom: 2%;
     background-color: hsla(120,100%,100%,0.17);
-    border-radius: 25px;
+    border-radius: 2rem;
     margin-top: 7%;
     display: inline;
 }
@@ -88,7 +103,7 @@ info{
 }
 
 button{
-    border-radius: 25px;
+    border-radius: 2rem;
     color: white;
     background-color: #423EF6;
     height: 5%;
@@ -106,8 +121,50 @@ button{
 }
 
 .modifMdp{
-    float : right;
+    /*float : right;*/
     margin-top: 2%;
-    margin-left: 20%;
+    margin-left: 70%;
 }
 
+/* Pour téléphones */
+@media only screen and (max-width: 700px) {
+    h1{
+        margin-left: 0;
+        padding-left: 40%;
+    }
+    .grid_container {
+        width : 85%;
+        display: grid;
+        grid-template-columns: 100%;
+        padding-right: 10%;
+    }
+
+    img{
+        width: 75%;
+        height : auto;
+        display: block;
+        margin : auto;
+        padding-left: 25%;
+        padding-bottom: 5%;
+    }
+
+    .center{
+        text-align: center;
+        width : 100%;
+        display: inline;
+    }
+
+    button{
+        width : 30%;
+        margin-top : 7%;
+    }
+    
+    .avatar label{
+        padding-top : 5%;
+        border-radius: 2rem;
+        color: white;
+        background-color: #423EF6;
+        height: 5%;
+        width : 10%;
+    }
+}

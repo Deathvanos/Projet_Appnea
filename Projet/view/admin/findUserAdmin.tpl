@@ -17,7 +17,7 @@
 
 <head>
     <title>APNEA - findUser</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/admin/findUserAdmin.css" />
 </head>
 
@@ -29,7 +29,7 @@
 
 
 
-    <main class='main' style=<?php echo "height:".$size."px;" ?>>
+    <main class='main'>
     <form name='findUser' action="index.php?controle=admin&action=findUser" method='post'>
 
         <h1><?php echo $txt['adminGestionUser_title']; ?></h1> 
@@ -79,7 +79,7 @@
                     <td><select name=<?php echo $sensor."Stat"?>>
                         <option value=""></option>
                         <?php // Mise en place de la boite à selection
-                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock'], '.'] as $etat) {
+                            foreach ([$txt['adminGestionUser_Active'], $txt['adminGestionUser_Lock']] as $etat) {
                             $selected = ($_POST[$sensor."Stat"] == $etat) ? "selected" : "";
                             echo "<option value='$etat' $selected>$etat</option>";
                         }?>
@@ -104,17 +104,26 @@
                     echo '<td>'.$row['city'].'</td>';
                     echo '<td>'.$row['address'].'</td>';
 
-                    printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
-                    printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
-                    printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
-                    printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
-        
+                    if($row['typeUser']=="User") {
+                        printInfoSensor($row['heart_id'], $row['heart_isUsed'], $row['heart_isNotBroken']);
+                        printInfoSensor($row['sound_id'], $row['sound_isUsed'], $row['sound_isNotBroken']);
+                        printInfoSensor($row['temp_id'], $row['temp_isUsed'], $row['temp_isNotBroken']);
+                        printInfoSensor($row['hum_id'], $row['hum_isUsed'], $row['hum_isNotBroken']);
+                    }
+                    else {echo '<td></td>';echo '<td></td>';echo '<td></td>';echo '<td></td>';}
+    
                     echo '<td class="tblBlanc">...</td>';
-                    echo '<td><button class="btnDel" name="delUser" value="'.$row['mail'].'">'.$txt['adminGestionUser_Delete'].'</button></td>';
-                    echo '<td><a href="index.php?controle=user&action=errorPage">'.$txt['adminGestionUser_Manage'].'</a></td>';
+
+                    if($row['typeUser']!="Admin") {
+                        echo "<td><button type='button' class='btnDel' onclick=showPopup('".$row['mail']."','".$_SESSION['lang']."')>".$txt['adminGestionUser_Delete'].'</button></td>';
+                        echo "<td><a href='index.php?controle=admin&action=showUserInfo&temoin=".$row['mail']."'>".$txt['adminGestionUser_Manage'].'</a></td>';
+                    }
+                    else {
+                        echo '<td> </td>';
+                        echo '<td> </td>';
+                    }
                 echo '</tr>';
             }?>
-
         </table>
         </div>
 
@@ -134,7 +143,7 @@
     </form>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 
 </body>
 

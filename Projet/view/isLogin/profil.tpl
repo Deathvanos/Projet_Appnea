@@ -15,42 +15,43 @@
 <html lang="fr">
 <head>
     <title>APNEA - Profil</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/profil.css"/>
 </head>
 <body>
     <?php
     // Bug  : on doit récuperer ces deux variables dans les variables globals
     $txt = $GLOBALS['translat'];
-    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
+    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';
+    ?>
 
-    <main style="height:830px;">
+    <main>
         <h1> Votre <color>profil</color></h1>
         <div class="contenu">
             <?php
                 if($photo_base64 !=""){
-                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
+                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=100% heigth=100%/>";
                 }else{
-                    echo "<img src='Ressources/img/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
+                    echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
                 }
             ?>
             <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->
             <div class="infos_perso grid_container">
-                <h3 class="infos">  <?php echo $txt['Profil_Label_Name1']; ?> : <info><?php echo($lastName); ?></info></h3>
-                <h3 class="hide"> </h3>
+                <h3 class="infos">  <?php echo $txt['Profil_Label_Name1']; ?> : <info><?php echo("<div class='center'>".$lastName."</div>"); ?></info></h3>
+                <h3 class="hide"> </h3> 
                 <h3 class="infos">  <?php echo $txt['Profil_Label_Name2']; ?> : <info><?php echo($firstName); ?></info></h3>
                 <h3 class="infos">  <?php echo $txt['Profil_Tel']; ?> : <info><?php echo($phoneNumber); ?></info></h3>
                 <h3 class="hide"></h3>
                 <h3 class="infos">  <?php echo $txt['Profil_Mail']; ?> : <info><?php echo($mail); ?></info></h3>
                 <h3 class="infos">  <?php echo $txt['Profil_Localisation']; ?> : <info><?php echo($localisation); ?></info></h3>
             </div>
-            <form action="index.php?controle=user&action=displayModifInfos" method="POST">
+            <form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=displayModifInfos";?> method="POST">
                 <button type="submit"><?php echo $txt['Profil_Button_Edit']; ?></button>
             </form>
         </div>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>
 

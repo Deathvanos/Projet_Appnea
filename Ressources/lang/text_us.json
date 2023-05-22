@@ -1,10 +1,9 @@
 {
     "title_brand": "Appnea",
     "header_link1": "Our product",
-    "header_link2": "Sensors",
     "header_link3": "Our team",
     "header_link4": "QNA",
-    "header_linkU1": "Data Sensor",
+    "header_linkU1": "Our Data Sensor",
     "header_linkU2": "Incident ticket",
     "header_linkA1": "Create user",
     "header_linkM1": "Manage FAQ",
@@ -41,14 +40,40 @@
     "login_nameField": "Enter your username",
     "login_mdpLabel": "Password",
     "login_mdpField": "Enter your password",
-    "login_newUser": "New at APPNEA ? <a href='index.php?controle=guest&action=contactPage'>Buy your product</a>",
+    "login_newUser1": "New at APPNEA ? ",
+    "login_newUser2": "Buy your product",
     "login_forgotMdp": "Forgot your password ? Click here",
     "login_Add": "- Finally some real rest",
+
+    "faq_title": "Your <color id='degrade'>questions</color>",
+
+    "cgu_title": "Our <color id='degrade'>user conditions</color>",
+    "cgu_CGV_Q": "GCU",
+    "cgu_CGV_A": "Any order of products implies unreserved acceptance of these general conditions of sale, supplemented or amended by our special conditions, which cancel any contrary clause that may appear in the conditions of purchase, order forms, or other commercial documents. <br>The goods are invoiced at the rate in effect on the day the order is placed.",
+    "cgu_ML_Q": "Légales Mentions",
+    "cgu_ML_A": "Please read carefully the different terms of use of this site before browsing its pages. By connecting to this site, you unreservedly accept these terms and conditions. , the managers of this website www.anthedesign.fr are:<br>Site editor:<br>SARL ANTHEDESIGN SIRET number: 75221735600027<br>Editorial manager: Hugo ESSIQUE<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Telephone: 09 72 21 25 07<br>Email: contact@anthedesign.fr<br>Website: www.anthedesign.fr<br>Hosting:<br>Host: SARL ANTHEDESIGN<br>12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Website: www.anthedesign.fr<br>Development:<br>SARL ANTHEDESIGN<br>Address: 12 Rue du Huit Mai 1945, 60350 ATTICHY<br>Website: www.anthedesign .fr<br>Terms of use:<br>This site (www.anthedesign.fr) is offered in different web languages (HTML, HTML5, Javascript, CSS, etc.) for better user comfort and graphic design. more pleasant.<br>We recommend that you use modern browsers such as Internet Explorer, Safari, Firefox, Google Chrome, etc…<br>The web agency AntheDesign implements all the means at its disposal to ensure information reliable and reliable updating of its websites.<br>However, errors or omissions may occur. The Internet user must therefore ensure the accuracy of the information with AntheDesign, and report any changes to the site that he or she deems useful. AntheDesign is in no way responsible for the use made of this information, and for any direct or indirect damage that may result.<br>Cookies: The site www.anthedesign.fr may ask you to accept cookies for statistical and display purposes. A cookie is information placed on your hard drive by the server of the site you are visiting.",
+
+    "ourTeams_title": "Our <color id='dégradé'>team</color>",
+    "ourTeams_info": "Our team is made up of 6 highly qualified professionals from various fields. We have combined our strategic, business, technical and marketing knowledge to design and deploy reliable and secure sleep apnea detection services.",
+    "ourTeams_P1": "MAIZA Fares<br><color id='violet'>Data</color><color id='dégradé'> manager: </color>",
+    "ourTeams_P2": "PAVIOT-ADET Flore<br><color id='violet'>Project management</color><color id='dégradé'> manager</color>",
+    "ourTeams_P3": "VINGADASSAMY Prasanaa<br><color id='violet'>Development</color><color id='dégradé'> manager</color>",
+    "ourTeams_P4": "Mailley Charles<br><color id='violet'>Organization</color><color id='dégradé'> manager</color>",
+    "ourTeams_P5": "Martinez Eliot<br><color id='violet'>Quality</color><color id='dégradé'> manager</color>",
+    "ourTeams_P6": "Spasojevic Fanny<br><color id='violet'>Design</color><color id='dégradé'> manager</color>",
+    "ourTeams_client": "Our client <br><color id='violet'>INFINITE </color><color id='dégradé'> MESURES </color>",
+
+    "contact_title": "Support <color id='dégradé'>Contact</color>",
+    "contact_obj_title": "Object",
+    "contact_obj_sub": "What is your request ?",
+    "contact_question_title": "Question",
+    "contact_question_sub": "Write your question",
+    "contact_back": "Back",
+    "contact_send": "Send",
 
     "adminMainTitle": "<color>Admin</color> Gestion",
     "adminMain1": "Create a profil",
     "adminMain2": "User management",
-
 
     "adminGestionUser_title": "Users management",
     "adminGestionUser_typeUser": "UserTpe",
@@ -74,7 +99,12 @@
     "adminGestionUser_NextPage": "Next",
     "adminGestionUser_Active": "Active",
     "adminGestionUser_Lock": "Lock",
-    "adminGestionUser_MsgDelUser": "Your user deletion request has been taken.\\nTo validate the deletion, please repeat the deletion procedure.\\n\\nAttention, the action will be irreversible.",
+    "adminGestionUser_MsgDelTitle": "Delete Confirmation",
+    "adminGestionUser_MsgDelUser": "Are you sure you want to delete this user?<br>Attention, the action will be irreversible.",
+    "adminGestionUser_OkDetete1": "User ",
+    "adminGestionUser_OkDetete2": " was successfully deleted.",
+    "adminGestionUser_FailDelete": "Error while deleting",
+    "adminGestionUser_PopupSubmit": "Confirme",
 
     "modoMainTitle": "<color>Modo</color> gestion",
     "modoMain2": "FAQ management",
@@ -87,19 +117,24 @@
     "userMain_btnTicket": "Send a incident ticket",
 
 
-    "xx": "xxx",
+
+
     "Submit": "Submit",
     "Abandon": "Abandon",
-
     "Profil_Label_Name1": "Last name",
     "Profil_Label_Name2": "First name",
-    "Profil_Tel": "Phone number",
+    "Profil_Tel": "Phone",
     "Profil_Mail": "Mail",
     "Profil_Localisation" : "Address",
     "Profil_Button_Edit": "Edit informations",
     "Profil_City": "City",
     "Profil_Country": "Country",
     "Profil_Avatar": "Change profile picture",
-    "Profil_Change_mdp": "Change your password ? Click here"
+    "Profil_Change_mdp": "Change your password ? Click here",
+    "Error_img_size" : "Image too large",
+    
+    "xxw": "xxxw",
+    "xx": "xxx"
+
 
 }

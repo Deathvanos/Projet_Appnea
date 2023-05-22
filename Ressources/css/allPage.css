@@ -20,6 +20,7 @@ Style commun à toutes les pages
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
     font-family: "poppins";
     /* Couleur de la chartre graphique */
     --myColor-main-base: #211265;
@@ -39,16 +40,15 @@ Style commun à toutes les pages
 main {
     background-image: url("../img/background.svg");
     background-size: 100% 100%;
-    height: auto; 
     color: var(--myColor-fontColor-main);
-    height: 830px; /*522*/
     /* Ajout un espace entre le bloc et le bord de l'ecran gauche*/
     padding-left: 2.5%;
-    
+    padding-bottom: 8em;
 }
 
 body {/*Suppression du blanc de bas de page en cas de zoom*/
     background-color: var(--myColor-main-base);
+    margin-top: 0.5em;
 }
  
 
@@ -98,7 +98,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 
 .header_conn { /* Settings des liens du header*/ 
     background-color: var(--myColor-buttonLogin);
-    border-radius: 25px;
+    border-radius: 2rem;
 }
 
 .header_conn a { /* Settings des liens du header*/ 
@@ -113,7 +113,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 
 .header_flag {
     width: 60px;
-    border-radius: 100%;
+    border-radius: 2rem;
 
 }
 
@@ -141,7 +141,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
 }
 .header_language ul li:hover a {
     background-color: #2779BF;
-    border-radius: 50%;
+    border-radius: 2rem;
 }
 
 
@@ -189,18 +189,19 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     */
 }
 
+
 .footer_icon {
-    font-size: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .footer_top {
     color: var(--myColor-fontColor-main);
     display: flex;
     justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .footer_top h3 {
@@ -208,7 +209,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     border-bottom: 3px solid var(--myColor-fontColor-main);
     padding-left: 5px;
     padding-right: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 0.25em;
 }
 
 .footer_top a {
@@ -216,7 +217,10 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     text-decoration: none;
 }
 
-.footer_top li {display: block;}
+.footer_top li {
+    display: block;   
+    margin-block: 0.4em;
+}
 
 .footer_bottom {
     color: #c0bbbb;
@@ -225,6 +229,7 @@ body {/*Suppression du blanc de bas de page en cas de zoom*/
     font-size: 11px;
 }
 
+.footer_bottom i {color: #c0bbbb;}
 
 
 /***************-----*************** FOOTER NUMBERPHONE TICKET ***************-----***************/

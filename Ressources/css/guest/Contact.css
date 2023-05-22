@@ -12,139 +12,16 @@
 
 Style pour la page Equipe
 *********************************************************/
-/*
+
+main {text-align: center;}
 
 
-body {
-    font-family: "Poppins", sans-serif;
-  }
-
-.top {
-    /* Mettre les éléments en ligne*//*
-    display: flex;
-    align-items: center;
-    /* Ajouter un espace vide en haut et en bas de cette élément*//*
-    margin-top: 50px;
-    margin-bottom: 225px;
-}
-
-.top_title {/*
-    /*Prend toute la moitié gauche de l'ecran*//*
-    width: 50%;
-    /*Ajout un trait de bordure avec l'élément de droite*//*
-    border-right: 1px solid var(--myColor-fontColor-main);
-}
-
-.top_title a { /*Transforme le lien en un bouton*//*
-    /*Couleur de fond et de texte sans surlignement*//*
-    background-color: var(--myColor-buttonLogin);
-    color: var(--myColor-fontColor-main);
-    text-decoration: none;
-    /*Angle des coins du rectangle*//*
-    border-radius: 10px;
-    /*Espacement dans le rectangle*//*
-    padding-inline: 20px;
-    padding-block: 10px;
-    font-weight:lighter;
-}
-.top_title a:hover {background-color: #2779BF;}
-
-.top_title h2 {/*
-    /*Espace entre titre et les éléments en haut et en base*//*
-    margin-top: 20px;/*
-    margin-bottom: 20px;
-    /*Epaisseur du texte*//*
-    font-weight:500;
-}
-
-.top_title color {
-    background: linear-gradient(to right, #6C37EE,#F6593E);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-
-
-
-.top_Zoneavis {
-    /*Prend toute la moitié droite de l'ecran*//*
-    width: 50%;
-    padding-inline: 12%;
-}
-
-
-
-.top_avis div {
-    margin-top: 25px;
-    /*Aligner les boites horizontalement et les centre*//*
-    display: flex;
-    align-items: center;
-}
-
-.top_avis div img{
-    border-radius: 30px;
-    border: 2px solid var(--myColor-fontColor-main);/*
-    /*Taille de l'image*//*
-    max-width: 15%;
-}
-
-.top_avis div autor{
-    font-size: 11px;
-    font-style: italic;
-    /*Espacement <-->*//*
-    margin-left: 10px;
-    margin-right: 50px;
-}
-
-.top_nextAvis {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 25px;
-    
-}
-
-.top_nextAvis cran i {font-size: 8px;}
-
-.top_nextAvis a {
-    /*Déplace le bouton flèche en dehors de son cadre en haut*//*
-    position: relative;
-    top: -50px;
-}
-.top_nextAvis a i {
+.title {
+    font-weight: 500;
     font-size: 40px;
-    color:var(--myColor-main-light);
-    background-color:#fff;
-    border-radius: 100%;
+    text-align: center;
+    color: #FFFFFF;
 }
-
-.top_nextAvis #c1 {
-    color:var(--myColor-buttonLogin);
-}
-
-.bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bottom_presProd {
-    width: 50%;
-}
-
-.bottom #OurProduct {
-    display: inline-block;
-    font-weight:100;
-    border-bottom: 3px solid var(--myColor-fontColor-main);
-}
-
-.bottom_presProd p {
-    margin-top:25px;
-}
-
-.bottom_imgProd {
-    height: 300px;
-    margin-right: 200px;
-}
-*/
 
 #dégradé {
     background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
@@ -152,160 +29,55 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-#Contacter {
-    position: absolute;
-    width: 417px;
-    height: 40px;
-    left: 527px;
-    top: 182px;
 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 100%;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
-
-.rectangle {
-    position: absolute;
-    width: 619.67px;
-    height: 38.69px;
-    left: 209px;
-    top: 358.93px;
-
-    background: rgba(255, 255, 255, 0.17);
-    border-radius: 72px;
-}
-
-.rectangle textarea {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    padding: 10px;
-    color: white;
-}
-
-.objet {
-    position: absolute;
-    width: 101.49px;
-    height: 23.32px;
-    left: 236.02px;
-    top: 329px;
-
-    /*font-family: 'Poppins';*/
-    font-style: normal;
+.mailSpace p {
     font-weight: 500;
     font-size: 20px;
-    line-height: 100%;
-
     color: #89EDFB;
+    margin-bottom: 1%;
+    margin-top: 2%;
  }
 
- .rectanglebleu{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px 32px;
-    gap: 8px;
+ .mailSpace textarea {
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 2rem;
+    color: white;
+    width: 50%;
+    min-width: 20%;
+    max-width: 90%;
+    padding-left: 2%;
+    padding-top: 1%;
+    min-height: 2.5rem;
+    max-height: 10rem;
+ }
 
-    position: absolute;
-    width: 139px;
-    height: 44px;
-    left: 1124px;
-    top: 315px;
-
-    background: #423EF6;
-    border-radius: 50px;
+ .mailSpace textarea:last-of-type {
+    min-height: 10rem;
+    max-height: 30rem;
  }
 
 
-.rectanglebleu span {
-    font-family: 'Poppins';
-    font-style: normal;
+.buttons {margin-top: 2%;}
+
+ .buttons a {
+    text-decoration: none;
+    color: white;
     font-weight: 400;
     font-size: 20px;
-    line-height: 140%;
+    text-align: center;
+    padding: 0.5em 1.5em;
+    border-radius: 2rem;
 }
-
-.rectanglequestion{
-    position: absolute;
-    width: 617px;
-    height: 131px;
-    left: 209px;
-    top: 500px;
-
-    background: rgba(255, 255, 255, 0.17);
-    border-radius: 72px;
-
-}
-
-.rectanglequestion textarea {
-    width: 98%;
-    height: 98%;
-    border: none;
-    background-color: transparent;
-    padding: 10px;
-    color: white;
-    padding-left: 40px;
-    padding-top: 20px;
-}
-
-.question {
-    position: absolute;
-    width: 181.67px;
-    height: 23.32px;
-    left: 236px;
-    top: 470px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 100%;
-    
-    color: #89EDFB;
-}
-
-.rectangleorange {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px 32px;
-    gap: 8px;
-
-    position: absolute;
-    width: 151.61px;
-    height: 39.24px;
-    left: 207px;
-    top: 680px;
-
+ 
+ .buttons a:first-of-type {
     background: #F6593E;
-    border-radius: 50px;
+    margin-right: 2%;
+}
+ .buttons a:last-of-type {
+    background: #423EF6;
+    margin-left: 2%;
 }
 
 
-.rectangleorange span {
-    width: 80%;
-    height: 80%;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 140%;
-
-    text-align: center;
-
-    color: #FFFFFF;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
 
 
-      

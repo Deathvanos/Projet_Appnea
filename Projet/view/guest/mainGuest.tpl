@@ -15,7 +15,7 @@
 <html lang="fr">
 <head>
     <title>APNEA - Main Guest</title>
-    <?php include 'Projet/view/other/header_Font_Page.html';?>
+    <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/guest/mainGuest.css" />
 </head>
 <body>
@@ -23,7 +23,7 @@
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
-    <main style="height:830px;">
+    <main>
         <div class="top">
             <div class="top_title">
                 <a href="#OurProduct"><?php echo $txt['index_topLeft_1']; ?></a>
@@ -58,7 +58,7 @@
         </div>
     </main>
 
-    <?php include 'Projet/view/' . $_SESSION['controle'] . '/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>
 

@@ -31,7 +31,18 @@
 
 
     /***** Footer *****/
-    function contactPage(){require_once('./Projet/view/guest/contact.tpl');}
+    function contactPage(){
+        
+        // si y a du contenu isset()
+            // si ele ok
+                // alors send mail
+                // confirm send
+            // MSG ERREUR et remplir box
+
+
+        require_once('./Projet/view/guest/contact.tpl');
+    
+    }
 
     function CGUPage(){require_once('./Projet/view/guest/CGUPage.tpl');}
 
@@ -107,5 +118,10 @@
             }
         }
     }
+
+
+
+
+
 
 ?>

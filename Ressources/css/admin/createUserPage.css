@@ -1,0 +1,22 @@
+#Creation {
+    text-align: center;
+    padding-top: 35px;
+}
+
+#Creation {
+    text-align: center;
+}
+
+#dégradé {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main{
+    padding-left: 0;
+}
+
+.grid_container{
+    grid-template-columns: 40% 10% 40%;
+}

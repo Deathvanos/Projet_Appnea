@@ -31,4 +31,8 @@
         // charge la page
         require_once('./Projet/view/admin/findUserAdmin.tpl');
     }
+
+
+ 
+
 ?>

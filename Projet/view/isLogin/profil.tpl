@@ -30,7 +30,7 @@
         <div class="contenu">
             <?php
                 if($photo_base64 !=""){
-                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
+                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=100% heigth=100%/>";
                 }else{
                     echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
                 }
@@ -38,7 +38,7 @@
             <!--<img src="<?php echo("'data:image/jpeg;base64," . $photo_base64 . "'"); ?> " /> -->
             <div class="infos_perso grid_container">
                 <h3 class="infos">  <?php echo $txt['Profil_Label_Name1']; ?> : <info><?php echo($lastName); ?></info></h3>
-                <h3 class="hide"> </h3>
+                <h3 class="hide"> </h3> 
                 <h3 class="infos">  <?php echo $txt['Profil_Label_Name2']; ?> : <info><?php echo($firstName); ?></info></h3>
                 <h3 class="infos">  <?php echo $txt['Profil_Tel']; ?> : <info><?php echo($phoneNumber); ?></info></h3>
                 <h3 class="hide"></h3>

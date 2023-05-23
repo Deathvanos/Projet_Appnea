@@ -2,7 +2,7 @@
 * APP - Projet Système Numérique - Composante Informatique
 * ISEP - A1 - G7C
 * Semestre 2
-* Auteur : - MAILLEY_Charles
+* Auteur : - MAILLEY_Charles 
            - MAIZA_Fares
            - MARTINEZ_Eliot
            - PAVIOT-ADET_Flore
@@ -11,43 +11,27 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <title>APNEA - Profil modification</title>
+    <title>APNEA - createUserPage</title>
     <?php include 'Projet/view/other/head_Font_Page.html';?>
-    <link rel="stylesheet" href="Ressources/css/user/modifProfil.css"/>
+    <link rel="stylesheet" href="Ressources/css/admin/createUserPage.css" />
 </head>
+
 <body>
     <?php
-    // Bug  : on doit récuperer ces deux variables dans les variables globals
+    // Bug  : on doit récuperer ces deux variables dans les variables globals 
     $txt = $GLOBALS['translat'];
-    include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
+    include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
-<main class='main'>
-    <h1 id="Creation">Création de <color id="dégradé"> profil </color></h1>
-    <div class="contenu">
-        <form enctype="multipart/form-data" style="padding-bottom:20px" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=modifInfos";?> method="POST">
-            <div class="infos_perso grid_container" style="width:100%">
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" placeholder="Votre nom"></elem>
-                <h3 class="hide"> </h3>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name2']; ?> :</h3><input type="text" placeholder="Votre prénom" ></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder="Votre numéro de téléphone" ></elem>
-                <h3 class="hide"> </h3>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Mail']; ?> : </h3><input type="text" placeholder="Votre mail"></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Localisation']; ?> : </h3><input type="text" placeholder="Votre adresse"></elem>
-                <h3 class="hide"> </h3>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_City']; ?>  : </h3><input type="text" placeholder="Votre ville"></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Country']; ?>  : </h3><input type="text" placeholder="Votre pays"></elem>
-            </div>
-        </form>
-        <form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=displayProfil";?> method="POST">
-            <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
-            <button type="submit" class="btnAbandon"><?php echo $txt['Abandon']; ?></button>
-        </form>
-    </div>
-</main>
+    <main class='main'>
+        <h1>createUserPage</h1>
+    </main>
 
-<?php include 'Projet/view/other/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
+
 </html>

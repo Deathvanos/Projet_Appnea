@@ -61,6 +61,62 @@ Style pour la page index
 
 
 
+
+.top_Zoneavis {
+    /*Prend toute la moitié droite de l'ecran*/
+    width: 50%;
+    padding-inline: 12%;
+}
+
+
+
+.top_avis div {
+    margin-top: 25px;
+    /*Aligner les boites horizontalement et les centre*/
+    display: flex;
+    align-items: center;
+}
+
+.top_avis div img{
+    border-radius: 2rem;
+    border: 2px solid var(--myColor-fontColor-main);
+    /*Taille de l'image*/
+    max-width: 15%;
+}
+
+.top_avis div autor{
+    font-size: 11px;
+    font-style: italic;
+    /*Espacement <-->*/
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.top_nextAvis {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    
+}
+
+.top_nextAvis cran i {font-size: 8px;}
+
+.top_nextAvis a {
+    /*Déplace le bouton flèche en dehors de son cadre en haut*/
+    position: relative;
+    top: -50px;
+}
+.top_nextAvis a i {
+    font-size: 40px;
+    color:var(--myColor-main-light);
+    background-color:#fff;
+    border-radius: 2rem;
+}
+
+.top_nextAvis #c1 {
+    color:var(--myColor-buttonLogin);
+}
+
 .bottom {
     display: flex;
     justify-content: space-between;

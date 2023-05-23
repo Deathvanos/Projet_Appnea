@@ -1,5 +1,6 @@
 ﻿
 h1{
+    margin-top: 5%;
     margin-left: 42.5%;
     color: white;
 }
@@ -12,7 +13,7 @@ color{
 
 img{
     float: left;
-    width: 10em;
+    width: 15%;
 }
 
 /*.filter_color{
@@ -20,23 +21,26 @@ img{
 }*/
 
 .contenu{
-    padding-top: 10%;
+    padding-top: 5%;
+    box-sizing: border-box;
+    color: white;
+    font-family: "poppins";
 }
 
 .grid_container {
-    width : 70%;
+    width : 85%;
     display: grid;
     grid-template-columns: 40% 10% 40%;
     padding-left: 5%;
 }
 
-elem {
+/*elem {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
-}
+}*/
 
 .infos{
     padding-left: 3%;
@@ -67,4 +71,34 @@ button{
 .bxs-user-rectangle{
     width : 300px;
     height: 300px;
+}
+
+
+/* Pour téléphones */
+@media only screen and (max-width: 700px) {
+    h1{
+        margin-left: 0;
+        padding-left: 40%;
+    }
+    .grid_container {
+        width : 75%;
+        display: grid;
+        grid-template-columns: 100%;
+        padding-left: 25%;
+    }
+
+    img{
+        width: 75%;
+        height : auto;
+        display: block;
+        margin : auto;
+        padding-left: 25%;
+        padding-bottom: 5%;
+    }
+    
+    
+    button{
+        width : 30%;
+        margin-top : 7%;
+    }
 }

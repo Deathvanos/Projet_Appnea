@@ -128,7 +128,7 @@
     "Abandon": "Abandon",
     "Profil_Label_Name1": "Last name",
     "Profil_Label_Name2": "First name",
-    "Profil_Tel": "Phone number",
+    "Profil_Tel": "Phone",
     "Profil_Mail": "Mail",
     "Profil_Localisation" : "Address",
     "Profil_Button_Edit": "Edit informations",
@@ -136,7 +136,7 @@
     "Profil_Country": "Country",
     "Profil_Avatar": "Change profile picture",
     "Profil_Change_mdp": "Change your password ? Click here",
-    
+    "Error_img_size" : "Image too large",
     
     "xxw": "xxxw",
     "xx": "xxx"

@@ -54,7 +54,7 @@
     </div>
 
 
-    <div id="droite_login"><h3><?php echo $txt['login_Add']; ?></h3></div>
+    <div id="droite_login" class="main"><h3><?php echo $txt['login_Add']; ?></h3></div>
 
 </body>
 

@@ -29,7 +29,7 @@
     <div class="contenu">
         <?php
         if($photo_base64 !=""){
-                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
+                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=100% heigth=100% />";
         }else{
         echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
         }
@@ -47,8 +47,11 @@
                 <elem><h3 class="form_title"><?php echo $txt['Profil_City']; ?>  : </h3><input type="text" placeholder= <?php echo("'$city'");?> name="city" value=<?php echo("'$city'"); ?>/></elem>
                 <elem><h3 class="form_title"><?php echo $txt['Profil_Country']; ?>  : </h3><input type="text" placeholder= <?php echo("'$country'");?> name="country" value=<?php echo("'$country'"); ?>/></elem>
             </div>
-            <label for="avatar"><?php echo $txt['Profil_Avatar']; ?> </label>
-            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;">
+            <div class="avatar">
+                <label for="avatar"><?php echo $txt['Profil_Avatar']; ?> </label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;">
+            </div>
+            
             <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
             <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=errorPage";?> class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
         </form>
@@ -56,6 +59,11 @@
             <button type="submit" class="btnAbandon"><?php echo $txt['Abandon']; ?></button>
         </form>
     </div>
+    <?php
+        if($error == 1){
+            echo($txt['Error_img_size']);
+        }
+    ?>
 </main>
 
 <?php include 'Projet/view/other/footer.tpl'; ?>

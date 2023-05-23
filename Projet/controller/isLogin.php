@@ -22,6 +22,7 @@
     }
 
     function displayModifInfos(){
+        $error = 0;
         include_once("Projet/modele/isLogin.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
         $firstName = $result[0]['firstName'];
@@ -36,15 +37,44 @@
         unset($result);
         require_once("Projet/view/isLogin/modifProfil.tpl");
     }
+    
+    function displayModifInfos_Error(){
+        include_once("Projet/modele/isLogin.php");
+        $result = getProfil($_SESSION['userInfo']['mail']);
+        $firstName = $result[0]['firstName'];
+        $lastName = $result[0]['lastName'];
+        $phoneNumber = $result[0]['phoneNumber'];
+        $mail = $result[0]['mail'];
+        $address = $result[0]['address'];
+        $city = $result[0]['city'];
+        $country = $result[0]['country'];
+        $photo = $result[0]['photo'];
+        $photo_base64 = base64_encode($photo);
+        unset($result);
+        $error = 1;
+        require_once("Projet/view/isLogin/modifProfil.tpl");
+    }
 
     function modifInfos(){
+        $error = 0;
         include_once("Projet/modele/isLogin.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
         // Si les champs sont nuls, on ne modifie rien
 
-        // (╯°□°)╯︵ ┻━┻
-        if($_FILES["avatar"]["tmp_name"] == ""){$avatar = $result[0]['photo'];}
-        else{$avatar = file_get_contents($_FILES["avatar"]["tmp_name"]);}
+        if($_FILES["avatar"]["tmp_name"] == ""){
+            $avatar = $result[0]['photo'];
+        }else{
+            $img_name = $_FILES["avatar"]["tmp_name"];
+            $size = filesize($_FILES["avatar"]["tmp_name"]);
+            if($size > 600000){
+                $error = 1;
+                //require_once("Projet/view/isLogin/modifProfil.tpl");
+                displayModifInfos_Error();
+                return;
+            }
+            // BUG : pour certaines images, la taille n'est plus indiquée 
+            $avatar = file_get_contents($_FILES["avatar"]["tmp_name"]);
+        }
 
         $lastName = isset($_POST['lastname'])?$_POST['lastname']:$result[0]['lastName'];
         $firstName = isset($_POST['firstname'])?$_POST['firstname']:$result[0]['firstName'];

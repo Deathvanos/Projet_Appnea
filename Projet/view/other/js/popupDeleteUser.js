@@ -14,8 +14,9 @@ function confirmPopup(mailUser, lang) {
     xmlhttp.onreadystatechange = function() {
         // Si le code PHP a bien été exécuté
         if (this.readyState == 4 && this.status == 200) {
-            // Récupération du message PHP
-            var response = JSON.parse(this.response);            
+            // Récupération du message PHP en ne gradant que la partir JSON dans la console
+            var response = JSON.parse('{'+this.response.split('{')[1]);        
+    
             // On save le msg pour l'afficher après avoir reload la page
             localStorage.setItem('messageDelete', response.message);
             // On reload la page
@@ -23,9 +24,7 @@ function confirmPopup(mailUser, lang) {
         }
     };
     // Indique la méthode et la page PHP à charger de manière asynchrone
-    //xmlhttp.open("GET", "Projet/view/other/php/delUser.php?temoin=" + mailUser, true);
-    //xmlhttp.open("GET", "index.php?controle=admin&action=deleteUser&temoin=" + mailUser, true);
-    xmlhttp.open("GET", "delUser.php?temoin=" + mailUser + "&lang=" + lang, true);
+    xmlhttp.open("GET", "index.php?controle=admin&action=deleteUserAjax&temoin=" + mailUser, true);
     // Active la requete Ajax
     xmlhttp.send();
 };

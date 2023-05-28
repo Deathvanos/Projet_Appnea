@@ -4,7 +4,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "appnea";
+        $dbname = "pftxpg_appneawe_db";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

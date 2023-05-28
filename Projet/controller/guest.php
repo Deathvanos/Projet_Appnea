@@ -63,7 +63,7 @@
  
 
     /************************************/
-    /****** Fonctions check login *******/
+    /****** Fonctions check login *******/ // a mettre dans le controller du isLogout
     /************************************/
     function testConnection() {
         // Récupération des infos du guest

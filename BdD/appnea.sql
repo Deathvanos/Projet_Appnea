@@ -17,7 +17,7 @@
 
 
 --
--- Base de données : `appnea`
+-- Base de données : `pftxpg_appneawe_db`
 --
 
 
@@ -29,8 +29,8 @@
 -- ---------------------------------------------------------------------
 -- --------------- Creation de la DataBase si inexistante --------------
 -- ---------------------------------------------------------------------
-CREATE DATABASE IF NOT EXISTS `appnea` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `appnea`;
+CREATE DATABASE IF NOT EXISTS `pftxpg_appneawe_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `pftxpg_appneawe_db`;
 
 
 

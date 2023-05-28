@@ -30,8 +30,8 @@
     function FAQPage(){
 
         // Fonction login vers la base de données
-        include_once("Projet/modele/isLogout.php");
-        $data = FAQPage();
+        include_once("Projet/modele/guest.php");
+        $data = FAQextraction();
         
 
         require_once('./Projet/view/guest/FAQPage.tpl');

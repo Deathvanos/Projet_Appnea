@@ -31,18 +31,15 @@
 
         <?php 
         // Faire la boucle pour afficher les i questions (enlever les questions d'en dessous)
-        
-            //<tr><td>
             // Affichage des questions dans la table HTML
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr><td>";
-                echo "<question>" . $row['question'] . "</question><br>";
-                echo "<response>" . $row['response'] . "</response>";
-                echo "</td></tr>";
-    }
-           // </td></tr>
+             foreach ($data as $value) {
+           
+               echo "<tr><td>";
+               echo "<question>" . $value[$_SESSION['lang'].'_question'] . "</question><br>";
+               echo "<response>" . $value[$_SESSION['lang'].'_response'] . "</response>";
+               echo "</td></tr>";
+             }
             ?>
-
     </main>
     
 </table>
@@ -52,4 +49,4 @@
 </body>
 </html>
 
-// 
+

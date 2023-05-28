@@ -8,10 +8,13 @@ function FAQextraction() {
         $conn = connectionToDB();
         
         // Regarde si le mail et le mdp existent dans la base de données
-        $sql =  'SELECT * FROM FAQ';
+        $sql =  'SELECT '.$_SESSION['lang'].'_question, '.$_SESSION['lang'].'_response FROM FAQ'; 
         $commande = $conn->prepare($sql);
         $bool = $commande->execute();
-        $resultat = $commande->fetch(PDO::FETCH_ASSOC);
+        $resultat = $commande->fetchAll(PDO::FETCH_ASSOC);
+
+
+        
 
         // Récupération des questions depuis la base de données
     /*$query = "SELECT * FROM FAQ";

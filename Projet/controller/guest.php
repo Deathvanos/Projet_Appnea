@@ -38,6 +38,29 @@
                 // alors send mail
                 // confirm send
             // MSG ERREUR et remplir box
+            
+            print_r($_POST);
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                echo "fghjk";
+                // Récupérer les données du formulaire
+                $objet = $_POST["objet"];
+                $question = $_POST["question"];
+            
+                // Validation des données (vous pouvez ajouter vos propres validations ici)
+            
+                // Envoyer l'e-mail
+                $to = "serviceappnea@outlook.com";
+                $subject = $_POST['title'];
+                $message = "Objet: " . $objet . "\n\n" . "Question: " . $question;
+                $headers = "From: serviceappnea@outlook.com";
+            
+                if (mail($to, $subject, $message, $headers)) {
+                    echo "E-mail envoyé avec succès.";
+                } else {
+                    echo "Erreur lors de l'envoi de l'e-mail.";
+                }
+            }
 
 
         require_once('./Projet/view/guest/contact.tpl');

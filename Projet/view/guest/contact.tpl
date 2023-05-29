@@ -11,6 +11,7 @@
 * Date de rendu  : 05/06/2023
 ********************************************************-->
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -28,42 +29,30 @@
 
         <h2 class="title"><?php echo $txt['contact_title'];?></h2>
 
-        <<form name='contact' class="contact-form" action="envoyer_email.php" method='post'>
-    <div class='mailSpace'>
-        <p><?php echo $txt['contact_obj_title'];?></p>
-        <textarea placeholder="<?php echo $txt['contact_obj_sub'];?>" name="objet"></textarea>
-        <p><?php echo $txt['contact_question_title'];?></p>
-        <textarea placeholder="<?php echo $txt['contact_question_sub'];?>" name="message"></textarea>
-    </div>
-</form>
+
+        <form method="post" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=contactPage"?>>
+    <!-- Vos champs de formulaire ici -->
+
+        <div class='mailSpace'>
+            <p><?php echo $txt['contact_obj_title'];?></p>
+            <textarea name="title" placeholder="<?php echo $txt['contact_obj_sub'];?>"></textarea>
+            <p><?php echo $txt['contact_question_title'];?></p>
+            <textarea name="text placeholder="<?php echo $txt['contact_question_sub'];?>"></textarea>
+        </div>
 
         
+        
        <div class='buttons'>
-            <input href="#"><?php echo $txt['contact_send'];?></input>
+            <input type="submit" value=<?php echo $txt['contact_send'];?>></input>
             <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=main".ucfirst($_SESSION['controle'])?>><?php echo $txt['contact_back'];?></a>
        </div>
+
+       </form>
         
     </main>
 
-    <?php include 'Projet/view/other/footer.tpl'; 
-    
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $to = "serviceappnea@outlook.com"; 
-        $objet = $_POST["objet"];
-        $message = $_POST["message"];
-    
-        $headers = "serviceappnea@outlook.com"; 
-        $headers .= "Reply-To: " . $_POST["email"];
-    
-        if (mail($to, $objet, $message, $headers)) {
-            echo "L'e-mail a bien été envoyé.";
-        } else {
-            echo "Une erreur s'est produite lors de l'envoi.";
-        }
-    }
-?>
-
+    <?php include 'Projet/view/other/footer.tpl';     
+    ?>
 
 </body>
 </html>

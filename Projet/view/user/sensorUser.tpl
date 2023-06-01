@@ -36,6 +36,7 @@
         <h1><?php echo $txt['Captor_Page_Name'];?></h1>
         <br>
 
+        
 
         <div id="dd" style="display: none;">
             <?php
@@ -90,30 +91,18 @@
 
             <div class="Line">
                 <div id="first" class="firstGraph">
-
                     <h3><?php echo $txt['Temperature'];?></h3>
                 </div>
 
-
-
-
-
                 <div class="vertical-lign"></div>
 
-
-
-
-
-
                 <div id="second" class="secondGraph">
-
                     <h3><?php echo $txt['Cardiac'];?></h3>
-
-
                 </div>
             </div>
-
+            
             <div class="horizontal-lign"></div>
+
 
             <div class="Line">
                 <div id="third" class="thirdGraph">

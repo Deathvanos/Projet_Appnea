@@ -20,24 +20,28 @@
     var divDF = document.getElementById("df");
     let dateFin = new Date(divDF.textContent);
 
-    var x = d3.scaleTime()
-        .domain([dateDeb, dateFin])
-        .range([0, width]);
-
-
-    x.ticks(d3.timeSecond.every(1));
-
-    allDates = x.ticks(d3.timeSecond.every(1));
-
     //Recupération des données Via cookies
     let temp = JSON.parse(document.getElementById("tempD").textContent.replace('{"values":', '').replace('}', ''))
     var dataTemp = []
 
+    var x = d3.scaleTime()
+        .domain([dateDeb, dateFin])
+        .range([0, width]);
+
+    
+    let numberOfPoints = temp.length
+    let numberOfSec = Math.abs(dateDeb.getTime() - dateFin.getTime())/1000
+
+    x.ticks(d3.timeSecond.every(numberOfPoints/numberOfSec));
+
+    allDates = x.ticks(d3.timeSecond.every(numberOfPoints/numberOfSec));
+
+    //insertion des données dans une liste appropriée
     for (let i = 0; i < temp.length; i++) {
 
         dataTemp.push({ "x": allDates[i], "y": temp[i] })
     }
-
+ 
 
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -133,15 +137,6 @@
     //Read the data
 
     let card = JSON.parse(document.getElementById("cardD").textContent.replace('{"values":', '').replace('}', ''))
-
-    var x = d3.scaleTime()
-        .domain([dateDeb, dateFin])
-        .range([0, width]);
-
-
-    x.ticks(d3.timeSecond.every(1));
-
-    allDates = x.ticks(d3.timeSecond.every(1));
 
     var dataCard = []
 
@@ -242,16 +237,6 @@
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
-
-    var x = d3.scaleTime()
-        .domain([dateDeb, dateFin])
-        .range([0, width]);
-
-
-    x.ticks(d3.timeSecond.every(1));
-
-    allDates = x.ticks(d3.timeSecond.every(1));
-
 
     let hum = JSON.parse(document.getElementById("humD").textContent.replace('{"values":', '').replace('}', ''))
 
@@ -355,15 +340,6 @@ var svg4 = d3.select("#forth")
     .append("g")
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
-
-var x = d3.scaleTime()
-    .domain([dateDeb, dateFin])
-    .range([0, width]);
-
-
-x.ticks(d3.timeSecond.every(1));
-
-allDates = x.ticks(d3.timeSecond.every(1));
 
 
 let son = JSON.parse(document.getElementById("sonD").textContent.replace('{"values":', '').replace('}', ''))

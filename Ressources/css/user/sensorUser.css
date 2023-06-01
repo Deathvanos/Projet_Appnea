@@ -72,7 +72,7 @@ main h1 {text-align: center;}
 
 .horizontal-lign {border: 2px solid rgb(240, 182, 34);}
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1400px) {
         .allGraphs{
           flex-direction: column;
         }
@@ -82,7 +82,7 @@ main h1 {text-align: center;}
         }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 200px) {
     .vertical-lign{
       border: 0px ;
     }

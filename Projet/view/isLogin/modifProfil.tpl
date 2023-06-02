@@ -29,9 +29,9 @@
     <div class="contenu">
         <?php
         if($photo_base64 !=""){
-                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=100% heigth=100% />";
+            echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=100% heigth=100% />";
         }else{
-        echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
+            echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
         }
         ?>
         <form enctype="multipart/form-data" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=modifInfos";?> method="POST">

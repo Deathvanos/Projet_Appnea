@@ -22,7 +22,7 @@
 
     function sensorUserPage() {
         include_once("Projet/modele/user.php");
-                
+
         //Récuperation des données de chaques capteurs
         $td = getDataSensor('temperatureSensor');
         $cd = getDataSensor('heartSensor');

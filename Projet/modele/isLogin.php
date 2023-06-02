@@ -27,8 +27,8 @@
 
     function updateUser($tab, $id){
         include_once("./Projet/modele/infoDB.php");
-        $conn = connectionToDB();   
-        $sql = "UPDATE utilisateur 
+        $conn = connectionToDB();
+        $sql = "UPDATE utilisateur
                     SET lastName = :lastName,
                         firstName = :firstName,
                         phoneNumber = :phoneNumber,
@@ -52,7 +52,7 @@
             $commande->bindParam(':photo', $tab['Photo']);
             $commande->bindParam(':birthday', $tab['Birthday']);
             $commande->bindParam(':codePostal', $tab['CodePostal']);
-            
+
             $commande->bindParam(':id', $id);
             $commande->execute();
         }catch(PDOException $e){
@@ -175,7 +175,7 @@
         // Renvoi le resultat de la Requete
          return $query->fetch()[0];
     }
-    
+
     function getIdByMail($mail){
         include_once("Projet/modele/infoDB.php");
         $conn = connectionToDB();
@@ -193,7 +193,7 @@
             die();
         }
     }
-    
+
     /**
     * Supprime la photo d'un utilisateur donné
     * @param idU : Id de l'utilisateur dont la photo doit être supprimée
@@ -202,7 +202,7 @@
         include_once("Projet/modele/infoDB.php");
         $conn = connectionToDB();
         $sql="UPDATE utilisateur set photo=null WHERE id_utilisateur = :idU";
-        try{ 
+        try{
             $commande = $conn->prepare($sql);
             $commande->bindParam(':idU', $idU);
             $commande->execute();
@@ -210,8 +210,8 @@
             echo utf8_encode("Echec de la suppression de la photo : " . $e->getMessage() . "\n");
             die();
         }
-        
+
     }
 
-    
+
 ?>

@@ -47,14 +47,14 @@
                 </p>
                 <p id="mdp_oublie"><a href='index.php?controle=guest&action=errorPage'><?php echo $txt['login_forgotMdp']; ?></a></p>
                 <!-- Afficher le message d'erreur s'il existe -->
-                <?php if (isset($_SESSION['errorLog'])) {echo '<div class="erroMsg">' . $_SESSION['errorLog'] . '</div>';} 
+                <?php if (isset($_SESSION['errorLog'])) {echo '<div class="erroMsg">' . $_SESSION['errorLog'] . '</div>';}
                 else {echo '';} ?>
             </form>
         </div>
     </div>
 
 
-    <div id="droite_login" class="main"><h3><?php echo $txt['login_Add']; ?></h3></div>
+    <div id="droite_login"><h3><?php echo $txt['login_Add']; ?></h3></div>
 
 </body>
 

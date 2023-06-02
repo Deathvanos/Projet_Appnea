@@ -28,12 +28,18 @@
     "index_topLeft_1": "Découvrir le produit",
     "index_topLeft_2": "Une solution personnalisée <br>pour vos problèmes de <color>sommeil</color>.",
     "index_topLeft_3": "Le sommeil profond commence avec nous.",
-    "index_topRight_1": "\"La qualité de mon sommeil et ma santé se sont beaucoup améliorés !\"",
-    "index_topRight_2": "Malik Ben Mechichi",
     "index_bottom_title": "NOTRE PRODUIT",
     "index_bottom_1": "Nous proposons un dispositif permettant de faire un premier diagnostic pour détecter l'apnée du sommeil chez un patient suspectant être atteint de ce trouble.",
     "index_bottom_2": "Notre produit remplace, ou complète le calendrier du sommeil qui est donné lors de la phase de recherche de trouble du sommeil à l'hôpital.",
     "index_bottom_3": "Ainsi, le patient arrive chez un médecin du sommeil avec ses analyses effectuées par notre appareil et est immédiatement pris en charge à l'hôpital pour des analyses plus approfondies.",
+
+    "index_carsel_1t": "\"La qualité de mon sommeil et ma santé se sont beaucoup améliorés !\"",
+    "index_carsel_1n": "Malik Ben Mechichi",
+    "index_carsel_2t": "\"Simple et peu contraignant\"",
+    "index_carsel_2n": "Jean-Luc Taleb",
+    "index_carsel_3t": "\"SAV au top\"",
+    "index_carsel_3n": "Pierre Karius",
+
 
     "login_title": "Se connecter",
     "login_nameLabel": "Nom d'utilisateur",
@@ -133,7 +139,7 @@
     "Suppr_Photo": "Supprimez la photo",
     "Profil_Birthday": "Anniversaire",
     "Profil_CodePostal": "Code postal",
-    
+
     "xxw": "xxxw",
     "xx": "xxx"
 }

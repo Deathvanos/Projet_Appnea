@@ -54,20 +54,20 @@
             <label for="avatar" class="actPhoto"><?php echo $txt['Profil_Avatar']; ?> </label>
             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;">
         </div>
-            
+
         <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
                 <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=deletePhoto";?> class="actPhoto"><?php echo $txt['Suppr_Photo']; ?></a>
         <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=errorPage";?> class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
         </form>
-        
+
         <!--<form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=deletePhoto";?> method="POST">
             <button type="submit" class="btnAbandon"><?php echo $txt['Suppr_Photo']; ?></button>
         </form>-->
-        
+
         <form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=displayProfil";?> method="POST">
             <button type="submit" class="btnAbandon"><?php echo $txt['Abandon']; ?></button>
         </form>
-        
+
     </div>
     <?php
         if($error == 1){

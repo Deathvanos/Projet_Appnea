@@ -41,7 +41,7 @@
         unset($result);
         require_once("Projet/view/isLogin/modifProfil.tpl");
     }
-    
+
     function displayModifInfos_Error(){
         include_once("Projet/modele/isLogin.php");
         $result = getProfil($_SESSION['userInfo']['mail']);
@@ -91,7 +91,7 @@
         $birthday = isset($_POST['birthday'])?($_POST['birthday']):$result[0]['birthday'];
 
         $codePostal = isset($_POST['codePostal'])?($_POST['codePostal']):$result[0]['codePostal'];
-        
+
         $id_user = $result[0]['id_utilisateur'];
         $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar, "Birthday"=>$birthday, "CodePostal"=>$codePostal);
 
@@ -99,7 +99,7 @@
         unset($result);
         displayProfil();
     }
-    
+
     function deletePhoto(){
         include_once("Projet/modele/isLogin.php");
         $result_id = getIdByMail($_SESSION['userInfo']['mail']);

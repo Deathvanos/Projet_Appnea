@@ -149,7 +149,7 @@ button{
         padding-left: 25%;
         padding-bottom: 5%;
     }
-    
+
 
     .center{
         text-align: center;
@@ -161,9 +161,9 @@ button{
         width : 30%;
         margin-top : 7%;
     }
-    
+
     /* .avatar label*/
-    
+
     .actPhoto{
         color : white;
         text-decoration: none;
@@ -178,18 +178,18 @@ button{
         padding-left: 0;
         padding-bottom: 2%;
     }
-    
+
     .modifMdp{
         display: block;
         float : none;
-    }   
-    
+    }
+
     elem{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .error{
         color: red;
     }

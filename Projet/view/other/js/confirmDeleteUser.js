@@ -4,7 +4,7 @@
  * Génération de 2 boites de dialogues à confirmer
  * Anulation de la procédure si annulation
  */
-function msgDelUser(idUser, txt) {   
+function msgDelUser(idUser, txt) {
     // Boite de dialogue
     var firstConfirm = confirm(txt+" \nUser: "+idUser);
     if (firstConfirm==true) {

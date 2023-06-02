@@ -3,8 +3,8 @@
     function connectionToDB() {
         $servername = "localhost";
         $username = "root";
-        $password = "root";
-        $dbname = "appnea";
+        $password = "";
+        $dbname = "pftxpg_appneawe_db";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

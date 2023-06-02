@@ -22,9 +22,9 @@
     /***** Header *****/
 
     function mainGuest(){require_once('./Projet/view/guest/mainGuest.tpl');}
-    
+
     function productPage(){require_once('./Projet/view/guest/productPage.tpl');}
-    
+
     function teamsPage(){require_once('./Projet/view/guest/teams.tpl');}
 
     function FAQPage(){require_once('./Projet/view/guest/FAQPage.tpl');}
@@ -39,13 +39,13 @@
     function PrivacyPolicyPage(){require_once('./Projet/view/guest/privacyPolicyPage.tpl');}
 
     function CookiesPage(){require_once('./Projet/view/guest/cookiesPage.tpl');}
-    
 
- 
+
+
     /********************************************/
     /********* Fonctions de login Page **********/
     /********************************************/
-    
+
     // Après verification de la demande de login, connection de l'utilisateur
     function isUser(){
         $_SESSION['controle'] = "user";
@@ -60,34 +60,11 @@
         header('Location: index.php?controle=admin&action=mainAdmin');
     }
 
- 
+
 
     /************************************/
-    /****** Fonctions check login *******/
+    /** TEMP : check session variable ***/
     /************************************/
-    function testConnection() {
-        // Récupération des infos du guest
-        $mail = htmlspecialchars($_POST['mail']);
-        $mdp= htmlspecialchars($_POST['mdp']);
-
-        /*** Vérification des infos avant la requete SQL ***/
-        if (!preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) { 
-            // La chaîne ne contient que des caractères alphanumériques et certains symboles
-            // caractères spéciaux possible ~ ! @ # $ % ^ & * ( ) _ - + = { [ } ] | : ; < > , . ?
-                $_SESSION['errorLog'] = "Mail ou mot de passe non conforme.";
-                header('Location: ' . $_SERVER['HTTP_REFERER']);
-                exit();
-        }
-
-        // Fonction login vers la base de données
-        include_once("Projet/modele/isLogout.php");
-        tryLogin();
-
-        // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        $temp = 'is'.$_SESSION['userInfo']["typeUser"];
-        $temp();
-    }
-
 
 
 

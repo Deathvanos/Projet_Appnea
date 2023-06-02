@@ -15,6 +15,8 @@
         $mail = $result[0]['mail'];
         $localisation = $result[0]['address'] . ", " . $result[0]['city'] . " " . $result[0]['country'];
         $photo = $result[0]['photo'];
+        $birthday = $result[0]['birthday'];
+        $codePostal = $result[0]['codePostal'];
         $photo_base64 = base64_encode($photo);
 
         //header("Content-type: image");
@@ -33,6 +35,8 @@
         $city = $result[0]['city'];
         $country = $result[0]['country'];
         $photo = $result[0]['photo'];
+        $birthday = $result[0]['birthday'];
+        $codePostal = $result[0]['codePostal'];
         $photo_base64 = base64_encode($photo);
         unset($result);
         require_once("Projet/view/isLogin/modifProfil.tpl");
@@ -49,6 +53,8 @@
         $city = $result[0]['city'];
         $country = $result[0]['country'];
         $photo = $result[0]['photo'];
+        $birthday = $result[0]['birthday'];
+        $codePostal = $result[0]['codePostal'];
         $photo_base64 = base64_encode($photo);
         unset($result);
         $error = 1;
@@ -72,7 +78,6 @@
                 displayModifInfos_Error();
                 return;
             }
-            // BUG : pour certaines images, la taille n'est plus indiquée 
             $avatar = file_get_contents($_FILES["avatar"]["tmp_name"]);
         }
 
@@ -83,12 +88,22 @@
         $address = isset($_POST['address'])?($_POST['address']):$result[0]['address'];
         $city = isset($_POST['city'])?($_POST['city']):$result[0]['city'];
         $country = isset($_POST['country'])?($_POST['country']):$result[0]['country'];
+        $birthday = isset($_POST['birthday'])?($_POST['birthday']):$result[0]['birthday'];
 
+        $codePostal = isset($_POST['codePostal'])?($_POST['codePostal']):$result[0]['codePostal'];
+        
         $id_user = $result[0]['id_utilisateur'];
-        $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar);
+        $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar, "Birthday"=>$birthday, "CodePostal"=>$codePostal);
 
         updateUser($infos_user, $id_user);
         unset($result);
+        displayProfil();
+    }
+    
+    function deletePhoto(){
+        include_once("Projet/modele/isLogin.php");
+        $result_id = getIdByMail($_SESSION['userInfo']['mail']);
+        deletePhotodB($result_id);
         displayProfil();
     }
 

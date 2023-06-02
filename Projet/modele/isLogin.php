@@ -9,7 +9,7 @@
     function getProfil($mail){
         include_once("./Projet/modele/infoDB.php");
         $conn = connectionToDB();
-        $sql = "SELECT firstName, lastName, birthday, phoneNumber, mail, country, city, address, photo, id_utilisateur FROM utilisateur
+        $sql = "SELECT firstName, lastName, birthday, phoneNumber, mail, country, city, address, photo, id_utilisateur, codePostal FROM utilisateur
                 WHERE mail = :mail";
         try{
             $commande = $conn->prepare($sql);
@@ -36,7 +36,9 @@
                         address = :adresse,
                         city = :city,
                         country = :country,
-                        photo = :photo
+                        photo = :photo,
+                        birthday = :birthday,
+                        codePostal = :codePostal
                     WHERE id_utilisateur=:id";
         try{
             $commande = $conn->prepare($sql);
@@ -48,6 +50,9 @@
             $commande->bindParam(':city', $tab['Ville']);
             $commande->bindParam(':country', $tab['Pays']);
             $commande->bindParam(':photo', $tab['Photo']);
+            $commande->bindParam(':birthday', $tab['Birthday']);
+            $commande->bindParam(':codePostal', $tab['CodePostal']);
+            
             $commande->bindParam(':id', $id);
             $commande->execute();
         }catch(PDOException $e){
@@ -169,6 +174,43 @@
         $conn = null;
         // Renvoi le resultat de la Requete
          return $query->fetch()[0];
+    }
+    
+    function getIdByMail($mail){
+        include_once("Projet/modele/infoDB.php");
+        $conn = connectionToDB();
+        $sql = "SELECT id_utilisateur FROM utilisateur WHERE mail = :mail";
+        try{
+            $commande = $conn->prepare($sql);
+            $commande->bindParam(':mail', $mail, PDO::PARAM_STR);
+            $bool = $commande->execute();
+            if($bool){
+                $resultat = $commande->fetch()[0];
+                return $resultat;
+            }
+        }catch(PDOException $e){
+            echo utf8_encode("Echec de la récupération de l'utilisateur : " . $e->getMessage() . "\n");
+            die();
+        }
+    }
+    
+    /**
+    * Supprime la photo d'un utilisateur donné
+    * @param idU : Id de l'utilisateur dont la photo doit être supprimée
+    */
+    function deletePhotodB($idU){
+        include_once("Projet/modele/infoDB.php");
+        $conn = connectionToDB();
+        $sql="UPDATE utilisateur set photo=null WHERE id_utilisateur = :idU";
+        try{ 
+            $commande = $conn->prepare($sql);
+            $commande->bindParam(':idU', $idU);
+            $commande->execute();
+        }catch(PDOException $e){
+            echo utf8_encode("Echec de la suppression de la photo : " . $e->getMessage() . "\n");
+            die();
+        }
+        
     }
 
     

@@ -83,6 +83,7 @@
         $address = isset($_POST['address'])?($_POST['address']):$result[0]['address'];
         $city = isset($_POST['city'])?($_POST['city']):$result[0]['city'];
         $country = isset($_POST['country'])?($_POST['country']):$result[0]['country'];
+        $birthday = isset($_POST['country'])?($_POST['country']):$result[0]['country'];
 
         $id_user = $result[0]['id_utilisateur'];
         $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar);
@@ -90,6 +91,52 @@
         updateUser($infos_user, $id_user);
         unset($result);
         displayProfil();
+    }
+
+    function envoieMail(){
+        $txt = $GLOBALS['translat'];
+        // Génération mdp 
+        $longueur = 8;
+        $caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        $motDePasse = '';
+        
+        $caracteresLongueur = strlen($caracteres);
+        for ($i = 0; $i < $longueur; $i++) {
+            $indexAleatoire = rand(0, $caracteresLongueur - 1);
+            $caractereAleatoire = $caracteres[$indexAleatoire];
+            $motDePasse .= $caractereAleatoire;
+        }
+               
+        $error = 0;
+        // include_once("Projet/modele/isLogin.php");
+        // $result = getProfil($_SESSION['userInfo']['mail']);
+        // Si les champs sont nuls, on ne modifie rien
+
+        $lastName = $_POST['lastname'];
+        $firstName = $_POST['firstname'];
+        $phoneNumber = $_POST['phoneNumber'];
+        $mail = $_POST['mail'];
+        $address = $_POST['address'];
+        $city = $_POST['city'];
+        $country = $_POST['country'];
+        // Envoi un mail de bien reception du message à l'utilisateur
+        $to = $mail;
+        $title = "Creation profil APPNEA";
+        $text = "Votre mot de passe " . $motDePasse . ".";
+        $subject = "APPNEA";
+        $message = $txt['contact_msgConfirm']."___________________\nObjet: ".$title.  "\n\n". $text;
+        $headers = "Content-Type: text/plain; charset=utf-8\r\n";
+        $headers .= "From: serviceappnea@outlook.com\r\n";
+        $headers .= "Reply-To: serviceappnea@outlook.com\r\n";
+        $headers .= "X-Mailer: PHP/" . phpversion();
+
+        if (mail($mail, $subject, $message, $headers)) {
+            echo "L'e-mail a été envoyé avec succès.";
+        }
+        else
+        {
+            echo "Erreur lors de l'envoi de l'e-mail.";
+        }
     }
 
 

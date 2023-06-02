@@ -28,11 +28,5 @@
         $posList = $arrayReturn[2];
         require_once('./Projet/view/modo/findUserModo.tpl');
     }
-   
-
-
-
-
-
 
 ?>

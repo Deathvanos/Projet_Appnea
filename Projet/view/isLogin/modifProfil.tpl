@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>APNEA - Profil modification</title>
+    <title>APPNEA - Profil modification</title>
     <?php include 'Projet/view/other/head_Font_Page.html';?>
     <link rel="stylesheet" href="Ressources/css/user/modifProfil.css"/>
 </head>
@@ -29,9 +29,10 @@
     <div class="contenu">
         <?php
         if($photo_base64 !=""){
-                    echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
-        }else{
-        echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
+            echo "<img src='data:image/jpeg;base64," . $photo_base64 . "' . width=30% heigth=30%/>";
+        }else
+        {
+            echo "<img src='Ressources/img/profil/bedroom.png' alt='Photo de profil' width=15% heigth=15%/>";
         }
         ?>
         <form enctype="multipart/form-data" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=modifInfos";?> method="POST">
@@ -39,7 +40,7 @@
                 <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" placeholder= <?php echo("'$lastName'"); ?> name="lastname" value=<?php echo("'$lastName'"); ?>/></elem>
                 <h3 class="hide"> </h3>
                 <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name2']; ?> :</h3><input type="text" placeholder= <?php echo("'$firstName'");?> name="firstname" value=<?php echo("'$firstName'"); ?> /></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder= <?php echo("'$phoneNumber'");?> name="phone" value=<?php echo("'$phoneNumber'"); ?>/></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder= <?php echo("'$phoneNumber'");?> name="phoneNumber" value=<?php echo("'$phoneNumber'"); ?>/></elem>
                 <h3 class="hide"> </h3>
                 <elem><h3 class="form_title"><?php echo $txt['Profil_Mail']; ?> : </h3><input type="text" placeholder= <?php echo("'$mail'");?> name="mail" value=<?php echo("'$mail'"); ?>/></elem>
                 <elem><h3 class="form_title"><?php echo $txt['Profil_Localisation']; ?> : </h3><input type="text" placeholder= <?php echo("'$address'");?> name="address" value=<?php echo("'$address'"); ?>/></elem>
@@ -57,7 +58,6 @@
         </form>
     </div>
 </main>
-
 <?php include 'Projet/view/other/footer.tpl'; ?>
 </body>
 </html>

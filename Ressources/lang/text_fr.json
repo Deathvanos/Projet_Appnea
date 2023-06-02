@@ -138,5 +138,8 @@
     "Error_img_size" : "La photo est trop volumineuse",
     
     "xxw": "xxxw",
-    "xx": "xxx"
+    "xx": "xxx",
+
+    "contact_msgConfirm": "Bonjour,\nNous avons bien reçu votre demande.\n Votre demande sera traitée sous peu par un nos agents.\n \n"
+    
 }

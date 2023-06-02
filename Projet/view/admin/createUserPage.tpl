@@ -29,24 +29,25 @@
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
 
     <main class='main'>
-        <h1 id="Creation">Création de 
+        <h1 id="Creation">Création de
         <color id=dégradé>profil</color></h1>
         <div class="contenu">
-        <form enctype="multipart/form-data" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=modifInfos";?> method="POST">
+        <form enctype="multipart/form-data" action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=envoieMail";?> method="POST">
             <div class="infos_perso grid_container">
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" placeholder= "Votre nom"></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" name="lastname" placeholder= "Votre nom" /></elem>
                 <h3 class="hide"> </h3>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name2']; ?> :</h3><input type="text" placeholder= "Votre prénom" ></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder= "Votre n° de téléphone"></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name2']; ?> :</h3><input type="text" name="firstname" placeholder= "Votre prénom" ></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" name="phoneNumber" placeholder= "Votre n° de téléphone"></elem>
                 <h3 class="hide"> </h3>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Mail']; ?> : </h3><input type="text" placeholder= "Votre mail"></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Localisation']; ?> : </h3><input type="text" placeholder= "Votre adresse"></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Mail']; ?> : </h3><input type="text" name="mail" placeholder= "Votre mail"></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Localisation']; ?> : </h3><input type="text" name="address" placeholder= "Votre adresse"></elem>
                 <h3 class="hide"> </h3>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_City']; ?>  : </h3><input type="text" placeholder= "Votre ville"></elem>
-                <elem><h3 class="form_title"><?php echo $txt['Profil_Country']; ?>  : </h3><input type="text" placeholder= "Votre pays"></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_City']; ?>  : </h3><input type="text" placeholder= "Votre ville" name="city"></elem>
+                <elem><h3 class="form_title"><?php echo $txt['Profil_Country']; ?>  : </h3><input type="text" placeholder= "Votre pays" name="country"></elem>
             </div>
             <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
             <button type="submit" class="btnAbandon"><?php echo $txt['Abandon']; ?></button>
+        </form>
     </div>
     </main>
 

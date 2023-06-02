@@ -13,7 +13,7 @@
         $mdp= htmlspecialchars($_POST['mdp']);
 
         /*** Vérification des infos avant la requete SQL ***/
-        if (!preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) { 
+        if (!preg_match('/^[a-zA-Z0-9~!@#$%^&*()_+-={[}]|\:;<>,.?\/]+$/', $mdp) ) {
             // La chaîne ne contient que des caractères alphanumériques et certains symboles
             // caractères spéciaux possible ~ ! @ # $ % ^ & * ( ) _ - + = { [ } ] | : ; < > , . ?
                 $_SESSION['errorLog'] = "Mail ou mot de passe non conforme.";

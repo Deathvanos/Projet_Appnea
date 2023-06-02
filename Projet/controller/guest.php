@@ -22,9 +22,9 @@
     /***** Header *****/
 
     function mainGuest(){require_once('./Projet/view/guest/mainGuest.tpl');}
-    
+
     function productPage(){require_once('./Projet/view/guest/productPage.tpl');}
-    
+
     function teamsPage(){require_once('./Projet/view/guest/teams.tpl');}
 
     function FAQPage(){require_once('./Projet/view/guest/FAQPage.tpl');}
@@ -39,13 +39,13 @@
     function PrivacyPolicyPage(){require_once('./Projet/view/guest/privacyPolicyPage.tpl');}
 
     function CookiesPage(){require_once('./Projet/view/guest/cookiesPage.tpl');}
-    
 
- 
+
+
     /********************************************/
     /********* Fonctions de login Page **********/
     /********************************************/
-    
+
     // Après verification de la demande de login, connection de l'utilisateur
     function isUser(){
         $_SESSION['controle'] = "user";
@@ -60,7 +60,13 @@
         header('Location: index.php?controle=admin&action=mainAdmin');
     }
 
- 
+
+
+    /************************************/
+    /** TEMP : check session variable ***/
+    /************************************/
+
+
 
     /************************************/
     /** TEMP : check session variable ***/

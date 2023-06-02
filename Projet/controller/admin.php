@@ -17,8 +17,8 @@
     function mainAdmin(){require_once('./Projet/view/admin/mainAdmin.tpl');}
     function createUserPage(){require_once('./Projet/view/admin/createUserPage.tpl');}
     function showUserInfo(){require_once('./Projet/view/admin/showUserInfo.tpl');}
-    
-    
+
+
     /** Affiche la page de findUser **/
     function findUser(){
         $arrayReturn = searchUser();
@@ -38,7 +38,7 @@
      * Je n'ai pas réussi à la mettre dans le controller del'admin car : VM578:1  Uncaught SyntaxError
      * Cette fonction appel ensuite le modele pour del l'user.
      */
-    function deleteUserAjax() { 
+    function deleteUserAjax() {
         // Fichier de lang
         include_once( 'Projet/view/other/php/setLang.php');
         $txt = $GLOBALS['translat'];
@@ -57,6 +57,6 @@
         echo json_encode($response);
     }
 
- 
+
 
 ?>

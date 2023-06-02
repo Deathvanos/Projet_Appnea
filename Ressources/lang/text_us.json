@@ -32,7 +32,7 @@
     "index_bottom_1": "We propose a device allowing to make a first diagnosis to detect sleep apnea in a patient suspecting to be affected by this disorder.",
     "index_bottom_2": "Our product replaces, or completes the sleep calendar that is given during the research phase for sleep disorders in the hospital.",
     "index_bottom_3": "Thus, the patient arrives at a sleep doctor with his analyzes carried out by our device and is immediately taken to the hospital for more in-depth analyzes",
-    
+
     "index_carsel_1t": "\"The quality of my sleep and my health have improved a lot !\"",
     "index_carsel_1n": "Malik Ben Mechichi",
     "index_carsel_2t": "\"Easy and et not very restrictive\"",
@@ -128,7 +128,7 @@
     "Abandon": "Abandon",
     "Profil_Label_Name1": "Last name",
     "Profil_Label_Name2": "First name",
-    "Profil_Tel": "Phone number",
+    "Profil_Tel": "Phone",
     "Profil_Mail": "Mail",
     "Profil_Localisation" : "Address",
     "Profil_Button_Edit": "Edit informations",
@@ -136,8 +136,11 @@
     "Profil_Country": "Country",
     "Profil_Avatar": "Change profile picture",
     "Profil_Change_mdp": "Change your password ? Click here",
-    
-    
+    "Error_img_size" : "Image too large",
+    "Suppr_Photo": "Delete picture",
+    "Profil_Birthday": "Birthday",
+    "Profil_CodePostal": "Zip code",
+
     "xxw": "xxxw",
     "xx": "xxx"
 

@@ -2,7 +2,7 @@
 
 
 /**
- * Après confirmation de la demande de suppression, 
+ * Après confirmation de la demande de suppression,
  * on effectue une requete Ajax pour supprimer l'utilisateur
  * @param {*} mailUser mail de l'utilisateur à supprimer
  */
@@ -15,8 +15,8 @@ function confirmPopup(mailUser, lang) {
         // Si le code PHP a bien été exécuté
         if (this.readyState == 4 && this.status == 200) {
             // Récupération du message PHP en ne gradant que la partir JSON dans la console
-            var response = JSON.parse('{'+this.response.split('{')[1]);        
-    
+            var response = JSON.parse('{'+this.response.split('{')[1]);
+
             // On save le msg pour l'afficher après avoir reload la page
             localStorage.setItem('messageDelete', response.message);
             // On reload la page
@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
         var boxMsgDeleteUser = document.createElement('center');
         boxMsgDeleteUser.id = 'boxMsgDeleteUser';
         boxMsgDeleteUser.innerHTML = message;
-        // Application des styles 
+        // Application des styles
         boxMsgDeleteUser.style.cssText = styles;
         // Ajout de la div sur la page sous le header
         document.querySelector('.header_all').insertAdjacentHTML('afterend', boxMsgDeleteUser.outerHTML);

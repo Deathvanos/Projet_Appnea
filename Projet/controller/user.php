@@ -14,16 +14,15 @@
 
 <?php
 
- 
+     date_default_timezone_set("Europe/Paris");
     /* Affiche la page d'accueil */
-    function mainUser(){require_once('./Projet/view/user/mainUser.tpl');}
-
-   
-
+    function mainUser(){
+        require_once('./Projet/view/user/mainUser.tpl');
+    }
 
     function sensorUserPage() {
         include_once("Projet/modele/user.php");
-                
+
         //Récuperation des données de chaques capteurs
         $td = getDataSensor('temperatureSensor');
         $cd = getDataSensor('heartSensor');

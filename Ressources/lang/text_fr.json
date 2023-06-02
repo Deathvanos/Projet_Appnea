@@ -127,7 +127,7 @@
     "Abandon": "Annuler",
     "Profil_Label_Name1" : "Nom",
     "Profil_Label_Name2" : "Prénom",
-    "Profil_Tel": "Numéro de téléphone",
+    "Profil_Tel": "Téléphone",
     "Profil_Mail": "Mail",
     "Profil_Localisation": "Adresse",
     "Profil_Button_Edit": "Modifier les informations",
@@ -135,6 +135,10 @@
     "Profil_Country": "Pays",
     "Profil_Avatar": "Modifier la photo",
     "Profil_Change_mdp": "Modifier votre mot de passe ? Cliquez ici",
+    "Error_img_size" : "La photo est trop volumineuse",
+    "Suppr_Photo": "Supprimez la photo",
+    "Profil_Birthday": "Anniversaire",
+    "Profil_CodePostal": "Code postal",
 
     "xxw": "xxxw",
     "xx": "xxx"

@@ -29,19 +29,17 @@
     <?php $txt = $GLOBALS['translat'];
     include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl';?>
 
+    <p style="font-style: italic;"><?php echo $txt["firefox"];?></p>
 
     <main>
 
         <br>
-        <h1><?php echo $txt['Captor_Page_Name'];?></h1>
         <br>
-
-        
 
         <div id="dd" style="display: none;">
             <?php
             ; // Again, do some operation, get the output.
-            echo htmlspecialchars($d1); /* You have to escape because the result
+            echo htmlspecialchars(json_encode($d1)); /* You have to escape because the result
               will not be valid HTML otherwise. */
             ?>
         </div>
@@ -49,7 +47,7 @@
         <div id="df" style="display: none;">
             <?php
             ; // Again, do some operation, get the output.
-            echo htmlspecialchars($d2); /* You have to escape because the result
+            echo htmlspecialchars(json_encode($d2)); /* You have to escape because the result
               will not be valid HTML otherwise. */
             ?>
         </div>
@@ -57,7 +55,7 @@
         <div id="tempD" style="display: none;">
             <?php
             ; // Again, do some operation, get the output.
-            echo htmlspecialchars($tempValues); /* You have to escape because the result
+            echo htmlspecialchars(json_encode($tempValues)); /* You have to escape because the result
               will not be valid HTML otherwise. */
             ?>
         </div>
@@ -65,7 +63,7 @@
         <div id="cardD" style="display: none;">
             <?php
             ; // Again, do some operation, get the output.
-            echo htmlspecialchars($cardValues); /* You have to escape because the result
+            echo htmlspecialchars(json_encode($cardValues)); /* You have to escape because the result
               will not be valid HTML otherwise. */
             ?>
         </div>
@@ -73,7 +71,7 @@
         <div id="humD" style="display: none;">
             <?php
             ; // Again, do some operation, get the output.
-            echo htmlspecialchars($humValues); /* You have to escape because the result
+            echo htmlspecialchars(json_encode($humValues)); /* You have to escape because the result
               will not be valid HTML otherwise. */
             ?>
         </div>
@@ -81,11 +79,33 @@
         <div id="sonD" style="display: none;">
             <?php
             ; // Again, do some operation, get the output.
-            echo htmlspecialchars($sonValues); /* You have to escape because the result
+            echo htmlspecialchars(json_encode($sonValues)); /* You have to escape because the result
               will not be valid HTML otherwise. */
             ?>
         </div>
 
+        <div id="dateSelection">
+        <label for="dateSelected">Quel jour souhaitez-vous voir?</label><br>
+            <select id="dateSelected" onchange="saveSelectedValue()">
+                <option value="0">Dernière nuit enregistrée</option>
+                <option value="1">Avant Dernière nuit enregistrée</option>
+                <option value="2">Avant Avant Dernière nuit enregistrée</option>
+            </select>
+        </div>
+        <script>
+            // Fonction pour sauvegarder la valeur sélectionnée dans le stockage local
+            function saveSelectedValue() {
+                var selectedValue = document.getElementById("dateSelected").value;
+                localStorage.setItem("selectedValue", selectedValue);
+                location.reload();
+            }
+
+            // Vérifie si une valeur est déjà enregistrée dans le stockage local
+            var storedValue = localStorage.getItem("selectedValue");
+            if (storedValue) {
+                document.getElementById("dateSelected").value = storedValue;
+            }
+        </script>
 
         <div class="allGraphs">
 

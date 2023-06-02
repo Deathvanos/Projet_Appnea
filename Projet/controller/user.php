@@ -23,27 +23,29 @@
 
     function sensorUserPage() {
         include_once("Projet/modele/user.php");
+
+        $userMail = $_SESSION['userInfo']['mail'];
                 
         //Récuperation des données de chaques capteurs
-        $td = getDataSensor('temperatureSensor');
-        $cd = getDataSensor('heartSensor');
-        $hd = getDataSensor('humiditySensor');
-        $sd = getDataSensor('soundSensor');
+        $td = getDataSensor('temperatureSensor',$userMail );
+        $cd = getDataSensor('heartSensor', $userMail);
+        $hd = getDataSensor('humiditySensor', $userMail);
+        $sd = getDataSensor('soundSensor', $userMail);
 
-        $d1 = $td[0]['date_start'];
-        $d2 = $td[0]['date_end'];
-        $tempValues = $td[0]['dataFile'];
-        $cardValues = $cd[0]['dataFile'];
-        $humValues = $hd[0]['dataFile'];
-        $sonValues = $sd[0]['dataFile'];
+        $d1 = array_column($td, "date_start");
+        $d2 = array_column($td, "date_end");
+        $tempValues = array_column($td, "dataFile");
+        $cardValues = array_column($cd, "dataFile");
+        $humValues = array_column($hd, "dataFile");
+        $sonValues = array_column($sd, "dataFile");
 
-        $_COOKIE['d1'] = $td[0]['date_start'];
-        $_COOKIE['d2'] = $td[0]['date_end'];
+        $_COOKIE['d1'] = array_column($td, "date_start");
+        $_COOKIE['d2'] = array_column($td, "date_end");
 
-        $_COOKIE['tempValues'] = $td[0]['dataFile'];
-        $_COOKIE['cardValues'] = $cd[0]['dataFile'];
-        $_COOKIE['humValues'] = $hd[0]['dataFile'];
-        $_COOKIE['sonValues'] = $sd[0]['dataFile'];
+        $_COOKIE['tempValues'] = array_column($td, "dataFile");
+        $_COOKIE['cardValues'] = array_column($cd, "dataFile");
+        $_COOKIE['humValues'] = array_column($hd, "dataFile");
+        $_COOKIE['sonValues'] = array_column($sd, "dataFile");
 
         //echo print_r($_COOKIE['tempValues']);
         // $df1 = get_object_vars($data1)['values'];

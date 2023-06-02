@@ -68,6 +68,30 @@ main h1 {text-align: center;}
     border-radius: 2rem;
 }
 
+#dateSelected {
+  background-color: #6C37EE;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+#dateSelected option {
+  background-color: #211265;
+  color: #ffffff;
+  padding: 10px;
+}
+
+
+.dateSelection label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
 .vertical-lign {border: 2px solid rgb(240, 182, 34);}
 
 .horizontal-lign {border: 2px solid rgb(240, 182, 34);}

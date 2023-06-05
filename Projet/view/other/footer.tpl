@@ -29,18 +29,16 @@
         <div>
         <h3><?php echo $txt['footer_p2_title']; ?></h3>
         <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=PrivacyPolicyPage"?>><?php echo $txt['footer_p2_txt4']; ?></a></li>
             <li><i class="bx bx-chevron-right"></i> <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=CGUPage"?>><?php echo $txt['footer_p2_txt1']; ?></a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=CookiesPage"?>><?php echo $txt['footer_p2_txt2']; ?></a></li>
             <li><i class="bx bx-chevron-right"></i> <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=FAQPage"?>><?php echo $txt['footer_p2_txt3']; ?></a></li>
         </ul>
         </div>
         <div>
         <h3><?php echo $txt['footer_p3_title']; ?></h3>
         <ul>
-            <a class="footer_icon" href=<?php echo "https://www.centre-apnea.com/"?>><i class="bx bxl-facebook"></i></a>
-            <a class="footer_icon" href=<?php echo "https://www.app-nea.com/"?>><i class="bx bxl-instagram"></i></a>
-            <a class="footer_icon" href=<?php echo "https://appnea.app/"?>><i class="bx bxl-twitter"></i></a>  
+            <a class="footer_icon" href=<?php echo "https://www.facebook.com/profile.php?id=100093521102356"?>><i class="bx bxl-facebook"></i></a>
+            <a class="footer_icon" href=<?php echo "https://www.instagram.com/appnea2023"?>><i class="bx bxl-instagram"></i></a>
+            <a class="footer_icon" href=<?php echo "https://twitter.com/appnea2023"?>><i class="bx bxl-twitter"></i></a>  
         </ul>
         </div>
     </div>

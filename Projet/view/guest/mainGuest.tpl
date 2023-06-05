@@ -61,7 +61,6 @@
                     <a href="#1" onclick="scrollCarrousel(event, '1')"><i class="bx bxs-circle"></i></a>
                     <a href="#2" onclick="scrollCarrousel(event, '2')"><i class="bx bxs-circle"></i></a>
                     <a href="#3" onclick="scrollCarrousel(event, '3')"><i class="bx bxs-circle"></i></a>
-                    <a style="color:transparent">.</a>
                 </div>
             </div>
 

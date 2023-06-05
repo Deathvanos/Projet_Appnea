@@ -1,5 +1,6 @@
 .main {
     text-align: center;
+    margin-bottom: -6.5rem;
 }
 
 .buttonMain {
@@ -7,7 +8,7 @@
 }
 
 .buttonMain td {
-    padding-block: 5%;
+    padding-block: 3%;
   }
 
 .buttonMain td a {

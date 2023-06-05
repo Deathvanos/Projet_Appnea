@@ -1,0 +1,149 @@
+#degrade {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Conditions {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-block: 1% 2%;
+}
+
+
+
+table {
+    width: 95%;
+    font-size: 69%;
+    /* Espacement entre les lignes du tableau*/
+    border-spacing: 0px 2.25rem;
+}
+
+tr td:first-child {
+    width: 100%;
+}
+
+tr {
+    background-color: black;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    
+
+}
+
+td {
+    padding-block: 1.5%;
+    background-color: #F6593E;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    border-radius:2rem;
+}
+
+question {
+    color: #FFFFFF;
+    margin-left: 5%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    width: 60%;
+}
+
+td:hover response  {
+    background-color: #F6593E;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    border-radius: 2rem;
+}
+
+
+response {
+    color: black;
+    display: none;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    margin-top: 10px;
+    text-align: justify;
+    width: 60%;
+}
+
+
+/* Gestion de la case vide */
+.tblBlanc {
+    visibility: hidden;
+    width: 1%;
+}
+
+
+.btn  {padding-inline: 1rem;}
+
+.btn:hover  {background-color: #E5482D;}
+
+.btn a {text-decoration: none;}
+
+.btn button {
+    background-color: transparent;
+    border: 0;
+    font-size: 100%;
+    font-weight: bolder;  
+    cursor: pointer;
+}
+
+.newFAQ {
+    text-decoration: none;
+    background-color: #6C37EE;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    margin-block: 2rem;
+}
+
+.newFAQ:hover {
+    background-color: #5B26DD;
+}
+
+center {
+    margin-block: 2rem 1rem;
+}
+
+
+/********** Popup style **********/
+
+.popup-content {
+    background-color: #F6593E;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: black;
+}
+
+.popup-content p {
+    margin-block: 0.5rem 1rem;
+}
+
+.popup-content button {
+    background-color: #6C37EE;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: white;
+    width: 10rem;
+    
+}
+
+.popup-content button:hover {
+    background-color: #211265;
+}

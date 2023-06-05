@@ -31,6 +31,7 @@
         <table class='buttonMain'>
             <thead><h1 class='title'><?php echo $txt['adminMainTitle']; ?></h1></thead> 
             <tr><td><a href='index.php?controle=admin&action=createUserPage'><?php echo $txt['adminMain1']; ?></a></td></tr>
+            <tr><td><a href='index.php?controle=admin&action=createBoxAndSensor'><?php echo $txt['adminMain3']; ?></a></td></tr>
             <tr><td><a href='index.php?controle=admin&action=findUser'><?php echo $txt['adminMain2']; ?></a></td></tr>
         </table>
     </main>

@@ -1,0 +1,218 @@
+#dégradé {
+    background-image: linear-gradient(to right, #6C37EE 40%, #F6593E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main{
+    padding-left: 0;
+}
+
+*{
+    margin : 0;
+    padding  :0;
+}
+
+
+main { /* a supprimer quand plus de float: right; */
+    padding-bottom: 15%;
+}
+
+h1{
+    margin-top: 5%;
+    margin-left: 42.5%;
+    color: white;
+}
+
+color{
+    background: linear-gradient(to right, #6C37EE,#F6593E);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+form{
+    width: 100%;
+}
+
+img{
+    float: left;
+    width: 15%;
+    /*overflow: hidden;
+    position: relative;*/
+}
+
+label, a{
+    color : white;
+    text-decoration: underline;
+    cursor : pointer;
+}
+
+label{
+    display: block;
+    height : 1em;
+    width : 25%;
+    /*padding-top: 50%;*/
+    padding-left: 2%;
+}
+
+.contenu{
+    padding-top: 5%;
+}
+
+.grid_container {
+    width : 100%;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+input{
+    width:60%;
+    align-content: center;
+    border:none;
+    border-bottom : 2px solid lightgray;
+    background-color:transparent;
+    padding-left: 1%;
+    margin-left: 3%;
+    color: white;
+}
+
+input::placeholder, input[value]{
+    text-align: center;
+}
+
+
+input:focus{
+    outline : none;
+    border-radius: 2rem;
+    border-bottom: 1px solid lightgray;
+    /*background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);*/
+}
+
+
+elem{
+    padding-bottom: 2%;
+    background-color: hsla(120,100%,100%,0.17);
+    border-radius: 2rem;
+    margin-top: 7%;
+    display: inline;
+}
+
+.form_title{
+    margin-left: 3%;
+    display: inline;
+}
+
+info{
+    font-size: 0.75em;
+}
+
+.hide{
+    background-color: transparent;
+}
+
+button{
+    border-radius: 2rem;
+    color: white;
+    background-color: #423EF6;
+    height: 5%;
+    width : 10%;
+}
+
+.infos_perso {
+    margin-bottom: 50px;
+}
+
+.submit{
+    width:15%;
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.btnAbandon{
+    width: 15%;
+    float :right;
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+}
+
+.modifMdp{
+    /*float : right;*/
+    margin-top: 2%;
+    margin-left: 70%;
+}
+
+/* Pour téléphones */
+@media only screen and (max-width: 700px) {
+    h1{
+        margin-left: 0;
+        padding-left: 40%;
+    }
+    .grid_container {
+        width : 85%;
+        display: grid;
+        grid-template-columns: 100%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+
+    img{
+        width: 75%;
+        height : auto;
+        display: block;
+        margin : auto;
+        padding-left: 25%;
+        padding-bottom: 5%;
+    }
+
+    .center{
+        text-align: center;
+        width : 100%;
+        display: inline;
+    }
+
+    button{
+        width : 30%;
+        margin-top : 7%;
+    }
+    
+    .avatar label{
+        /*padding-top : 5%;
+        border-radius: 2rem;
+        color: white;
+        background-color: #423EF6;
+        height: 5%;
+        width : 10%;*/
+        color : white;
+        text-decoration: none;
+        border : 1px solid black;
+        height : 5%;
+        border-radius: 20px;
+        background-color: #423EF6;
+    }
+}
+
+.erroMsg{ 
+    padding-block:0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F6593E;
+    text-align: center;
+}
+
+select {
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.17);
+    text-align: center;
+    height:2rem;
+    width:60%;
+}
+
+select option {color:black;}
+
+.error {
+    border: 2px solid red;
+}

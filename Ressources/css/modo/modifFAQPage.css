@@ -1,0 +1,47 @@
+
+.header_title {
+    margin-left: 2.5%;
+    margin-top: 1rem;
+}
+main {
+    text-align: center;
+}
+
+
+main h3 {
+    margin-block: 4rem 1rem;
+}
+
+main div p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+main textarea {
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 2rem;
+    color: white;
+    width: 80%;
+    min-width: 30%;
+    max-width: 90%;
+    padding: 2% 1%;
+    min-height: 5rem;
+    max-height: 15rem;
+ }
+
+ main div textarea:last-of-type  {
+    min-height: 10rem;
+    max-height: 20rem;
+ }
+
+ main button {
+    background-color: #F6593E;
+    border: 0;
+    font-size: 100%;
+    font-weight: bolder;  
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+ }
+

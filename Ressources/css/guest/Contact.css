@@ -38,6 +38,14 @@ main {text-align: center;}
     margin-top: 2%;
  }
 
+ .mailSpace input {
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 2rem;
+    color: white;
+    width: 50%;
+    padding-left: 2%;
+ }
+
  .mailSpace textarea {
     background: rgba(255, 255, 255, 0.17);
     border-radius: 2rem;
@@ -57,9 +65,18 @@ main {text-align: center;}
  }
 
 
+ .mailSpace select {
+    width: 50%;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.17);
+ }
+ .mailSpace select option {
+    color: black;
+ }
+
 .buttons {margin-top: 2%;}
 
- .buttons a {
+ .buttons a, .buttons input {
     text-decoration: none;
     color: white;
     font-weight: 400;
@@ -67,17 +84,24 @@ main {text-align: center;}
     text-align: center;
     padding: 0.5em 1.5em;
     border-radius: 2rem;
+    
 }
  
- .buttons a:first-of-type {
-    background: #F6593E;
+ .buttons input  {
+    background-color: #F6593E;
     margin-right: 2%;
 }
- .buttons a:last-of-type {
-    background: #423EF6;
+.buttons input:hover  {background-color: #2779BF;}
+
+ .buttons a  {
+    background-color: #423EF6;
     margin-left: 2%;
 }
+.buttons a:hover  {background-color: #18A7F9;}
 
 
-
-
+.msgforUser {
+    padding-block:0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F6593E;
+}

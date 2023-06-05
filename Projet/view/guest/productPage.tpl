@@ -25,26 +25,41 @@
 
     <main>
 
-        <h1>Presentation de notre produit</h1>
-        <p>Nous avons differents capteurs pour la detection de l'appneé du sommeil</p>
-        <ul>
-            <li>cardiaque : il sert à ...</li>
-            <li>son : il sert à ...</li>
-            <li>temp : il sert à ...</li>
-            <li>hum : il sert à ...</li>
-        </ul>
+        <h1><?php echo $txt['productPage_title'];?></h1>
+        <p><?php echo $txt['productPage_intro'];?></p>
 
-        <p>Tout ces capteurs sont placé dans une boite</p>
-        <img src="" alt="Image du boitier">
+        <table>
+            <tr class="aa" id="aa">
+                <td><img src="Ressources/img/ourProduct/capteur_graph-cardiaque.jpeg" alt="Capteur cardiaque"></td>
+                <td><?php echo $txt['productPage_heart'];?></td>
+            </tr>
+            <tr>
+                <td><img src="Ressources/img/ourProduct/capteur_graph-sonor.png" alt="Capteur sonore"></td>
+                <td><?php echo $txt['productPage_sound'];?></td>
+            </tr>
+            <tr>
+                <td><img src="Ressources/img/ourProduct/capteur_graph-humidity.png" alt="Capteur d'humidité"></td>
+                <td><?php echo $txt['productPage_humy'];?></td>
+            </tr>
+            <tr>
+                <td><img src="Ressources/img/ourProduct/capteur_graph-temperature.png" alt="Capteur temperature"></td>
+                <td><?php echo $txt['productPage_temp'];?></td>
+            </tr>
 
-        <h2>Comment utiliser notre produit</h2>
-        <p>...</p>
+            <tr>
+                <td>
+                    <p><?php echo $txt['productPage_ccl1'];?></p><br>
+                    <p><?php echo $txt['productPage_ccl2'];?></p><br>
+                    <p><?php echo $txt['productPage_ccl3'];?></p>
+                </td>
+                <td><img src="Ressources/img/ourProduct/sensor_shema.PNG" alt="sensor shema"></td>
 
+            </tr>
+        </table>
         
-       
     </main>
 
-    <?php include 'Projet/view/other/footer.tpl'; ?>
+    <?php include 'Projet/view/other/footer.tpl';?>
 </body>
 </html>
 

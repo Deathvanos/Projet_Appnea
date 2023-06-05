@@ -1,7 +1,7 @@
-﻿<?php
+<?php
 
 
-function getDataSensor($sensorName, $mailUser='faresdata.yessir@yahoo.fr') {
+function getDataSensor($sensorName, $mailUser) {
     include_once("./Projet/modele/infoDB.php");
     $conn = connectionToDB();
     $sql = "SELECT u.mail, u.id_Box, s.typeSensor, d.dataFile, d.date_start, d.date_end

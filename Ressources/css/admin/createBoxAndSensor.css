@@ -1,0 +1,105 @@
+main {
+    text-align: center;
+}
+
+.header_title {
+    margin-left: 2.5%;
+    margin-top: 1rem;
+}
+
+
+
+
+/* Presentation General */
+
+.rowBlock {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    align-items:center;
+}
+
+.colBlock {width:40%;}
+.colBlock p {margin-bottom:0.5rem;}
+.colBlock button {margin-top:0.5rem;}
+
+main hr:first-of-type {margin-top:3rem;}
+
+main hr:last-of-type {
+    margin-top:3rem;
+    margin-inline:15%;
+}
+
+/* Style General */
+
+main input {
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 2rem;
+    color: white;
+    padding: 2% 5%;
+}
+
+main select {
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.17);
+    height: 20%;
+    text-align: center;
+}
+main select option {color:black;}
+
+main button, main a {
+    background-color: #423EF6;
+    border: 0;
+    cursor: pointer;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+}
+main button:hover, main a:hover {background-color: #6C37EE;}
+
+main a {text-decoration: none;}
+
+#labelColor {color: #89EDFB;}
+
+.redbutton {background-color: #F6593E;}
+.redbutton:hover {background-color: #D4371C;}
+
+
+/* Part 1 & Part 2 */
+
+#part1 input, #part1 select, #part2 input, #part2 select {width:80%;}
+
+main input, main select {height: 3em;}
+
+
+
+
+/* Part table */
+
+main #userBox {
+    width:20rem;
+    text-align: center;
+    padding:unset
+}
+
+main table {
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+main td {
+    padding-right: 0.25em;
+}
+
+main td:nth-of-type(2) {
+    padding-right: 3em;
+}
+
+main td:nth-of-type(4) {
+    padding-right: 3em;
+}
+
+main select {
+    width:10rem;
+}

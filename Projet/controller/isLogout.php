@@ -4,8 +4,8 @@
     function login(){require_once('./Projet/view/isLogout/login.tpl');}
 
 
-        /************************************/
-    /****** Fonctions check login *******/ // a mettre dans le controller du isLogout
+    /************************************/
+    /****** Fonctions check login *******/
     /************************************/
     function testConnection() {
         // Récupération des infos du guest
@@ -26,8 +26,26 @@
         tryLogin();
 
         // Si la fonction tryLogin a fonctionné alors l'user exist -> connection
-        // ('is'.$_SESSION['userInfo']["typeUser"])();
         $funcTypeUser = 'is'.$_SESSION['userInfo']["typeUser"];
         $funcTypeUser();
+    }
+
+
+    /********************************************/
+    /********* Fonctions de login Page **********/
+    /********************************************/
+    
+    // Après verification de la demande de login, connection de l'utilisateur
+    function isUser(){
+        $_SESSION['controle'] = "user";
+        header('Location: index.php?controle=user&action=mainUser');
+    }
+    function isModo(){
+        $_SESSION['controle'] = "modo";
+        header('Location: index.php?controle=modo&action=mainModo');
+    }
+    function isAdmin(){
+        $_SESSION['controle'] = "admin";
+        header('Location: index.php?controle=admin&action=mainAdmin');
     }
 ?>

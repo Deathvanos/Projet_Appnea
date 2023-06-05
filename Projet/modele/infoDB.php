@@ -1,9 +1,9 @@
 <?php
 
     function connectionToDB() {
-        $servername = "91.121.230.45";
-        $username = "pftxpg_appneawe_db";
-        $password = "%PMZ0U7w1px-t3_!";
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
         $dbname = "pftxpg_appneawe_db";
 
         try {

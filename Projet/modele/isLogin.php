@@ -61,6 +61,43 @@
         }
     }
 
+    function getIdByMail($mail){
+        include_once("Projet/modele/infoDB.php");
+        $conn = connectionToDB();
+        $sql = "SELECT id_utilisateur FROM utilisateur WHERE mail = :mail";
+        try{
+            $commande = $conn->prepare($sql);
+            $commande->bindParam(':mail', $mail, PDO::PARAM_STR);
+            $bool = $commande->execute();
+            if($bool){
+                $resultat = $commande->fetch()[0];
+                return $resultat;
+            }
+        }catch(PDOException $e){
+            echo utf8_encode("Echec de la récupération de l'utilisateur : " . $e->getMessage() . "\n");
+            die();
+        }
+    }
+
+    /**
+    * Supprime la photo d'un utilisateur donné
+    * @param idU : Id de l'utilisateur dont la photo doit être supprimée
+    */
+    function deletePhotodB($idU){
+        include_once("Projet/modele/infoDB.php");
+        $conn = connectionToDB();
+        $sql="UPDATE utilisateur set photo=null WHERE id_utilisateur = :idU";
+        try{
+            $commande = $conn->prepare($sql);
+            $commande->bindParam(':idU', $idU);
+            $commande->execute();
+        }catch(PDOException $e){
+            echo utf8_encode("Echec de la suppression de la photo : " . $e->getMessage() . "\n");
+            die();
+        }
+
+    }
+
 
 
 
@@ -176,42 +213,5 @@
          return $query->fetch()[0];
     }
 
-    function getIdByMail($mail){
-        include_once("Projet/modele/infoDB.php");
-        $conn = connectionToDB();
-        $sql = "SELECT id_utilisateur FROM utilisateur WHERE mail = :mail";
-        try{
-            $commande = $conn->prepare($sql);
-            $commande->bindParam(':mail', $mail, PDO::PARAM_STR);
-            $bool = $commande->execute();
-            if($bool){
-                $resultat = $commande->fetch()[0];
-                return $resultat;
-            }
-        }catch(PDOException $e){
-            echo utf8_encode("Echec de la récupération de l'utilisateur : " . $e->getMessage() . "\n");
-            die();
-        }
-    }
-
-    /**
-    * Supprime la photo d'un utilisateur donné
-    * @param idU : Id de l'utilisateur dont la photo doit être supprimée
-    */
-    function deletePhotodB($idU){
-        include_once("Projet/modele/infoDB.php");
-        $conn = connectionToDB();
-        $sql="UPDATE utilisateur set photo=null WHERE id_utilisateur = :idU";
-        try{
-            $commande = $conn->prepare($sql);
-            $commande->bindParam(':idU', $idU);
-            $commande->execute();
-        }catch(PDOException $e){
-            echo utf8_encode("Echec de la suppression de la photo : " . $e->getMessage() . "\n");
-            die();
-        }
-
-    }
-
-
+    
 ?>

@@ -6,18 +6,24 @@
     3 modothwoth@yahoo.fr modo modo123ABC!!!
     4 pinpon@lespompiers.fr user user123ABC!!!
     5 bobleponge@lamere.fr user bob123ABC!!!
+    100 faresdata.yessir@yahoo.fr user Azerty123!
     */
 
     function tryLogin(){
         // Création de la connection à la base de données
-        require("Projet/modele/infoDB.php");
+        require_once("Projet/modele/infoDB.php");
         $conn = connectionToDB();
+
+        // hash du mdp
+        $mdpHashed = hash('ripemd160', $_POST['mdp']);
+        
         
         // Regarde si le mail et le mdp existent dans la base de données
-        $sql =  'SELECT * FROM utilisateur WHERE mail=:mail AND password=:password';
+        $sql =  'SELECT typeUser, photo, firstName, lastName, birthday, phoneNumber, mail, country, city, codePostal, address, id_Box
+                 FROM utilisateur WHERE mail=:mail AND password=:password';
         $commande = $conn->prepare($sql);
         $commande->bindParam(':mail', $_POST['mail']); // pour les requetes sql avec variables externe
-        $commande->bindParam(':password', $_POST['mdp']); // pour les requetes sql avec variables externe
+        $commande->bindParam(':password', $mdpHashed); // pour les requetes sql avec variables externe
         $bool = $commande->execute();
         $resultat = $commande->fetch(PDO::FETCH_ASSOC);
 

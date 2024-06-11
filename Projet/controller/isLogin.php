@@ -93,8 +93,9 @@
         $codePostal = isset($_POST['codePostal'])?($_POST['codePostal']):$result[0]['codePostal'];
 
         $id_user = $result[0]['id_utilisateur'];
-        $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar, "Birthday"=>$birthday, "CodePostal"=>$codePostal);
 
+        $infos_user = array("Nom"=>$lastName,"Prénom"=>$firstName,"Tel"=>$phoneNumber,"Mail"=>$mail,"Adresse"=>$address,"Ville"=>$city,"Pays"=>$country, "Photo"=>$avatar, "Birthday"=>$birthday, "CodePostal"=>$codePostal);
+        $_SESSION['userInfo']['mail'] = $mail;
         updateUser($infos_user, $id_user);
         unset($result);
         displayProfil();
@@ -112,7 +113,6 @@
 
 
 
-
     /********************************************/
     /************* Find user search *************/
     /********************************************/
@@ -120,7 +120,7 @@
 
     function searchUser(){
         // Ne concerne pas les users
-        if ($_SESSION['controle'] != "user" ) {
+        if ($_SESSION['controle'] == "admin" | $_SESSION['controle'] == "modo") {
 
             // Fonction login vers la base de données
             include_once("Projet/modele/isLogin.php");
@@ -181,4 +181,12 @@
         if ($sensor!=null) {if ($isUsed==1 & $isNotBroken==1) {echo '<td><p class="colorTrue">'.$txt['adminGestionUser_Active'].'</p></td>';return;}}
         echo '<td><p class="colorFalse">'.$txt['adminGestionUser_Lock'].'</p></td>';
     }
+
+
+
+
+
+
+
+
 ?>

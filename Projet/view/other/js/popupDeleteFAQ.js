@@ -6,7 +6,7 @@
  * on effectue une requete Ajax pour supprimer l'utilisateur
  * @param {*} mailUser mail de l'utilisateur à supprimer
  */
-function confirmPopup(mailUser, lang) {
+function confirmPopup(numFAQ) {
     // On a plus besoin du popup
     popup.remove();
     // Requete Ajax pour del l'user
@@ -24,7 +24,7 @@ function confirmPopup(mailUser, lang) {
         }
     };
     // Indique la méthode et la page PHP à charger de manière asynchrone
-    xmlhttp.open("GET", "index.php?controle=admin&action=deleteUserAjax&temoin=" + mailUser, true);
+    xmlhttp.open("GET", "index.php?controle=modo&action=deleteFAQAjax&temoin=" + numFAQ, true);
     // Active la requete Ajax
     xmlhttp.send();
 };
@@ -72,7 +72,7 @@ function cancelPopup() {
  * Un admin souhaite supprimer un utilisateur.
  * On affiche un popup lui demandant de confirmer son choix
  */
-function showPopup(mailUser="mailUser", lang='fr') {
+function showPopupFAQ(numFAQ="numFAQ", lang='fr') {
     // Style du Pop-Up
     var styles = `position: fixed;
                 top: 0;
@@ -92,7 +92,7 @@ function showPopup(mailUser="mailUser", lang='fr') {
     .then(data => {
         // recuperation des valeurs qui nous intéresse
         var title = data.adminGestionUser_MsgDelTitle;
-        var msg = data['adminGestionUser_MsgDelUser'];
+        var msg = data['manageFAQ_MsgDelUser'];
         var txtBtnBack = data['Abandon'];
         var txtBtnConf = data['adminGestionUser_PopupSubmit'];
         // Affiche le popup
@@ -102,10 +102,10 @@ function showPopup(mailUser="mailUser", lang='fr') {
         popup.innerHTML = '<div class="popup-content">\
                                 <h2>'+title+'</h2>\
                                 <p>'+msg+'</p>\
-                                <p>mail : '+mailUser+'</p>\
+                                <p>num : '+numFAQ+'</p>\
                                 <div class="popup-buttons">\
                                     <button onclick=cancelPopup()>'+txtBtnBack+'</button>\
-                                    <button onclick=confirmPopup("'+mailUser+'","'+lang+'")>'+txtBtnConf+'</button>\
+                                    <button onclick=confirmPopup("'+numFAQ+'","'+lang+'")>'+txtBtnConf+'</button>\
                                 </div>\
                             </div>'
         ;

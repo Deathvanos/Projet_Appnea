@@ -21,8 +21,8 @@ main h1 {text-align: center;}
 
 .allGraphs {
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
     text-align: center;
 }
 
@@ -35,14 +35,14 @@ main h1 {text-align: center;}
 }
 
 .firstGraph {
-    display: block;
-    border: 4px solid black;
+    display: inline-block;
+    border: 4px solid black;    
     background-color: aliceblue;
     margin-right: 1.5%;
     border-radius: 2rem;
 }
 
-.allGraphs h2 {color: rgb(6, 14, 33);}
+.allGraphs h3 {color: rgb(6, 14, 33);}
 
 .secondGraph {
     display: inline-block;
@@ -68,7 +68,79 @@ main h1 {text-align: center;}
     border-radius: 2rem;
 }
 
+#dateSelected {
+  background-color: #6C37EE;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+#dateSelected option {
+  background-color: #211265;
+  color: #ffffff;
+  padding: 10px;
+}
+
+
+.dateSelection label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
 .vertical-lign {border: 2px solid rgb(240, 182, 34);}
 
 .horizontal-lign {border: 2px solid rgb(240, 182, 34);}
+
+@media only screen and (max-width: 1400px) {
+        .allGraphs{
+          flex-direction: column;
+        }
+
+        main{
+          height: 1000px;
+        }
+}
+
+@media only screen and (max-width: 800px) {
+    .vertical-lign{
+      border: 0px ;
+    }
+
+    .allGraphs{
+      flex-direction: column;
+      display: flex;
+    }
+
+    .Line{
+      flex-direction: column;
+      display: block;
+      
+    }
+    .firstGraph {
+        margin-right: 0px;
+    }
+    
+
+    .secondGraph {
+        margin-left: 0px;
+    }
+    
+    .thirdGraph {
+        margin-right: 0px;
+    }
+    
+    .forthGraph {
+        margin-left: 0px;
+    }
+
+    main{
+      height: 1460px;
+    }
+
+  }
 

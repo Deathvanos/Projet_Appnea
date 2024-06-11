@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 
 function getDataSensor($sensorName, $mailUser='faresdata.yessir@yahoo.fr') {
@@ -20,5 +20,6 @@ function getDataSensor($sensorName, $mailUser='faresdata.yessir@yahoo.fr') {
     $resultat = $commande->fetchAll(PDO::FETCH_ASSOC);
     return $resultat;
 }
+
 
 ?>

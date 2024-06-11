@@ -18,24 +18,27 @@
 <head>
     <title>APNEA - Main Admin</title>
     <?php include 'Projet/view/other/head_Font_Page.html';?>
-    <link rel="stylesheet" href="Ressources/css/admin/mainAdmin.css" />
+    <link rel="stylesheet" href="Ressources/css/admin/showUserInfo.css" />
 </head>
 
 <body>
     <?php
     // Bug  : on doit récuperer ces deux variables dans les variables globals 
     $txt = $GLOBALS['translat'];
-    include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
+    //include 'Projet/view/' . $_SESSION['controle'] . '/header.tpl'; ?>
+
+    <a class="header_title" href="index.php?controle=modo&action=mainGuest">
+        <img class="header_logo" src="Ressources/img/Logo_Appea-grey.svg" alt="Logo APPNEA">
+        <?php echo $txt['title_brand']; ?>
+    </a>
 
     <main class='main'>
             <h1 class='title'>Vous consultez la page de : <?php echo $_GET['temoin']; ?> </h1> 
             <br><br>
-            <h3>Quel beau profil</h3> 
             <br>
-            <h2>Voulez vous modifier ses infos ?</h2> 
-            <h2>Voulez vous modifier sa boite de capteurs et ses capteurs ?</h2> 
+            <h2>ERROR - Info missing</h2> 
             <br>
-            RETOUR
+            <a href="index.php?controle=admin&action=findUser">RETOUR</a> 
     </main>
 
     <?php include 'Projet/view/other/footer.tpl'; ?>

@@ -20,7 +20,6 @@
 </head>
 <body>
 <?php
-    // Bug  : on doit récuperer ces deux variables dans les variables globals
     $txt = $GLOBALS['translat'];
     include 'Projet/view/'.$_SESSION['controle'].'/header.tpl';?>
 
@@ -39,7 +38,7 @@
             <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name1']; ?> : </h3><input type="text" placeholder= <?php echo("'$lastName'"); ?> name="lastname" value=<?php echo("'$lastName'"); ?>/></elem>
             <h3 class="hide"> </h3>
             <elem><h3 class="form_title"><?php echo $txt['Profil_Label_Name2']; ?> :</h3><input type="text" placeholder= <?php echo("'$firstName'");?> name="firstname" value=<?php echo("'$firstName'"); ?> /></elem>
-            <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder= <?php echo("'$phoneNumber'");?> name="phone" value=<?php echo("'$phoneNumber'"); ?>/></elem>
+            <elem><h3 class="form_title"><?php echo $txt['Profil_Tel']; ?> : </h3> <input type="text" placeholder= <?php echo("'$phoneNumber'");?> name="phoneNumber" value=<?php echo("'$phoneNumber'"); ?>/></elem>
             <h3 class="hide"> </h3>
             <elem><h3 class="form_title"><?php echo $txt['Profil_Mail']; ?> : </h3><input type="text" placeholder= <?php echo("'$mail'");?> name="mail" value=<?php echo("'$mail'"); ?>/></elem>
             <elem><h3 class="form_title"><?php echo $txt['Profil_Localisation']; ?> : </h3><input type="text" placeholder= <?php echo("'$address'");?> name="address" value=<?php echo("'$address'"); ?>/></elem>
@@ -57,7 +56,7 @@
 
         <button class="submit" type="submit"><?php echo $txt['Submit']; ?></button>
                 <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=deletePhoto";?> class="actPhoto"><?php echo $txt['Suppr_Photo']; ?></a>
-        <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=errorPage";?> class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
+        <a href=<?php echo "index.php?controle=".$_SESSION['controle']."&action=forgetPassword";?> class="modifMdp"><?php echo $txt['Profil_Change_mdp']; ?></a>
         </form>
 
         <!--<form action=<?php echo "index.php?controle=".$_SESSION['controle']."&action=deletePhoto";?> method="POST">

@@ -20,19 +20,19 @@ Le site internet d'Appnea intervient après la conception d'un appareil de déte
 
 Le projet a été développé sur VSCode et utilise [Xampp](https://www.apachefriends.org/fr/index.html) pour la partie serveur et base de données mySQL.
 
-Pour initialiser la BdD :
-    - Dans Xampp -> Start Apache + Start MySQL
-    - Dans un navigateur -> url=http://localhost/ -> phpMyAdmin
-    - Dans phpMyAdmin -> "Nouvelle base de données" (à gauche de l'écran)
-                      -> "Nom de base de données"="APPNEA" (ou un autre nom) 
-                      -> Créer
-    - Aller maintenant dans la partie SQL (sur le bandeau en haut et vers la gauche)
-    - Ouvrez le fichier BdD/appnea.SQL (présent dans ce dossier) avec un éditeur de texte -> ctrl+a -> ctrl+c pour copier tout le script
-    - Dans l'éditeur de code -> coller le script contenu dans le fichier appnea.SQL
-    - Exécuter (en bas à droite)
-    - Votre BdD est maintenant créée
-    - Pour le vérifier, allez dans l'onglet Structure pour constater la création des tables.
-
+Pour initialiser la BdD :  
+    - Dans Xampp -> Start Apache + Start MySQL  
+    - Dans un navigateur -> url=http://localhost/ -> phpMyAdmin  
+    - Dans phpMyAdmin -> "Nouvelle base de données" (à gauche de l'écran)  
+                      -> "Nom de base de données"="APPNEA" (ou un autre nom)   
+                      -> Créer  
+    - Aller maintenant dans la partie SQL (sur le bandeau en haut et vers la gauche)  
+    - Ouvrez le fichier BdD/appnea.SQL (présent dans ce dossier) avec un éditeur de texte -> ctrl+a -> ctrl+c pour copier tout le script  
+    - Dans l'éditeur de code -> coller le script contenu dans le fichier appnea.SQL  
+    - Exécuter (en bas à droite)  
+    - Votre BdD est maintenant créée   
+    - Pour le vérifier, allez dans l'onglet Structure pour constater la création des tables.  
+  
 Liste des logins (main, typeUser, mdp):
 - admin: adminthebest@gmail.com | admin123ABC!!!
 - modo: modothwoth@yahoo.fr | modo123ABC!!!
